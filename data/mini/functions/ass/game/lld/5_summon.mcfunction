@@ -1,0 +1,1 @@
+execute as @a[tag=mini_running] at @s run summon creeper ~ ~ ~ {CustomName: '', ignited: 1b, Fuse: 40s, AbsorptionAmount: 1000}

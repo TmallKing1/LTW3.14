@@ -1,0 +1,69 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "item:mixed/purple",
+                    "weight": 40
+                },
+                {
+                    "type": "item",
+                    "name": "creeper_head",
+                    "weight": 16,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"80% 概率能量值加倍\",\"color\":\"gold\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:101}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "creeper_head",
+                    "weight": 4,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"80% 概率能量值加倍\",\"color\":\"gold\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:0}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "heart_of_the_sea",
+                    "weight": 20,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"60 能量值\",\"color\":\"gold\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:60}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "music_disc_pigstep",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"能量值随机加倍或减半\",\"color\":\"gold\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:101}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "music_disc_pigstep",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"能量值随机加倍或减半\",\"color\":\"gold\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:-1}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

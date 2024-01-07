@@ -1,0 +1,42 @@
+[
+    {
+        "function": "set_lore",
+        "lore": [
+            "",
+            {
+                "text": "你当前未拥有此锻造模板！",
+                "color": "red",
+                "italic": false
+            }
+        ],
+        "conditions": [
+            {
+                "condition": "entity_scores",
+                "entity": "this",
+                "scores": {
+                    "trim_boolean": 0
+                }
+            }
+        ]
+    },
+    {
+        "function": "set_lore",
+        "lore": [
+            "",
+            {
+                "text": "点击切换！",
+                "color": "yellow",
+                "italic": false
+            }
+        ],
+        "conditions": [
+            {
+                "condition": "entity_scores",
+                "entity": "this",
+                "scores": {
+                    "trim_boolean": 1
+                }
+            }
+        ]
+    }
+]

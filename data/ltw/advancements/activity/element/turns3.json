@@ -1,0 +1,29 @@
+{
+  "parent": "ltw:activity/element/turns2",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_ingot"
+    },
+    "title": {
+      "text": "元素战争 · 周而复始 · 转"
+    },
+    "description": [
+      {
+        "text": "参与 15 次游戏。\n",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_3"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

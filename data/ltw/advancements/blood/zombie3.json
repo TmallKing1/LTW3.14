@@ -1,0 +1,37 @@
+{
+  "parent": "ltw:blood/zombie2",
+  "display": {
+    "icon": {
+      "item": "minecraft:zombie_head"
+    },
+    "title": {
+      "text": "穷途末路 · γ "
+    },
+    "description": [
+      {
+        "text": "【尸海寻路】获得 300 能量值\n",
+        "color": "gray"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "2 绿宝石",
+        "color": "white"
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_3"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

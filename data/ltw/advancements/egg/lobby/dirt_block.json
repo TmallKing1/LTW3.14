@@ -1,0 +1,33 @@
+{
+    "parent": "ltw:egg/lobby/lobby_root",
+    "display": {
+        "icon": {
+            "item": "minecraft:dirt"
+        },
+        "title": "一袋土块",
+        "description": [
+            {
+                "text": "在拥有 3 个或以上金块时进行一次二十面骰或幸运 777 抽奖并获得大成功。\n",
+                "color": "gray"
+            },
+            {
+                "text": "「你们可能不知道只用一个金粒赢到三个金块是什么概念。」",
+                "color": "dark_purple",
+                "italic": true
+            }
+        ],
+        "frame": "challenge",
+        "hidden": true
+    },
+    "criteria": {
+        "tower": {
+            "trigger": "impossible"
+        }
+    },
+    "requirements": [
+        [
+            "tower"
+        ]
+    ],
+    "rewards": {}
+}

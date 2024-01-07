@@ -1,0 +1,27 @@
+{
+    "parent": "ltw:activity/element",
+    "display": {
+      "icon": {
+        "item": "minecraft:dragon_breath"
+      },
+      "title": {
+        "text": "元素反应"
+      },
+      "description": [
+        {
+          "text": "",
+          "color": "white"
+        }
+      ],
+      "frame": "goal",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "rewards": {},
+    "criteria": {
+      "a": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }

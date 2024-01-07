@@ -1,0 +1,33 @@
+{
+    "parent": "ltw:egg/lobby/lobby_root",
+    "display": {
+        "icon": {
+            "item": "minecraft:spawner"
+        },
+        "title": "Bug 之王",
+        "description": [
+            {
+                "text": "到达错误之塔的最顶层！\n",
+                "color": "gray"
+            },
+            {
+                "text": "「2.12%的概率，你做到了。」",
+                "color": "dark_purple",
+                "italic": true
+            }
+        ],
+        "frame": "challenge",
+        "hidden": true
+    },
+    "criteria": {
+        "tower": {
+            "trigger": "impossible"
+        }
+    },
+    "requirements": [
+        [
+            "tower"
+        ]
+    ],
+    "rewards": {}
+}

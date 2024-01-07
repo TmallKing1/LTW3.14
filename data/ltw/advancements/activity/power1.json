@@ -1,0 +1,45 @@
+{
+  "parent": "ltw:activity/power",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_nugget"
+    },
+    "title": {
+      "text": "高能反应 · 起"
+    },
+    "description": [
+      {
+        "text": "参与 1 次游戏。\n",
+        "color": "white"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "126 魔法精华",
+        "color": "light_purple"
+      },
+      {
+        "text": "，",
+        "color": "gray"
+      },
+      {
+        "text": "6 金锭",
+        "color": "gold"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_1"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

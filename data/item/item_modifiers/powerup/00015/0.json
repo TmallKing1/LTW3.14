@@ -1,0 +1,39 @@
+[
+    {
+        "function": "set_name",
+        "name": {
+            "text": "JK137 的头",
+            "color": "gold",
+            "italic": false
+        }
+    },
+    {
+        "function": "set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "text": "戴在头上时：",
+                "color": "gray",
+                "italic": false
+            },
+            [
+                {
+                    "text": "物品栏被清空时有 5",
+                    "color": "blue",
+                    "italic": false
+                },
+                {
+                    "text": "% 概率获得额外 3 金粒",
+                    "color": "blue",
+                    "italic": false
+                }
+            ],
+            "",
+            {
+                "text": "你尚未拥有该物品！",
+                "color": "red",
+                "italic": false
+            }
+        ]
+    }
+]

@@ -1,0 +1,27 @@
+{
+    "parent": "ltw:activity/root",
+    "display": {
+      "icon": {
+        "item": "minecraft:heart_of_the_sea"
+      },
+      "title": {
+        "text": "会心一击"
+      },
+      "description": [
+        {
+          "text": "1.0版本「幻境流转」限时活动",
+          "color": "white"
+        }
+      ],
+      "frame": "goal",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": false
+    },
+    "rewards": {},
+    "criteria": {
+      "a": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }

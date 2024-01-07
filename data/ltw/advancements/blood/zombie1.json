@@ -1,0 +1,37 @@
+{
+  "parent": "ltw:blood/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:zombie_spawn_egg"
+    },
+    "title": {
+      "text": "穷途末路 · α "
+    },
+    "description": [
+      {
+        "text": "【尸海寻路】获得 150 能量值\n",
+        "color": "gray"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "1 绿宝石",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_1"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "parent": "ltw:activity/element",
+    "display": {
+      "icon": {
+        "item": "minecraft:diamond_horse_armor"
+      },
+      "title": {
+        "text": "游玩局数"
+      },
+      "description": [
+        {
+          "text": "",
+          "color": "white"
+        }
+      ],
+      "frame": "goal",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "rewards": {},
+    "criteria": {
+      "a": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }

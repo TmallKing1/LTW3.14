@@ -1,0 +1,29 @@
+{
+  "parent": "ltw:activity/duckrush2",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_ingot"
+    },
+    "title": {
+      "text": "躲鸭者 · 转"
+    },
+    "description": [
+      {
+        "text": "参与 4 次游戏。\n",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_3"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

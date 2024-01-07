@@ -1,0 +1,29 @@
+{
+  "parent": "ltw:activity/element/reaction1",
+  "display": {
+    "icon": {
+      "item": "minecraft:raw_gold"
+    },
+    "title": {
+      "text": "元素战争 · 反应大师 · 承"
+    },
+    "description": [
+      {
+        "text": "攻击触发 100 次元素反应。\n",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_2"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

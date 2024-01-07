@@ -1,0 +1,37 @@
+[
+    {
+        "function": "set_name",
+        "name": {
+            "text": "出售物品",
+            "color": "red",
+            "italic": false
+        }
+    },
+    {
+        "function": "set_lore",
+        "lore": [
+            {
+                "text": "漏斗内所有放入的可出售物品都会转化为信用点，",
+                "color": "gray",
+                "italic": false
+            },
+            {
+                "text": "不可出售的物品将会返还。",
+                "color": "gray",
+                "italic": false
+            },
+            [
+                {
+                    "text": "注意: ",
+                    "color": "dark_red",
+                    "italic": false
+                },
+                {
+                    "text": "成功出售后，漏斗矿车将会永久消失！",
+                    "color": "gray",
+                    "italic": false
+                }
+            ]
+        ]
+    }
+]

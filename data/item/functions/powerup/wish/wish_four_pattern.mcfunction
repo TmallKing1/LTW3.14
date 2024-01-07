@@ -1,0 +1,2 @@
+execute store result storage item:armor RandomPattern.Index int 1 store result score $random_pattern mem run random value 0..15
+function item:powerup/wish/four/pattern with storage item:armor RandomPattern

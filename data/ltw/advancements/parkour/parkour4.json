@@ -1,0 +1,34 @@
+{
+  "parent": "ltw:parkour/parkour3",
+  "display": {
+    "icon": {
+      "item": "minecraft:firework_rocket"
+    },
+    "title": {
+      "text": "轻车熟路 · Ω "
+    },
+    "description": [
+      {
+        "text": "【遗迹遍历】在剩余时间 ≥ 60 秒时遍历所有目标点\n",
+        "color": "gray"
+      },
+      {
+        "text": "究极隐藏挑战！",
+        "color": "dark_gray",
+        "italic": true
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_4"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

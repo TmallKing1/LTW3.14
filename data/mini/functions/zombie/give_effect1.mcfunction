@@ -1,0 +1,1 @@
+effect give @a[team=playing,tag=!rejoining] regeneration 10 5 true

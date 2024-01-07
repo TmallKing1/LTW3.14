@@ -1,0 +1,58 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "item:mixed/green",
+                    "weight": 40
+                },
+                {
+                    "type": "item",
+                    "name": "heart_of_the_sea",
+                    "weight": 20,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"20 能量值\",\"color\":\"aqua\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:20}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "heart_of_the_sea",
+                    "weight": 20,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"15 能量值\",\"color\":\"aqua\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:15}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "flower_banner_pattern",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"一半概率获得 25 能量值\",\"color\":\"aqua\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:25}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "flower_banner_pattern",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"一半概率获得 25 能量值\",\"color\":\"aqua\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:0}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

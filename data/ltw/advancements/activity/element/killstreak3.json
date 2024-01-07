@@ -1,0 +1,29 @@
+{
+  "parent": "ltw:activity/element/killstreak2",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_ingot"
+    },
+    "title": {
+      "text": "元素战争 · 杀戮狂魔 · 转"
+    },
+    "description": [
+      {
+        "text": "达成 32 次双杀、8 次三杀和 4 次四杀。\n",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_3"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

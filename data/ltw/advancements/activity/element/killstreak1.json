@@ -1,0 +1,29 @@
+{
+  "parent": "ltw:activity/element/killstreak",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_nugget"
+    },
+    "title": {
+      "text": "元素战争 · 杀戮狂魔 · 起"
+    },
+    "description": [
+      {
+        "text": "达成 8 次双杀。\n",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_1"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

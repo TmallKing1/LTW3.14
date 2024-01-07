@@ -1,0 +1,38 @@
+{
+  "parent": "ltw:parkour/parkour1",
+  "display": {
+    "icon": {
+      "item": "minecraft:target",
+      "nbt": "{Enchantments:[{id:\"minecraft:protection\",lvl:4s}]}"
+    },
+    "title": {
+      "text": "轻车熟路 · β "
+    },
+    "description": [
+      {
+        "text": "【遗迹遍历】一局内遍历 10 个目标点\n",
+        "color": "gray"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "2 绿宝石",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_2"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

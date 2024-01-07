@@ -1,0 +1,29 @@
+{
+  "parent": "ltw:activity/element/reaction",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_nugget"
+    },
+    "title": {
+      "text": "元素战争 · 反应大师 · 起"
+    },
+    "description": [
+      {
+        "text": "攻击触发 25 次元素反应。\n",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_1"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

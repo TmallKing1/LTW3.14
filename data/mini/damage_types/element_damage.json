@@ -1,0 +1,7 @@
+{
+    "message_id": "element_damage",
+    "death_message_type": "default",
+    "effects": "hurt",
+    "exhaustion": 0,
+    "scaling": "never"
+}

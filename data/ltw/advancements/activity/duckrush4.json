@@ -1,0 +1,34 @@
+{
+  "parent": "ltw:activity/duckrush3",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_block"
+    },
+    "title": {
+      "text": "躲鸭者 · 合"
+    },
+    "description": [
+      {
+        "text": "参与 8 次游戏。\n",
+        "color": "white"
+      },
+      {
+        "text": "究极但不隐藏挑战！",
+        "color": "dark_gray",
+        "italic": true
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_4"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

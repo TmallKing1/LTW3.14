@@ -1,0 +1,27 @@
+{
+    "parent": "ltw:vs/potato3",
+    "display": {
+      "icon": {
+        "item": "minecraft:golden_leggings"
+      },
+      "title": {
+        "text": "君临天下 · Ω "
+      },
+      "description": [
+        {"text": "【炸弹狂魔】在不使用金苹果且不损失生命值的情况下获胜\n", "color":"gray"},
+        {"text": "究极隐藏挑战！","color":"dark_gray","italic": true}
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": true
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_4"
+    },
+    "criteria": {
+      "a":{
+          "trigger": "minecraft:impossible"
+      }
+    }
+  }

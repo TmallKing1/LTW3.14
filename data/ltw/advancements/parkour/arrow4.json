@@ -1,0 +1,34 @@
+{
+  "parent": "ltw:parkour/arrow3",
+  "display": {
+    "icon": {
+      "item": "minecraft:crossbow"
+    },
+    "title": {
+      "text": "百步穿杨 · Ω "
+    },
+    "description": [
+      {
+        "text": "【掘一死箭】在决死模式中获胜，且决死模式持续时间 ≥ 40 秒\n",
+        "color": "gray"
+      },
+      {
+        "text": "究极隐藏挑战！",
+        "color": "dark_gray",
+        "italic": true
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_4"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

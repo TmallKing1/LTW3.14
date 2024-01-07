@@ -1,0 +1,37 @@
+{
+  "parent": "ltw:blood/bullet1",
+  "display": {
+    "icon": {
+      "item": "minecraft:vindicator_spawn_egg"
+    },
+    "title": {
+      "text": "箭无虚发 · β "
+    },
+    "description": [
+      {
+        "text": "【子弹时间】游戏结束时拥有 328 能量值\n",
+        "color": "gray"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "2 绿宝石",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_2"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

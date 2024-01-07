@@ -1,0 +1,13 @@
+{
+    "values": [
+        "player_head",
+        "glass",
+        "zombie_head",
+        "stone",
+        "observer",
+        "dropper",
+        "target",
+        "slime_block",
+        "light_gray_stained_glass_pane"
+    ]
+}

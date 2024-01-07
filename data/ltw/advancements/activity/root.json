@@ -1,0 +1,30 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:enchanted_book"
+      },
+      "title": {
+        "text": "小猪之最改版服 · 限时活动",
+        "color": "light_purple"
+      },
+      "description": [
+        {"text": "只有参与对应活动才能够获得相应进度\n", "color":"gray"},
+        {"text": "未参加则不会显示进度","color":"gray"}
+      ],
+      "frame": "task",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": false,
+      "background": "minecraft:textures/block/crying_obsidian.png"
+    },
+    "criteria": {
+      "root": {
+        "trigger": "minecraft:location"
+      }
+    },
+    "requirements": [
+      [
+        "root"
+      ]
+    ]
+  }

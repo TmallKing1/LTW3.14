@@ -1,0 +1,34 @@
+{
+  "parent": "ltw:parkour/river3",
+  "display": {
+    "icon": {
+      "item": "minecraft:shulker_box"
+    },
+    "title": {
+      "text": "神输鬼运 · Ω "
+    },
+    "description": [
+      {
+        "text": "【危险运输】在构成桥的方块几乎完全消失的情况下成功运输 1 个普通物资\n",
+        "color": "gray"
+      },
+      {
+        "text": "究极隐藏挑战！",
+        "color": "dark_gray",
+        "italic": true
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_4"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

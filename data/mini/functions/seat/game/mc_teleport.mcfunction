@@ -1,0 +1,1 @@
+execute as @e[type=minecart,tag=seat_mc] at @s run tp @s ~ 11 ~

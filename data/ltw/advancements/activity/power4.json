@@ -1,0 +1,50 @@
+{
+  "parent": "ltw:activity/power3",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_block"
+    },
+    "title": {
+      "text": "高能反应 · 合"
+    },
+    "description": [
+      {
+        "text": "参与 10 次游戏。\n",
+        "color": "white"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "3 金锭",
+        "color": "gold"
+      },
+      {
+        "text": "，",
+        "color": "gray"
+      },
+      {
+        "text": "下界合金质 盔甲纹饰材质\n",
+        "color": "aqua"
+      },
+      {
+        "text": "究极但不隐藏挑战！",
+        "color": "dark_gray",
+        "italic": true
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_4"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+[
+    {
+        "function": "set_name",
+        "name": {
+            "text": "更改盔甲纹饰材质",
+            "color": "green",
+            "italic": false
+        }
+    },
+    {
+        "function": "set_lore",
+        "entity": "this",
+        "lore": [
+            [
+                {
+                    "text": "当前盔甲纹饰材质：",
+                    "color": "gray",
+                    "italic": false
+                },
+                {
+                    "nbt": "Result",
+                    "storage": "lib:string",
+                    "color": "white",
+                    "italic": false,
+                    "interpret": true
+                }
+            ]
+        ],
+        "conditions": [
+            {
+                "condition": "inverted",
+                "entity": "this",
+                "term": {
+                    "condition": "entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "trim_editmat": -1
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "function": "set_lore",
+        "lore": [
+            [
+                {
+                    "text": "当前盔甲纹饰锻造模板：",
+                    "color": "gray",
+                    "italic": false
+                },
+                {
+                    "text": "无",
+                    "color": "red",
+                    "italic": false
+                }
+            ]
+        ],
+        "conditions": [
+            {
+                "condition": "entity_scores",
+                "entity": "this",
+                "scores": {
+                    "trim_editmat": -1
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,27 @@
+{
+    "parent": "ltw:vs/colormatch3",
+    "display": {
+      "icon": {
+        "item": "minecraft:black_glazed_terracotta"
+      },
+      "title": {
+        "text": "纷乱迷阵 · Ω "
+      },
+      "description": [
+        {"text": "【色彩迷阵】满速后无伤获胜前，对排名第二的玩家造成制胜一击\n", "color":"gray"},
+        {"text": "究极隐藏挑战！","color":"dark_gray","italic": true}
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": true
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_4"
+    },
+    "criteria": {
+      "a":{
+          "trigger": "minecraft:impossible"
+      }
+    }
+  }

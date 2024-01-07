@@ -1,0 +1,73 @@
+[
+    {
+        "function": "set_name",
+        "name": {
+            "text": "可出售的物品",
+            "color": "aqua",
+            "italic": false
+        }
+    },
+    {
+        "function": "set_lore",
+        "lore": [
+            {
+                "selector": "@e[type=marker,tag=sell_entry,nbt={data:{No:0}}]",
+                "italic": false
+            },
+            {
+                "selector": "@e[type=marker,tag=sell_entry,nbt={data:{No:1}}]",
+                "italic": false
+            },
+            {
+                "selector": "@e[type=marker,tag=sell_entry,nbt={data:{No:2}}]",
+                "italic": false
+            },
+            {
+                "selector": "@e[type=marker,tag=sell_entry,nbt={data:{No:3}}]",
+                "italic": false
+            },
+            {
+                "selector": "@e[type=marker,tag=sell_entry,nbt={data:{No:4}}]",
+                "italic": false
+            },
+            {
+                "selector": "@e[type=marker,tag=sell_entry,nbt={data:{No:5}}]",
+                "italic": false
+            },
+            {
+                "selector": "@e[type=marker,tag=sell_entry,nbt={data:{No:6}}]",
+                "italic": false
+            },
+            {
+                "selector": "@e[type=marker,tag=sell_entry,nbt={data:{No:7}}]",
+                "italic": false
+            },
+            {
+                "selector": "@e[type=marker,tag=sell_entry,nbt={data:{No:8}}]",
+                "italic": false
+            },
+            {
+                "selector": "@e[type=marker,tag=sell_entry,nbt={data:{No:9}}]",
+                "italic": false
+            },
+            {
+                "selector": "@e[type=marker,tag=sell_entry,nbt={data:{No:10}}]",
+                "italic": false
+            },
+            {
+                "selector": "@e[type=marker,tag=sell_entry,nbt={data:{No:11}}]",
+                "italic": false
+            },
+            {
+                "selector": "@e[type=marker,tag=sell_entry,nbt={data:{No:12}}]",
+                "italic": false
+            },
+            {
+                "text": "点击此项可回收漏斗矿车",
+                "color": "light_purple",
+                "italic": false
+            }
+        ],
+        "entity": "this"
+    }
+]

@@ -1,0 +1,45 @@
+{
+  "parent": "ltw:activity/power2",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_ingot"
+    },
+    "title": {
+      "text": "高能反应 · 转"
+    },
+    "description": [
+      {
+        "text": "参与 6 次游戏。\n",
+        "color": "white"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "42 魔法精华",
+        "color": "light_purple"
+      },
+      {
+        "text": "，",
+        "color": "gray"
+      },
+      {
+        "text": "4 金锭",
+        "color": "gold"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_3"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

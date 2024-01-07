@@ -1,0 +1,28 @@
+{
+    "parent": "ltw:vs/bingo2",
+    "display": {
+      "icon": {
+        "item": "minecraft:clock"
+      },
+      "title": {
+        "text": "一键三连 · γ "
+      },
+      "description": [
+        {"text": "【三点一线】在 75 秒内完成目标\n", "color":"gray"},
+        {"text": "奖励: ","color":"green"},
+        {"text": "2 绿宝石","color":"white"}
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_3"
+    },
+    "criteria": {
+      "a":{
+          "trigger": "minecraft:impossible"
+      }
+    }
+  }

@@ -1,0 +1,1 @@
+execute if score $ley_line_disorder mem matches 3 run function mini:iron/game/lld/3_disorder

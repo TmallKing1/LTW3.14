@@ -1,0 +1,28 @@
+{
+    "parent": "ltw:activity/root",
+    "display": {
+      "icon": {
+        "item": "minecraft:wooden_sword",
+        "nbt": "{Enchantments:[{id:\"sharpness\",lvl:1}]}"
+      },
+      "title": {
+        "text": "元素战争"
+      },
+      "description": [
+        {
+          "text": "2023年劳动节活动",
+          "color": "white"
+        }
+      ],
+      "frame": "goal",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "rewards": {},
+    "criteria": {
+      "a": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }

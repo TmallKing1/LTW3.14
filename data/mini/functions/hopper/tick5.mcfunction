@@ -1,0 +1,2 @@
+execute if score $countdown mem matches ..120 run effect give @a[team=playing,tag=!invisible] glowing infinite 0 true
+execute if score $countdown mem matches ..120 run effect clear @a[team=playing,tag=invisible] glowing

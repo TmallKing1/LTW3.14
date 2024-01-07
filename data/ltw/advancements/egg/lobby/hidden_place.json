@@ -1,0 +1,35 @@
+{
+    "parent": "ltw:egg/lobby/lobby_root",
+    "display": {
+        "icon": {
+            "item": "minecraft:red_bed"
+        },
+        "title": "惊醒",
+        "description": [
+            {
+                "text": "从梦中苏醒过来，到达秦王号。\n",
+                "color": "gray"
+            },
+            {
+                "text": "「我是谁，我在哪，我要干什么？」",
+                "color": "dark_purple",
+                "italic": true
+            }
+        ],
+        "hidden": true,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "hidden": {
+            "trigger": "impossible"
+        }
+    },
+    "requirements": [
+        [
+            "hidden"
+        ]
+    ],
+    "rewards": {
+        "function": "ltw:advancement/hidden_place"
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "ltw:activity/element/turns3",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_block"
+    },
+    "title": {
+      "text": "元素战争 · 周而复始 · 合"
+    },
+    "description": [
+      {
+        "text": "参与 24 次游戏。\n",
+        "color": "white"
+      },
+      {
+        "text": "究极但不隐藏挑战！",
+        "color": "dark_gray",
+        "italic": true
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_4"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

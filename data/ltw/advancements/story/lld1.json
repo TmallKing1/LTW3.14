@@ -1,0 +1,50 @@
+{
+  "parent": "ltw:story/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:ender_pearl"
+    },
+    "title": {
+      "text": "幻境勇者 · α "
+    },
+    "description": [
+      {
+        "text": "在 10 场启用了幻境干扰的非最终轮游戏中获得第一名\n",
+        "color": "gray"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "1 绿宝石",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_1"
+  },
+  "criteria": {
+    "goal": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "scores": {
+              "stat_lld_win": {
+                "min": 10
+              }
+            },
+            "condition": "entity_scores",
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "parent": "ltw:parkour/river1",
+  "display": {
+    "icon": {
+      "item": "minecraft:barrel"
+    },
+    "title": {
+      "text": "神输鬼运 · β "
+    },
+    "description": [
+      {
+        "text": "【危险运输】存活至倒计时最大值减少至 10 秒，且至少运输了 1 个普通物资\n",
+        "color": "gray"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "2 绿宝石",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_2"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

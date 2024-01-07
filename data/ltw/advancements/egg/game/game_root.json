@@ -1,0 +1,31 @@
+{
+    "parent": "ltw:egg/root",
+    "display": {
+      "icon": {
+        "item": "minecraft:piglin_spawn_egg"
+      },
+      "title": {
+        "text": "游戏彩蛋"
+      },
+      "description": [
+        {
+          "text": "",
+          "color": "gray"
+        }
+      ],
+      "frame": "task",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": false
+    },
+    "criteria": {
+      "root": {
+        "trigger": "minecraft:location"
+      }
+    },
+    "requirements": [
+      [
+        "root"
+      ]
+    ]
+  }

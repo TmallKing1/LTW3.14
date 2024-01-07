@@ -1,0 +1,27 @@
+{
+  "parent": "ltw:activity/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:egg"
+    },
+    "title": {
+      "text": "鸭子快跑"
+    },
+    "description": [
+      {
+        "text": "2023年愚人节活动",
+        "color": "white"
+      }
+    ],
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "rewards": {},
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

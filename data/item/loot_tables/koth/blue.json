@@ -1,0 +1,58 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "item:mixed/blue",
+                    "weight": 40
+                },
+                {
+                    "type": "item",
+                    "name": "heart_of_the_sea",
+                    "weight": 20,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"30 能量值\",\"color\":\"light_purple\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:30}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "heart_of_the_sea",
+                    "weight": 20,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"40 能量值\",\"color\":\"light_purple\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:40}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "music_disc_pigstep",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"能量值随机 +40 或减半\",\"color\":\"light_purple\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:40}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "music_disc_pigstep",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"能量值随机 +40 或减半\",\"color\":\"light_purple\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:-1}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

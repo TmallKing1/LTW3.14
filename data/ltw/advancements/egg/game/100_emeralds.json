@@ -1,0 +1,49 @@
+{
+    "parent": "ltw:egg/game/game_root",
+    "display": {
+        "icon": {
+            "item": "minecraft:emerald"
+        },
+        "title": "村民 Coser",
+        "description": [
+            {
+                "text": "累计获得 100 颗绿宝石。\n",
+                "color": "gray"
+            },
+            {
+                "text": "「哼？哼！」",
+                "color": "dark_purple",
+                "italic": true
+            }
+        ],
+        "frame": "challenge",
+        "hidden": true
+    },
+    "criteria": {
+        "emerald": {
+            "trigger": "location",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "green_total": {
+                                "min": 100,
+                                "max": 114514
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "emerald"
+        ]
+    ],
+    "rewards": {
+        "function": "ltw:advancement/100_emeralds"
+    }
+}

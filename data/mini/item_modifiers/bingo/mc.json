@@ -1,0 +1,42 @@
+[
+    {
+        "function": "set_name",
+        "name": {
+            "nbt": "data.displayName",
+            "entity": "@e[tag=goal_selected,limit=1]",
+            "interpret": true
+        },
+        "entity": "this"
+    },
+    {
+        "function": "set_lore",
+        "lore": [
+            [
+                {
+                    "text": "你的状态：",
+                    "color": "gray"
+                },
+                {
+                    "nbt": "completion",
+                    "storage": "mini:bingo",
+                    "interpret": true
+                }
+            ],
+            [
+                {
+                    "text": "已完成玩家：",
+                    "color": "gray"
+                },
+                {
+                    "selector": "@e[tag=complete_selected]"
+                }
+            ]
+        ],
+        "entity": "this"
+    },
+    {
+        "function": "set_nbt",
+        "tag": "{bingo_item: 1b,HideFlags: 3}",
+        "entity": "this"
+    }
+]

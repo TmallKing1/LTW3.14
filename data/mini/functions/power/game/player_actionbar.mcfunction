@@ -1,0 +1,17 @@
+# 计算伤害
+scoreboard players operation $player_atk_100 mem = @s player_atk
+scoreboard players operation $player_atk_100 mem /= #100 mem
+scoreboard players operation $player_atk_00 mem = @s player_atk
+scoreboard players operation $player_atk_00 mem %= #100 mem
+
+# 能量值小于等于99
+execute if score $player_atk_00 mem matches 10.. run title @s[scores={player_energy=..99}] actionbar [{"text": "当前攻击力加成：","color": "red"},{"text": "+","color": "green"},{"score":{"name":"$player_atk_100","objective": "mem"},"color":"light_purple"},{"text":".","color":"light_purple"},{"score":{"name":"$player_atk_00","objective": "mem"},"color":"light_purple"},"  ",{"text": "能量：","color": "aqua"},{"score":{"name": "@s","objective": "player_energy"},"color": "green"},{"text": "/100","color": "green"}]
+execute if score $player_atk_00 mem matches ..9 run title @s[scores={player_energy=..99}] actionbar [{"text": "当前攻击力加成：","color": "red"},{"text": "+","color": "green"},{"score":{"name":"$player_atk_100","objective": "mem"},"color":"light_purple"},{"text":".0","color":"light_purple"},{"score":{"name":"$player_atk_00","objective": "mem"},"color":"light_purple"},"  ",{"text": "能量：","color": "aqua"},{"score":{"name": "@s","objective": "player_energy"},"color": "green"},{"text": "/100","color": "green"}]
+
+# 能量值大于等于100，已充能
+execute if score $player_atk_00 mem matches 10.. run title @s[scores={player_energy=100..},tag=powered] actionbar [{"text": "当前攻击力加成：","color": "red"},{"text": "+","color": "green"},{"score":{"name":"$player_atk_100","objective": "mem"},"color":"light_purple"},{"text":".","color":"light_purple"},{"score":{"name":"$player_atk_00","objective": "mem"},"color":"light_purple"},"  ",{"text": "能量：","color": "aqua"},{"score":{"name": "@s","objective": "player_energy"},"color": "green"},{"text": "/100","color": "green"}]
+execute if score $player_atk_00 mem matches ..9 run title @s[scores={player_energy=100..},tag=powered] actionbar [{"text": "当前攻击力加成：","color": "red"},{"text": "+","color": "green"},{"score":{"name":"$player_atk_100","objective": "mem"},"color":"light_purple"},{"text":".0","color":"light_purple"},{"score":{"name":"$player_atk_00","objective": "mem"},"color":"light_purple"},"  ",{"text": "能量：","color": "aqua"},{"score":{"name": "@s","objective": "player_energy"},"color": "green"},{"text": "/100","color": "green"}]
+
+# 能量值大于等于100，未充能
+execute if score $player_atk_00 mem matches 10.. run title @s[scores={player_energy=100..},tag=!powered] actionbar [{"text": "当前攻击力加成：","color": "red"},{"text": "+","color": "green"},{"score":{"name":"$player_atk_100","objective": "mem"},"color":"light_purple"},{"text":".","color":"light_purple"},{"score":{"name":"$player_atk_00","objective": "mem"},"color":"light_purple"},"  ",{"text": "手持铁剑按 ","color": "aqua","bold": true},{"keybind":"key.swapOffhand","color": "aqua","bold": true},{"text": " 以充能","color": "aqua","bold": true}]
+execute if score $player_atk_00 mem matches ..9 run title @s[scores={player_energy=100..},tag=!powered] actionbar [{"text": "当前攻击力加成：","color": "red"},{"text": "+","color": "green"},{"score":{"name":"$player_atk_100","objective": "mem"},"color":"light_purple"},{"text":".0","color":"light_purple"},{"score":{"name":"$player_atk_00","objective": "mem"},"color":"light_purple"},"  ",{"text": "手持铁剑按 ","color": "aqua","bold": true},{"keybind":"key.swapOffhand","color": "aqua","bold": true},{"text": " 以充能","color": "aqua","bold": true}]

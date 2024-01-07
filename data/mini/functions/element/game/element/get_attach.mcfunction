@@ -1,0 +1,1 @@
+execute store result score $element_type mem run data get entity @s data.element_attach

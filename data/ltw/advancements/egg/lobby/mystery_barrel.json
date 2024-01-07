@@ -1,0 +1,64 @@
+{
+    "parent": "ltw:egg/lobby/lobby_root",
+    "display": {
+        "icon": {
+            "item": "minecraft:barrel"
+        },
+        "title": "奇怪的木桶",
+        "description": [
+            {
+                "text": "找到奇怪木桶的秘密！\n",
+                "color": "gray"
+            },
+            {
+                "text": "奖励: ",
+                "color": "green"
+            },
+            {
+                "text": "1 金块\n",
+                "color": "gold"
+            },
+            {
+                "text": "「你是真的很闲。」",
+                "color": "dark_purple",
+                "italic": true
+            }
+        ],
+        "hidden": true
+    },
+    "criteria": {
+        "barrel": {
+            "trigger": "item_used_on_block",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "location_check",
+                        "predicate": {
+                            "block": {
+                                "blocks": ["barrel"],
+                                "nbt": "{Items:[{id:\"minecraft:player_head\"}]}"
+                            }
+                        }
+                    },
+                    {
+                        "condition": "match_tool",
+                        "predicate": {
+                            "items": [
+                                "diamond"
+                            ],
+                            "nbt": "{display: {Name: '\"LTW3.14\"'}}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "barrel"
+        ]
+    ],
+    "rewards": {
+        "function": "ltw:advancement/mystery_barrel"
+    }
+}

@@ -1,0 +1,33 @@
+execute store result score $random mem run random value 3..30
+execute if score $random mem matches 3 run tp @a[tag=ready_tp] ~ ~-3 ~
+execute if score $random mem matches 4 run tp @a[tag=ready_tp] ~ ~-4 ~
+execute if score $random mem matches 5 run tp @a[tag=ready_tp] ~ ~-5 ~
+execute if score $random mem matches 6 run tp @a[tag=ready_tp] ~ ~-6 ~
+execute if score $random mem matches 7 run tp @a[tag=ready_tp] ~ ~-7 ~
+execute if score $random mem matches 8 run tp @a[tag=ready_tp] ~ ~-8 ~
+execute if score $random mem matches 9 run tp @a[tag=ready_tp] ~ ~-9 ~
+execute if score $random mem matches 10 run tp @a[tag=ready_tp] ~ ~-10 ~
+execute if score $random mem matches 11 run tp @a[tag=ready_tp] ~ ~-11 ~
+execute if score $random mem matches 12 run tp @a[tag=ready_tp] ~ ~-12 ~
+execute if score $random mem matches 13 run tp @a[tag=ready_tp] ~ ~-13 ~
+execute if score $random mem matches 14 run tp @a[tag=ready_tp] ~ ~-14 ~
+execute if score $random mem matches 15 run tp @a[tag=ready_tp] ~ ~-15 ~
+execute if score $random mem matches 16 run tp @a[tag=ready_tp] ~ ~-16 ~
+execute if score $random mem matches 17 run tp @a[tag=ready_tp] ~ ~-17 ~
+execute if score $random mem matches 18 run tp @a[tag=ready_tp] ~ ~-18 ~
+execute if score $random mem matches 19 run tp @a[tag=ready_tp] ~ ~-19 ~
+execute if score $random mem matches 20 run tp @a[tag=ready_tp] ~ ~-20 ~
+execute if score $random mem matches 21 run tp @a[tag=ready_tp] ~ ~-21 ~
+execute if score $random mem matches 22 run tp @a[tag=ready_tp] ~ ~-22 ~
+execute if score $random mem matches 23 run tp @a[tag=ready_tp] ~ ~-23 ~
+execute if score $random mem matches 24 run tp @a[tag=ready_tp] ~ ~-24 ~
+execute if score $random mem matches 25 run tp @a[tag=ready_tp] ~ ~-25 ~
+execute if score $random mem matches 26 run tp @a[tag=ready_tp] ~ ~-26 ~
+execute if score $random mem matches 27 run tp @a[tag=ready_tp] ~ ~-27 ~
+execute if score $random mem matches 28 run tp @a[tag=ready_tp] ~ ~-28 ~
+execute if score $random mem matches 29 run tp @a[tag=ready_tp] ~ ~-29 ~
+execute if score $random mem matches 30 run tp @a[tag=ready_tp] ~ ~-30 ~
+execute as @a[tag=ready_tp] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air replace #mini:hopper_block
+execute as @a[tag=ready_tp] at @s run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 oak_log replace lava
+execute as @a[tag=ready_tp] at @s run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 oak_log replace water
+kill

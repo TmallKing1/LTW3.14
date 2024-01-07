@@ -1,0 +1,47 @@
+{
+  "parent": "ltw:story/lld3",
+  "display": {
+    "icon": {
+      "item": "minecraft:recovery_compass"
+    },
+    "title": {
+      "text": "幻境勇者 · Ω "
+    },
+    "description": [
+      {
+        "text": "在 154 场启用了幻境干扰的非最终轮游戏中获得第一名\n",
+        "color": "gray"
+      },
+      {
+        "text": "究极隐藏挑战！",
+        "color": "dark_gray",
+        "italic": true
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_4"
+  },
+  "criteria": {
+    "goal": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "scores": {
+              "stat_lld_win": {
+                "min": 154
+              }
+            },
+            "condition": "entity_scores",
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  }
+}

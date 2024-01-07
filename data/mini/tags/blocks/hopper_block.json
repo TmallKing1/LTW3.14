@@ -1,0 +1,26 @@
+{
+    "values": [
+        "diamond_ore",
+        "emerald_ore",
+        "ancient_debris",
+        "copper_ore",
+        "iron_ore",
+        "coal_ore",
+        "gold_ore",
+        "lapis_ore",
+        "redstone_ore",
+        "obsidian",
+        "sand",
+        "stone",
+        "cobblestone",
+        "oak_log",
+        "dirt",
+        "grass_block",
+        "oak_leaves",
+        "nether_quartz_ore",
+        "nether_gold_ore",
+        "gravel",
+        "water",
+        "lava"
+    ]
+}

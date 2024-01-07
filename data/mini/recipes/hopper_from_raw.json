@@ -1,0 +1,19 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "xxx",
+        "xyx",
+        "xxx"
+    ],
+    "key": {
+        "x": {
+            "item": "raw_iron"
+        },
+        "y": {
+            "item": "chest"
+        }
+    },
+    "result": {
+        "item": "minecraft:hopper_minecart"
+    }
+}

@@ -1,0 +1,39 @@
+[
+    {
+        "function": "set_name",
+        "name": {
+            "text": "温迪的头",
+            "color": "gold",
+            "italic": false
+        }
+    },
+    {
+        "function": "set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "text": "戴在头上时：",
+                "color": "gray",
+                "italic": false
+            },
+            [
+                {
+                    "text": "获得积分时有 2",
+                    "color": "blue",
+                    "italic": false
+                },
+                {
+                    "text": "% 概率获得额外 1 金粒",
+                    "color": "blue",
+                    "italic": false
+                }
+            ],
+            "",
+            {
+                "text": "你尚未拥有该物品！",
+                "color": "red",
+                "italic": false
+            }
+        ]
+    }
+]

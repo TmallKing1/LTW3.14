@@ -1,0 +1,1 @@
+execute if score $mini_type mem matches 6 run function mini:koth/tick10

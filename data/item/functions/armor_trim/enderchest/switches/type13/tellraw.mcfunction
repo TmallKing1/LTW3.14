@@ -1,0 +1,1 @@
+$tellraw @s ["",{"text": ">> ","color": "green","bold": true},{"text": "成功设置锻造材质为 "},{"translate": "trim_material.minecraft.$(TrimMaterialName)","color": "green"}]

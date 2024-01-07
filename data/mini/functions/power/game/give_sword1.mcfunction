@@ -1,0 +1,5 @@
+# 未充能
+$item replace entity @s[tag=!powered] hotbar.8 with iron_sword{game_item:1b,display:{Name:'{"text":"不同寻常的铁剑","color":"aqua","italic":false}'},AttributeModifiers:[{UUID:[I;1,1,4,5],Amount:-2.4,AttributeName:"generic.attack_speed",Slot:"mainhand",Name:"spd",Operation:0},{UUID:[I;2,0,2,1],Amount:$(SwordAtk),AttributeName:"generic.attack_damage",Name:"attack",Slot:"mainhand",Operation:0}],HideFlags:4,Unbreakable:1b}
+
+# 已充能
+$item replace entity @s[tag=powered] hotbar.8 with iron_sword{game_item:1b,display:{Name:'{"text":"整装待发的铁剑","color":"gold","italic":false}'},AttributeModifiers:[{UUID:[I;1,1,4,5],Amount:10,AttributeName:"generic.attack_speed",Slot:"mainhand",Name:"spd",Operation:0},{UUID:[I;2,0,2,1],Amount:$(SwordAtk),AttributeName:"generic.attack_damage",Name:"attack",Slot:"mainhand",Operation:0}],HideFlags:5,Unbreakable:1b,Enchantments:[{id:"infinity",lvl:1}]}

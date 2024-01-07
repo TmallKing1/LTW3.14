@@ -1,0 +1,27 @@
+{
+    "parent": "ltw:blood/ass3",
+    "display": {
+      "icon": {
+        "item": "minecraft:creeper_head"
+      },
+      "title": {
+        "text": "爆破学家 · Ω "
+      },
+      "description": [
+        {"text": "【核爆刺客】在满生命时获胜，且使用苦力怕的次数不超过 3 次\n", "color":"gray"},
+        {"text": "究极隐藏挑战！","color":"dark_gray","italic": true}
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": true
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_4"
+    },
+    "criteria": {
+      "a":{
+          "trigger": "minecraft:impossible"
+      }
+    }
+  }

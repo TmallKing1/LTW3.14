@@ -1,0 +1,1 @@
+tellraw @s {"text":"点击跳转爱发电赞助入口","clickEvent":{"action":"open_url","value":"https://afdian.net/a/xiaozhuzhizui"},"color": "green","underlined": true}

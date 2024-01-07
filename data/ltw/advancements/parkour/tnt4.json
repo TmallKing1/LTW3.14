@@ -1,0 +1,31 @@
+{
+    "parent": "ltw:parkour/tnt3",
+    "display": {
+      "icon": {
+        "item": "minecraft:obsidian"
+      },
+      "title": {
+        "text": "圣坛之主 · Ω "
+      },
+      "description": [
+        {"text": "【地陷圣坛】不使用钻石块或浮空药水的情况下获胜，且游戏持续时间 ≥ 40 秒\n", "color":"gray"},
+        {
+          "text": "究极隐藏挑战！",
+          "color": "dark_gray",
+          "italic": true
+        }
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": true
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_4"
+    },
+    "criteria": {
+      "a":{
+          "trigger": "minecraft:impossible"
+      }
+    }
+  }

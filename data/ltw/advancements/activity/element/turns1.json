@@ -1,0 +1,29 @@
+{
+  "parent": "ltw:activity/element/turns",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_nugget"
+    },
+    "title": {
+      "text": "元素战争 · 周而复始 · 起"
+    },
+    "description": [
+      {
+        "text": "参与 3 次游戏。\n",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_1"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

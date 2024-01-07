@@ -1,0 +1,28 @@
+{
+    "parent": "ltw:activity/element",
+    "display": {
+      "icon": {
+        "item": "minecraft:tipped_arrow",
+        "nbt": "{Potion:\"minecraft:strong_healing\"}"
+      },
+      "title": {
+        "text": "连杀次数"
+      },
+      "description": [
+        {
+          "text": "",
+          "color": "white"
+        }
+      ],
+      "frame": "goal",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "rewards": {},
+    "criteria": {
+      "a": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }

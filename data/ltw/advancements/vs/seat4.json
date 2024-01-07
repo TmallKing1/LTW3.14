@@ -1,0 +1,27 @@
+{
+    "parent": "ltw:vs/seat3",
+    "display": {
+      "icon": {
+        "item": "minecraft:command_block_minecart"
+      },
+      "title": {
+        "text": "固若金汤 · Ω "
+      },
+      "description": [
+        {"text": "【矿车抢座】不将任何人赶下座位的情况下获胜\n", "color":"gray"},
+        {"text": "究极隐藏挑战！","color":"dark_gray","italic": true}
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": true
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_4"
+    },
+    "criteria": {
+      "a":{
+          "trigger": "minecraft:impossible"
+      }
+    }
+  }

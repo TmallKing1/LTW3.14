@@ -1,0 +1,27 @@
+[
+    {
+        "function": "set_name",
+        "name": {
+            "text": "标靶",
+            "color": "light_purple",
+            "italic": false
+        }
+    },
+    {
+        "function": "set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "text": "无属性",
+                "color": "gray",
+                "italic": false
+            },
+            "",
+            {
+                "text": "点击取消装备！",
+                "color": "yellow",
+                "italic": false
+            }
+        ]
+    }
+]

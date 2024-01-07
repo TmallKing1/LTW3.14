@@ -1,0 +1,35 @@
+{
+    "parent": "ltw:egg/game/game_root",
+    "display": {
+        "icon": {
+            "item": "minecraft:clock"
+        },
+        "title": "游艺街忠实玩家",
+        "description": [
+            {
+                "text": "连续在线 114514 游戏刻。\n",
+                "color": "gray"
+            },
+            {
+                "text": "「猪最很感谢您的支持！」",
+                "color": "dark_purple",
+                "italic": true
+            }
+        ],
+        "frame": "challenge",
+        "hidden": true
+    },
+    "criteria": {
+        "time": {
+            "trigger": "impossible"
+        }
+    },
+    "requirements": [
+        [
+            "time"
+        ]
+    ],
+    "rewards": {
+        "function": "ltw:advancement/online_time"
+    }
+}

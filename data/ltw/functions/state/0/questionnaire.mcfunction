@@ -1,0 +1,1 @@
+tellraw @s {"text":"点击跳转反馈问卷","clickEvent":{"action":"open_url","value":"https://tp.wjx.top/vm/tUXnH54.aspx"},"color": "green","underlined": true}

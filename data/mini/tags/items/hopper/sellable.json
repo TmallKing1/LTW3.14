@@ -1,0 +1,17 @@
+{
+    "values": [
+        "copper_ingot",
+        "iron_ingot",
+        "gold_ingot",
+        "diamond",
+        "emerald",
+        "redstone",
+        "lapis_lazuli",
+        "obsidian",
+        "flint",
+        "glass",
+        "quartz",
+        "netherite_scrap",
+        "smooth_stone"
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "item:mixed/white",
+                    "weight": 40
+                },
+                {
+                    "type": "item",
+                    "name": "heart_of_the_sea",
+                    "weight": 20,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"5 能量值\",\"color\":\"white\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:5}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "heart_of_the_sea",
+                    "weight": 20,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"10 能量值\",\"color\":\"white\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:10}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "flower_banner_pattern",
+                    "weight": 5,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"1/4 概率获得 20 能量值\",\"color\":\"white\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:20}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "flower_banner_pattern",
+                    "weight": 15,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{item_name:'{\"text\":\"1/4 概率获得 20 能量值\",\"color\":\"white\"}',is_bonus:1b,bonus_new:1b,bonus_add_power:0}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

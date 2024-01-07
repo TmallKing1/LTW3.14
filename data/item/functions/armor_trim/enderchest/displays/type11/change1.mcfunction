@@ -1,0 +1,1 @@
+$data modify storage lib:string Strings.B set from storage item:armor Types[$(Template)]

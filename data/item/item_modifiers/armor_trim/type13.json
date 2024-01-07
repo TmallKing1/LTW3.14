@@ -1,0 +1,42 @@
+[
+    {
+        "function": "set_lore",
+        "lore": [
+            "",
+            {
+                "text": "你当前未拥有此纹饰材料！",
+                "color": "red",
+                "italic": false
+            }
+        ],
+        "conditions": [
+            {
+                "condition": "entity_scores",
+                "entity": "this",
+                "scores": {
+                    "trim_boolean": 0
+                }
+            }
+        ]
+    },
+    {
+        "function": "set_lore",
+        "lore": [
+            "",
+            {
+                "text": "点击切换！",
+                "color": "yellow",
+                "italic": false
+            }
+        ],
+        "conditions": [
+            {
+                "condition": "entity_scores",
+                "entity": "this",
+                "scores": {
+                    "trim_boolean": 1
+                }
+            }
+        ]
+    }
+]

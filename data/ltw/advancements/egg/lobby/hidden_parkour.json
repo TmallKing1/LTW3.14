@@ -1,0 +1,54 @@
+{
+    "parent": "ltw:egg/lobby/lobby_root",
+    "display": {
+        "icon": {
+            "item": "minecraft:netherite_boots"
+        },
+        "title": "隐藏跑酷 Complete!",
+        "description": [
+            {
+                "text": "完成大厅的隐藏跑酷。\n",
+                "color": "gray"
+            },
+            {
+                "text": "「恭喜你通过了龙猫所制作的丧心病狂跑酷！」",
+                "color": "dark_purple",
+                "italic": true
+            }
+        ],
+        "hidden": true
+    },
+    "criteria": {
+        "parkour": {
+            "trigger": "location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "position": {
+                            "x": {
+                                "min": 5.8,
+                                "max": 11.2
+                            },
+                            "y": {
+                                "min": 48.9,
+                                "max": 50.0
+                            },
+                            "z": {
+                                "min": -31.7,
+                                "max": -24.3
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "parkour"
+        ]
+    ],
+    "rewards": {
+        "function": "ltw:advancement/hidden_parkour"
+    }
+}

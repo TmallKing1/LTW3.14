@@ -1,0 +1,33 @@
+{
+    "parent": "ltw:egg/game/game_root",
+    "display": {
+        "icon": {
+            "item": "minecraft:totem_of_undying"
+        },
+        "title": "不死之身",
+        "description": [
+            {
+                "text": "在游戏中，有 10 个或更多不死图腾同时存在于你的物品栏内。\n",
+                "color": "gray"
+            },
+            {
+                "text": "「巴尔泽『布』，我已登神。」",
+                "color": "dark_purple",
+                "italic": true
+            }
+        ],
+        "frame": "challenge",
+        "hidden": true
+    },
+    "criteria": {
+        "totem": {
+            "trigger": "impossible"
+        }
+    },
+    "requirements": [
+        [
+            "totem"
+        ]
+    ],
+    "rewards": {}
+}

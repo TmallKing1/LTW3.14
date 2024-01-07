@@ -1,0 +1,34 @@
+{
+  "parent": "ltw:activity/element/killstreak3",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_block"
+    },
+    "title": {
+      "text": "元素战争 · 杀戮狂魔 · 合"
+    },
+    "description": [
+      {
+        "text": "完成所有前置进度后达成 1 次绝杀。\n",
+        "color": "white"
+      },
+      {
+        "text": "究极但不隐藏挑战！",
+        "color": "dark_gray",
+        "italic": true
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_4"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

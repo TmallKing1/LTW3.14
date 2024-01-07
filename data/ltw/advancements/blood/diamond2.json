@@ -1,0 +1,37 @@
+{
+  "parent": "ltw:blood/diamond1",
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond_axe"
+    },
+    "title": {
+      "text": "钻石大亨 · β "
+    },
+    "description": [
+      {
+        "text": "【钻石风暴】游戏结束时拥有 12 颗钻石\n",
+        "color": "gray"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "2 绿宝石",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_2"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

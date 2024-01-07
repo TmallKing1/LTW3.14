@@ -1,0 +1,62 @@
+[
+    {
+        "function": "set_name",
+        "name": {
+            "text": "HerobrineXia 的头",
+            "color": "gold",
+            "italic": false
+        }
+    },
+    {
+        "function": "set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "text": "戴在头上时：",
+                "color": "gray",
+                "italic": false
+            },
+            [
+                {
+                    "text": "+0.",
+                    "color": "blue",
+                    "italic": false
+                },
+                {
+                    "score": {
+                        "name": "@s",
+                        "objective": "powerup_00003"
+                    },
+                    "color": "blue",
+                    "italic": false
+                },
+                {
+                    "text": " 盔甲韧性",
+                    "color": "blue",
+                    "italic": false
+                }
+            ],
+            "",
+            [
+                {
+                    "text": "当前等级: ",
+                    "color": "gray",
+                    "italic": false
+                },
+                {
+                    "score": {
+                        "name": "@s",
+                        "objective": "powerup_00003"
+                    },
+                    "color": "aqua",
+                    "italic": false
+                }
+            ],
+            {
+                "text": "点击取消装备！",
+                "color": "yellow",
+                "italic": false
+            }
+        ]
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "function": "set_enchantments",
+        "enchantments": {
+            "aqua_affinity": 1
+        },
+        "entity": "this"
+    }
+]

@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "a": {
+            "trigger": "player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "type": "zombie",
+                    "nbt": "{Tags:[\"bullet_entity\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "mini:bullet/game/kill_zombie"
+    }
+}

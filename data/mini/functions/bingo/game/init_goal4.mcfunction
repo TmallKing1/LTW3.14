@@ -1,0 +1,36 @@
+execute if score @s goal_id matches 1 run item replace block 0 0 1 container.0 with enchanting_table
+execute if score @s goal_id matches 2 run item replace block 0 0 1 container.0 with anvil
+execute if score @s goal_id matches 3 run item replace block 0 0 1 container.0 with jukebox
+execute if score @s goal_id matches 4 run item replace block 0 0 1 container.0 with hopper_minecart
+execute if score @s goal_id matches 5 run item replace block 0 0 1 container.0 with trapped_chest
+execute if score @s goal_id matches 6 run item replace block 0 0 1 container.0 with hay_block
+execute if score @s goal_id matches 7 run item replace block 0 0 1 container.0 with armor_stand
+execute if score @s goal_id matches 8 run item replace block 0 0 1 container.0 with yellow_concrete
+execute if score @s goal_id matches 9 run item replace block 0 0 1 container.0 with smoker
+execute if score @s goal_id matches 10 run item replace block 0 0 1 container.0 with grindstone
+execute if score @s goal_id matches 11 run item replace block 0 0 1 container.0 with lectern
+execute if score @s goal_id matches 12 run item replace block 0 0 1 container.0 with lantern
+execute if score @s goal_id matches 13 run item replace block 0 0 1 container.0 with diamond_chestplate
+execute if score @s goal_id matches 14 run item replace block 0 0 1 container.0 with mossy_stone_bricks
+execute if score @s goal_id matches 15 run item replace block 0 0 1 container.0 with lodestone
+execute if score @s goal_id matches 16 run item replace block 0 0 1 container.0 with stonecutter
+execute if score @s goal_id matches 17 run item replace block 0 0 1 container.0 with rotten_flesh 12
+execute if score @s goal_id matches 18 run item replace block 0 0 1 container.0 with apple
+execute if score @s goal_id matches 19 run item replace block 0 0 1 container.0 with light_gray_stained_glass
+execute if score @s goal_id matches 20 run item replace block 0 0 1 container.0 with mossy_cobblestone_wall
+execute if score @s goal_id matches 21 run item replace block 0 0 1 container.0 with cracked_stone_bricks
+execute if score @s goal_id matches 22 run item replace block 0 0 1 container.0 with rail
+execute if score @s goal_id matches 23 run item replace block 0 0 1 container.0 with diamond_hoe
+execute if score @s goal_id matches 24 run item replace block 0 0 1 container.0 with piston
+execute if score @s goal_id matches 25 run item replace block 0 0 1 container.0 with detector_rail
+execute if score @s goal_id matches 26 run item replace block 0 0 1 container.0 with repeater
+execute if score @s goal_id matches 27 run item replace block 0 0 1 container.0 with compass
+execute if score @s goal_id matches 28 run item replace block 0 0 1 container.0 with activator_rail
+execute if score @s goal_id matches 29 run item replace block 0 0 1 container.0 with chiseled_sandstone
+execute if score @s goal_id matches 30 run item replace block 0 0 1 container.0 with cut_sandstone
+execute if score @s goal_id matches 31 run item replace block 0 0 1 container.0 with campfire
+execute if score @s goal_id matches 32 run item replace block 0 0 1 container.0 with stripped_oak_wood 12
+execute if score @s goal_id matches 33 run item replace block 0 0 1 container.0 with fletching_table
+execute if score @s goal_id matches 34 run item replace block 0 0 1 container.0 with note_block
+execute if score @s goal_id matches 35 run item replace block 0 0 1 container.0 with chiseled_stone_bricks
+execute if score @s goal_id matches 36 run item replace block 0 0 1 container.0 with dispenser

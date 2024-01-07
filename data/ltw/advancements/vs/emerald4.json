@@ -1,0 +1,35 @@
+{
+  "parent": "ltw:vs/emerald3",
+  "display": {
+    "icon": {
+      "item": "minecraft:emerald_block",
+      "nbt": "{Enchantments:[{id:\"minecraft:protection\",lvl:4s}]}"
+    },
+    "title": {
+      "text": "商业奇迹 · Ω "
+    },
+    "description": [
+      {
+        "text": "【贸易专家】完成所有获得绿宝石和积分的交易\n",
+        "color": "gray"
+      },
+      {
+        "text": "究极隐藏挑战！",
+        "color": "dark_gray",
+        "italic": true
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_4"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

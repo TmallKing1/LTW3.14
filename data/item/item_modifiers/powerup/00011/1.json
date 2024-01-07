@@ -1,0 +1,62 @@
+[
+    {
+        "function": "set_name",
+        "name": {
+            "text": "钟离的头",
+            "color": "gold",
+            "italic": false
+        }
+    },
+    {
+        "function": "set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "text": "戴在头上时：",
+                "color": "gray",
+                "italic": false
+            },
+            [
+                {
+                    "text": "拾取奖励中的金粒时有 ",
+                    "color": "blue",
+                    "italic": false
+                },
+                {
+                    "score": {
+                        "name": "@s",
+                        "objective": "powerup_temp"
+                    },
+                    "color": "blue",
+                    "italic": false
+                },
+                {
+                    "text": "% 概率获得额外 1 金粒",
+                    "color": "blue",
+                    "italic": false
+                }
+            ],
+            "",
+            [
+                {
+                    "text": "当前等级: ",
+                    "color": "gray",
+                    "italic": false
+                },
+                {
+                    "score": {
+                        "name": "@s",
+                        "objective": "powerup_00011"
+                    },
+                    "color": "aqua",
+                    "italic": false
+                }
+            ],
+            {
+                "text": "点击取消装备！",
+                "color": "yellow",
+                "italic": false
+            }
+        ]
+    }
+]

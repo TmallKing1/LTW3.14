@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:parrot_spawn_egg"
+    },
+    "title": {
+      "text": "彩蛋"
+    },
+    "description": [
+      {
+        "text": "",
+        "color": "gray"
+      }
+    ],
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "minecraft:textures/block/amethyst_block.png"
+  },
+  "criteria": {
+    "root": {
+      "trigger": "minecraft:location"
+    }
+  },
+  "requirements": [
+    [
+      "root"
+    ]
+  ]
+}

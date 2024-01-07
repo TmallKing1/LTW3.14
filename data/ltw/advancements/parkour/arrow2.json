@@ -1,0 +1,38 @@
+{
+  "parent": "ltw:parkour/arrow1",
+  "display": {
+    "icon": {
+      "item": "minecraft:tnt",
+      "nbt": "{Enchantments:[{id:\"minecraft:protection\",lvl:1}]}"
+    },
+    "title": {
+      "text": "百步穿杨 · β "
+    },
+    "description": [
+      {
+        "text": "【掘一死箭】在最上层获得胜利\n",
+        "color": "gray"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "2 绿宝石",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_2"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
