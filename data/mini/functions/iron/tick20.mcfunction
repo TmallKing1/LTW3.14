@@ -19,7 +19,7 @@ execute if score $countdown mem matches 180 run tellraw @a[team=playing,scores={
 execute if score $countdown mem matches 150 unless score #gamemode mem matches 1 run function mini:iron/game/lld/init_lld
 
 # 120s：雷达提示
-execute if score $countdown mem matches 120 run title @a subtitle {"text":"⚠ 玩家雷达将在三十秒后开启！ ⚠","color":"yellow"}
+execute if score $countdown mem matches 120 run title @a subtitle {"text":"⚠ 玩家位置将在三十秒后暴露！ ⚠","color":"yellow"}
 execute if score $countdown mem matches 120 run title @a times 1t 100t 3t
 execute if score $countdown mem matches 120 run title @a title ""
 execute if score $countdown mem matches 120 run scoreboard players set $bossbar_color mem 2
@@ -27,7 +27,7 @@ execute if score $countdown mem matches 120 run function lib:bossbar/show
 
 # 90s：雷达开启
 execute if score $countdown mem matches 91 as @a run function lib:sounds/music/mini_fast
-execute if score $countdown mem matches 90 run title @a subtitle {"text":"⚠ 玩家雷达已开启！ ⚠","color":"red"}
+execute if score $countdown mem matches 90 run title @a subtitle {"text":"⚠ 玩家位置已显示！ ⚠","color":"red"}
 execute if score $countdown mem matches 90 run title @a times 1t 120t 3t
 execute if score $countdown mem matches 90 run title @a title ""
 execute if score $countdown mem matches 90 run scoreboard players set $bossbar_color mem 1

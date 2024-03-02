@@ -48,4 +48,7 @@ data modify entity @e[tag=new_zombie,tag=obsidian_zombie,limit=1] Health set val
 # 调整幻境干扰时的僵尸属性
 execute if score $ley_line_disorder mem matches 2 run attribute @e[tag=new_zombie,limit=1] generic.attack_damage modifier add 12bc0778-5585-498c-a1d4-993156bd3ff6 "" 0.2 multiply
 
+# 入队
+team join zombie @e[tag=new_zombie]
+
 tag @e[tag=new_zombie] remove new_zombie

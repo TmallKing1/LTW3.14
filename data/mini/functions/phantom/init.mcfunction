@@ -5,7 +5,3 @@ scoreboard objectives remove kill_phantom
 scoreboard objectives add kill_phantom killed:phantom "幻翼击杀数"
 scoreboard objectives remove kill_phantom2
 scoreboard objectives add kill_phantom2 dummy "幻翼击杀数缓存"
-
-team add zombie "僵尸"
-team modify zombie collisionRule always
-team modify zombie friendlyFire false

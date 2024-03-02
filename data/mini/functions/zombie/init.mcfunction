@@ -10,3 +10,7 @@ scoreboard objectives remove zombie_health
 scoreboard objectives add zombie_health dummy "僵尸生命值"
 scoreboard objectives remove attacker_UUID
 scoreboard objectives add attacker_UUID dummy "攻击者UUID"
+
+team add zombie "僵尸"
+team modify zombie collisionRule always
+team modify zombie friendlyFire false

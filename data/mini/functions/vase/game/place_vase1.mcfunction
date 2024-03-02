@@ -1,0 +1,1 @@
+$execute positioned $(PlaceX) 6 $(PlaceZ) run function mini:vase/game/place_vase2

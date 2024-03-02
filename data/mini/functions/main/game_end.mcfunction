@@ -12,6 +12,7 @@ execute if score $mini_type mem matches 9 run function mini:river/game_end
 execute if score $mini_type mem matches 10 run function mini:bullet/game_end
 execute if score $mini_type mem matches 11 run function mini:boomer/game_end
 execute if score $mini_type mem matches 12 run function mini:chain/game_end
+execute if score $mini_type mem matches 13 run function mini:vase/game_end
 execute if score $mini_type mem matches 101 run function mini:iron/game_end
 execute if score $mini_type mem matches 102 run function mini:trade/game_end
 execute if score $mini_type mem matches 103 run function mini:diamond/game_end

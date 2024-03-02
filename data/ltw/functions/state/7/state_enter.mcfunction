@@ -15,6 +15,8 @@ function lib:bossbar/show
 # 初始化倒计时
 scoreboard players set $countdown mem 5
 
+scoreboard players set $first_selection mem 1
+
 # 伤害管理
 scoreboard players set $remove_resistance mem 0
 team modify playing friendlyFire false

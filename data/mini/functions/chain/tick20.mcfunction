@@ -21,4 +21,4 @@ execute if score #new_item mem matches 0 run scoreboard players add $new_item_cd
 execute if score $new_item_cd mem matches ..19 run scoreboard players set #new_item mem 1
 
 # 如果上述条件均满足，则刷出新物品
-execute if score #new_item mem matches 0 run function mini:circle/game/new_item
+execute if score #new_item mem matches 0 run function mini:chain/game/new_item

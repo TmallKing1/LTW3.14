@@ -1,0 +1,1 @@
+$execute if block $(PlaceX) 6 $(PlaceZ) decorated_pot run function mini:vase/game/get_position

@@ -1,5 +1,5 @@
 # 生成苦力怕
-execute anchored eyes run summon creeper ^ ^ ^0.3 {Tags: ["creeper1"], CustomName: '', ignited: 1b, Fuse: 22s, AbsorptionAmount: 1000}
+execute anchored eyes run summon creeper ^ ^ ^0.3 {Tags: ["creeper1"], CustomName: '"Creeper"', ignited: 1b, Fuse: 22s, AbsorptionAmount: 1000}
 # 生成标记
 summon marker ^ ^ ^1 {Tags: ["marker1"]}
 # 记录自己和标记的位置

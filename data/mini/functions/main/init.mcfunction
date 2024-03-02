@@ -8,6 +8,7 @@ function mini:river/init
 function mini:bullet/init
 function mini:boomer/init
 function mini:chain/init
+function mini:vase/init
 
 function mini:iron/init
 function mini:trade/init

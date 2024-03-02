@@ -13,5 +13,8 @@ kill @e[type=experience_orb]
 # 对受伤僵尸的处理
 execute as @e[type=zombie,nbt={HurtTime: 9s}] at @s run function mini:zombie/game/zombie_hurt
 
+# 出界玩家处理
+execute as @a[tag=mini_running] if entity @s[x=1988.0,y=15.0,z=11988.0,dx=44,dy=27,dz=44] at @s run damage @s 114.514 bad_respawn_point
+
 # 清理浮漂
 kill @e[type=fishing_bobber]

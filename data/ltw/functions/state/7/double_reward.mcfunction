@@ -10,3 +10,5 @@ function ltw:state/6/generate_bonus
 
 # 初始化倒计时
 scoreboard players set $countdown mem 5
+
+scoreboard players set $first_selection mem 1

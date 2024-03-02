@@ -14,7 +14,7 @@ item replace entity @s[scores={shop_02_arrow=2}] inventory.0 with arrow 2
 item replace entity @s[scores={shop_02_arrow=3}] inventory.0 with arrow 3
 item replace entity @s[scores={shop_02_arrow=4}] inventory.0 with tipped_arrow{custom_potion_effects:[{id:"slowness", amplifier:0,duration:100}], CustomPotionColor: 5730431} 3
 item replace entity @s[scores={shop_02_arrow=5}] inventory.0 with tipped_arrow{custom_potion_effects:[{id:"slowness", amplifier:0,duration:100}], CustomPotionColor: 5730431} 4
-item replace entity @s[scores={shop_02_arrow=5}] inventory.0 with tipped_arrow{custom_potion_effects:[{id:"slowness", amplifier:1,duration:100}], CustomPotionColor: 5730431} 4
+item replace entity @s[scores={shop_02_arrow=6}] inventory.0 with tipped_arrow{custom_potion_effects:[{id:"slowness", amplifier:1,duration:100}], CustomPotionColor: 5730431} 4
 
 # 03
 clear @s golden_apple

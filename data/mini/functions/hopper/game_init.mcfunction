@@ -9,8 +9,9 @@ scoreboard players set $game_end_mode mem 0
 # 调整时间
 time set 8600t
 
-# 幻境干扰
+fill -1 265 4968 -32 319 4999 air
 
+# 幻境干扰
 scoreboard players set $lld_prepare mem 0
 scoreboard players set $lld_display_countdown mem 10
 scoreboard players set $bossbar_display_mode mem 0

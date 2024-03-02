@@ -16,6 +16,9 @@ execute if entity @a[tag=mini_rank4,tag=new_selector] run tellraw @a[tag=!new_se
 
 execute unless entity @a[tag=new_selector] if entity @a[tag=selecting] run tellraw @a ["",{"text": ">> ","color":"red","bold": true},{"selector": "@a[tag=selecting]","color":"red"}," 未选择奖励……"]
 
+# 非第一个
+scoreboard players set $first_selection mem 0
+
 # 清除「取消选择」屏障
 clear @a[tag=selecting] barrier
 

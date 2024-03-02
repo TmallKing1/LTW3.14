@@ -5,58 +5,64 @@
       "bonus_rolls": 0.0,
       "entries": [
         {
-          "type": "minecraft:alternatives",
-          "children": [
+          "type": "minecraft:item",
+          "name": "cactus",
+          "functions": [
             {
-              "type": "minecraft:dynamic",
+              "function": "copy_nbt",
+              "source": "this",
+              "ops": [
+                {
+                  "op": "replace",
+                  "source": "Owner[0]",
+                  "target": "SourceUUID"
+                }
+              ],
               "conditions": [
                 {
-                  "condition": "minecraft:match_tool",
+                  "condition": "entity_properties",
+                  "entity": "this",
                   "predicate": {
-                    "tag": "minecraft:breaks_decorated_pots"
-                  }
-                },
-                {
-                  "condition": "minecraft:inverted",
-                  "term": {
-                    "condition": "minecraft:match_tool",
-                    "predicate": {
-                      "enchantments": [
-                        {
-                          "enchantment": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
-                        }
-                      ]
-                    }
+                    "type": "#impact_projectiles"
                   }
                 }
-              ],
-              "name": "minecraft:sherds"
+              ]
             },
             {
-              "type": "minecraft:item",
-              "functions": [
+              "function": "copy_nbt",
+              "source": "this",
+              "ops": [
                 {
-                  "function": "minecraft:copy_nbt",
-                  "ops": [
-                    {
-                      "op": "replace",
-                      "source": "sherds",
-                      "target": "BlockEntityTag.sherds"
-                    }
-                  ],
-                  "source": "block_entity"
+                  "op": "replace",
+                  "source": "UUID[0]",
+                  "target": "SourceUUID"
                 }
               ],
-              "name": "minecraft:decorated_pot"
+              "conditions": [
+                {
+                  "condition": "entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "player"
+                  }
+                }
+              ]
+            },
+            {
+              "function": "copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
+                  "op": "replace",
+                  "source": "sherds[0]",
+                  "target": "SherdType"
+                }
+              ]
             }
           ]
         }
       ],
       "rolls": 1.0
     }
-  ],
-  "random_sequence": "minecraft:blocks/decorated_pot"
+  ]
 }

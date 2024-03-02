@@ -37,6 +37,16 @@ tag @s[tag=!new_checked] add new_checked
 tellraw @s[tag=!bc_2] ["",{"text": ">> ","color": "aqua","bold": true},"由于数据删除，服务器为玩家补偿 10 枚魔法符咒！"]
 scoreboard players add @s[tag=!bc_2] primogem 640
 tag @s[tag=!bc_2] add bc_2
+give @s diamond_chestplate{AttributeModifiers:[{}]}
+# 版本更新补偿
+tellraw @s[tag=!bc_1_1] ["",{"text": ">> ","color": "aqua","bold": true},"成功领取 1.1 版本更新奖励：240 魔法精华！"]
+scoreboard players add @s[tag=!bc_1_1] primogem 240
+tag @s[tag=!bc_1_1] add bc_1_1
+
+# 版本更新补偿
+tellraw @s[tag=!bc_1_1_1,scores={stat_total=1..}] ["",{"text": ">> ","color": "aqua","bold": true},"成功领取维护补偿：120 魔法精华！"]
+scoreboard players add @s[tag=!bc_1_1_1,scores={stat_total=1..}] primogem 120
+tag @s[tag=!bc_1_1_1] add bc_1_1_1
 
 # 活动：黎明盛会
 tag @s remove double_reward

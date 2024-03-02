@@ -8,8 +8,8 @@ execute as @a[tag=mini_running] at @s run function mini:chain/game/calculate_dis
 execute if score $boom_count1 mem matches 1.. run function mini:chain/game/get_minimum
 
 # 爆炸
-execute as @a[tag=targeted_player] run function mini:main/player_lose_heart
 tellraw @a ["", {"text": ">> ","color": "gold","bold": true}, {"selector": "@a[tag=targeted_player]","color": "gold"}, {"text": " 裂开了！"}]
+execute as @a[tag=targeted_player] run function mini:main/player_lose_heart
 tag @a remove targeted_player
 
 # 特效
