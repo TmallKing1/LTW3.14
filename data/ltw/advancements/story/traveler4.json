@@ -1,0 +1,60 @@
+{
+  "parent": "ltw:story/traveler3",
+  "display": {
+    "icon": {
+      "item": "minecraft:dark_oak_sign"
+    },
+    "title": {
+      "text": "探索时光 · Ω "
+    },
+    "description": [
+      {
+        "text": "到达「对视的虚无」\n",
+        "color": "gray"
+      },
+      {
+        "text": "究极隐藏挑战！",
+        "color": "dark_gray",
+        "italic": true
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_4"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "position": {
+                  "x": {
+                    "min": -2.0,
+                    "max": -1.0
+                  },
+                  "y": {
+                    "min": 45.0,
+                    "max": 46.0
+                  },
+                  "z": {
+                    "min": -61.0,
+                    "max": -59.0
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

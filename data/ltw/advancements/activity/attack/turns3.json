@@ -1,0 +1,45 @@
+{
+  "parent": "ltw:activity/attack/turns2",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_ingot"
+    },
+    "title": {
+      "text": "重在参与 · 转"
+    },
+    "description": [
+      {
+        "text": "参与 6 次游戏且每次游戏至少造成 10 点伤害。\n",
+        "color": "white"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "42 魔法精华",
+        "color": "light_purple"
+      },
+      {
+        "text": "，",
+        "color": "gray"
+      },
+      {
+        "text": "4 金锭",
+        "color": "gold"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_3"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

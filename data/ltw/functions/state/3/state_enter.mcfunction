@@ -11,6 +11,12 @@ execute if score $round mem matches 6 if score $random mem matches 0..2 run scor
 execute if score #gamemode mem matches 1 run scoreboard players set $double_reward mem 0
 execute if score #gamemode mem matches 2 run scoreboard players set $double_reward mem 1
 
+# 1.2 版本活动：发动总攻，轮数为 5
+#execute if score $round mem matches 5 store result score $random mem run random value 1..2
+#execute if score $round mem matches 5 if score $attack_end mem matches 0 if score $random mem matches 1 run scoreboard players set $mini_type mem 304
+#execute if score $round mem matches 5 if score $attack_end mem matches 0 if score $random mem matches 1 run scoreboard players set $round mem 0
+#execute if score $round mem matches 0 if score $attack_end mem matches 1 run scoreboard players set $round mem 5
+
 # 玩家进入状态
 execute as @a[team=!debugging] run function ltw:state/3/player_enter
 function ltw:state/3/spectate
@@ -66,9 +72,16 @@ execute if score #gamemode mem matches 1 if score $round mem matches 6 if score 
 
 # 1.0 版本活动：会心一击
 # 若当前轮数为 0 则选用会心一击
-execute if score $round mem matches 0 run scoreboard players set $mini_type mem 303
+#execute if score $round mem matches 0 run scoreboard players set $mini_type mem 303
 
 # 1.0 版本活动：开局不重置物品，打完第一局再重置
+#execute if score $round mem matches 1 as @a[team=playing] at @s run function item:shop/refresh_equip
+
+# 1.4 版本活动：元素战争 EX
+# 若当前轮数为 0 则选用元素战争 EX
+#execute if score $round mem matches 0 run scoreboard players set $mini_type mem 302
+
+# 1.4 版本活动：开局不重置物品，打完第一局再重置
 #execute if score $round mem matches 1 as @a[team=playing] at @s run function item:shop/refresh_equip
 
 # 游戏规则

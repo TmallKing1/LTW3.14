@@ -3,12 +3,14 @@ function mini:parkour_old/init
 function mini:tntrun/init
 function mini:hotpm/init
 function mini:phantom/init
+function mini:koth/init
 function mini:zombie/init
 function mini:river/init
 function mini:bullet/init
 function mini:boomer/init
 function mini:chain/init
 function mini:vase/init
+function mini:sand/init
 
 function mini:iron/init
 function mini:trade/init
@@ -22,6 +24,7 @@ function mini:arrow/init
 function mini:duckrush/init
 function mini:element/init
 function mini:power/init
+function mini:attack/init
 
 # 计分板初始化
 scoreboard objectives remove mini_score

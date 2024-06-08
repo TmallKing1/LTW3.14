@@ -1,0 +1,1 @@
+$damage @s $(Damage) mini:element_damage by @p[tag=attacker]

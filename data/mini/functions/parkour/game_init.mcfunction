@@ -16,8 +16,8 @@ setblock 1000 4 1000 air
 setblock 1000 4 1032 air
 
 # 幻境干扰
-execute store result score $random mem run random value 1..10
-execute if score $random mem matches 1..5 run scoreboard players set $ley_line_disorder mem 1
+execute store result score $random mem run random value 1..2
+execute if score $random mem matches 1 run scoreboard players set $ley_line_disorder mem 1
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 0
@@ -25,5 +25,6 @@ execute unless score $ley_line_disorder mem matches 1 run team modify playing fr
 execute if score $ley_line_disorder mem matches 1 run team modify playing friendlyFire true
 team modify playing collisionRule never
 team modify playing deathMessageVisibility never
+gamerule naturalRegeneration true
 
 schedule function mini:parkour/game_init2 15t replace

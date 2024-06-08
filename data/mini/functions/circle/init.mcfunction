@@ -1,6 +1,4 @@
 # 计分板初始化
-scoreboard objectives remove kills
-scoreboard objectives add kills dummy ["玩家击杀数"]
 scoreboard objectives remove kill_streak
 scoreboard objectives add kill_streak dummy ["连杀次数"]
 scoreboard objectives remove last_damage_UUID

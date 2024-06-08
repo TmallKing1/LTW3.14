@@ -13,8 +13,12 @@ scoreboard players set $survival mem 0
 scoreboard players set $game_end_mode mem 1
 
 # 幻境干扰
-execute store result score $random mem run random value 1..10
-execute if score $random mem matches 1..5 run scoreboard players set $ley_line_disorder mem 1
+execute store result score $random mem run random value 1..2
+execute if score $random mem matches 1 run scoreboard players set $ley_line_disorder mem 1
+
+execute if score $ley_line_disorder mem matches 1 run scoreboard players set $period_lld_max mem 320
+execute if score $ley_line_disorder mem matches 1 run scoreboard players set $period_lld_warn mem 280
+execute if score $ley_line_disorder mem matches 1 run scoreboard players set $period_lld_warned mem 0
 
 # 生成地图
 setblock 999 60 14999 structure_block[mode=load]{mode: "LOAD", posX: 0, posY: 1, posZ: 0, name: "mini:element000"}

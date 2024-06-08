@@ -1,0 +1,42 @@
+{
+  "parent": "ltw:activity/attack/turns3",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_block"
+    },
+    "title": {
+      "text": "重在参与 · 合"
+    },
+    "description": [
+      {
+        "text": "参与 10 次游戏且每次游戏至少造成 10 点伤害。\n",
+        "color": "white"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "3 金锭\n",
+        "color": "gold"
+      },
+      {
+        "text": "究极但不隐藏挑战！",
+        "color": "dark_gray",
+        "italic": false
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_4"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

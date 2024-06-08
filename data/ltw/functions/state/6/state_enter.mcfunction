@@ -9,6 +9,9 @@ scoreboard objectives setdisplay list total_score_disp
 scoreboard players set $bossbar_type mem 0
 function lib:bossbar/show
 
+# 伤害管理
+gamerule naturalRegeneration true
+
 # 清理残留实体
 function mini:main/kill_remaining_entity
 
@@ -16,6 +19,10 @@ function mini:main/kill_remaining_entity
 scoreboard players set $countdown mem 4
 
 team modify playing nametagVisibility always
+
+# 特殊模式直接结束
+execute if score $round mem matches 0 run return 0
+execute if score $test_mode mem matches 1 if score $round mem matches 6 run return 0
 
 # 生成地图
 setblock 0 10 2000 minecraft:structure_block{mode:"LOAD",name:"ltw:select"}

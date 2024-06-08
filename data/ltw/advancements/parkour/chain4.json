@@ -1,0 +1,27 @@
+{
+    "parent": "ltw:parkour/chain3",
+    "display": {
+      "icon": {
+        "item": "minecraft:chain_command_block"
+      },
+      "title": {
+        "text": "命悬一线 · Ω "
+      },
+      "description": [
+        {"text": "【连锁爆破】在不使用生命果且不损失生命值的情况下获胜\n", "color":"gray"},
+        {"text": "究极隐藏挑战！","color":"dark_gray","italic": true}
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": true
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_4"
+    },
+    "criteria": {
+      "a":{
+          "trigger": "minecraft:impossible"
+      }
+    }
+  }

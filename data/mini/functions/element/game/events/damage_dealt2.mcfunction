@@ -1,5 +1,3 @@
-
-
 # 获取自己的标记
 function mini:element/game/marker/find
 tag @e[tag=found_marker] add self
@@ -19,6 +17,7 @@ scoreboard players operation $element_self mem = $element_type mem
 execute if score $element_self mem matches 0 run scoreboard players set $damage mem 1
 execute if score $element_self mem matches 0 if entity @e[tag=target,limit=1,tag=chaodao] run scoreboard players add $damage mem 5
 execute if score $element_self mem matches 0 if entity @e[tag=target,limit=1,tag=dongjie] run scoreboard players set $damage mem 6
+execute if score $element_self mem matches 0 if entity @e[tag=attacker,nbt={active_effects:[{id:"minecraft:strength",amplifier:10b}]}] run scoreboard players add $damage mem 3
 execute if score $element_self mem matches 0 run tag @e[tag=target,limit=1,tag=dongjie] add dongjie_jiechu
 execute if score $element_self mem matches 0 run tag @e[tag=target,limit=1,tag=dongjie] remove dongjie
 execute if score $element_self mem matches 0 run tag @e[tag=target,limit=1] add wulidamage

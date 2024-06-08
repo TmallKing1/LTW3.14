@@ -1,0 +1,63 @@
+{
+  "parent": "ltw:story/traveler1",
+  "display": {
+    "icon": {
+      "item": "minecraft:repeating_command_block"
+    },
+    "title": {
+      "text": "探索时光 · β "
+    },
+    "description": [
+      {
+        "text": "到达「轮回的深处」\n",
+        "color": "gray"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "2 绿宝石",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_2"
+  },
+  "criteria": {
+    "01": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "position": {
+                  "x": {
+                    "min": 18.0,
+                    "max": 22.0
+                  },
+                  "y": {
+                    "min": 10.0,
+                    "max": 12.0
+                  },
+                  "z": {
+                    "min": -69.0,
+                    "max": -64.0
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

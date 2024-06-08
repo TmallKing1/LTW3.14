@@ -7,9 +7,6 @@ title @s actionbar ""
 effect clear @s
 function mini:main/give_effect
 
-# 设置玩家生命
-attribute @s generic.max_health base set 20
-
 # 传送玩家（重生）
 scoreboard players reset @s kills
 scoreboard players set @s[team=playing,tag=!rejoining] damage_cd 0
@@ -21,9 +18,17 @@ tag @s remove respawning
 execute if entity @s[team=playing,tag=!rejoining] run tag @s add smmk
 execute if entity @s[team=playing,tag=!rejoining] summon marker run function mini:element/game/marker/summon
 
+tag @s[team=playing,tag=!rejoining] add count_act
+tag @s[tag=rejoining] remove count_act
+
 # 调整模式
 gamemode spectator @s[team=!debugging]
 gamemode adventure @s[team=playing,tag=!rejoining]
 
+# 重置活动数据
+scoreboard players add @s element_reaction 0
+scoreboard players add @s element_burst 0
+scoreboard players add @s act_turns 0
+
 # 重新加入处理
-execute if entity @s[tag=rejoining] run gamemode spectator
+gamemode spectator @s[tag=rejoining]

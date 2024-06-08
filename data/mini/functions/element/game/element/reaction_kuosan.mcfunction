@@ -6,7 +6,7 @@ execute if score $element_target mem matches 4 as @a[distance=..6,tag=!attacker]
 execute if score $element_target mem matches 5 as @a[distance=..6,tag=!attacker] run function mini:element/game/element/5_pyro_attach
 execute if score $element_target mem matches 6 as @a[distance=..6,tag=!attacker] run function mini:element/game/element/6_cryo_attach
 data modify entity @e[tag=target,limit=1] data.element_attach set value 0
-summon text_display ~ ~1 ~ {billboard:"center",text:'{"text": "扩散","color": "#76EEC6"}',Tags:["text_display"], brightness: {block: 15, sky: 15}, background: 0}
+summon text_display ~ ~1 ~ {billboard:"center",text:'{"text": "扩散","color": "#76EEC6"}',Tags:["text_display"], brightness: {block: 15, sky: 15}, background: 0, alignment:"center"}
 scoreboard players set @e[tag=text_display] countdown_fast 8
 execute as @e[tag=text_display] at @s run function mini:element/game/element/tp_text_display
 
@@ -18,3 +18,6 @@ execute if score $element_target mem matches 6 run particle dust 0.035 0.761 0.8
 
 # 音效
 playsound entity.ender_dragon.flap player @a ~ ~ ~
+
+# 反应计数
+scoreboard players add @p[tag=attacker] element_reaction 1

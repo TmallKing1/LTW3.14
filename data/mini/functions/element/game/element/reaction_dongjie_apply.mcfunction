@@ -7,6 +7,6 @@ execute if entity @e[tag=found_marker,limit=1,tag=dongjie,tag=!respawning] run e
 execute if entity @e[tag=found_marker,limit=1,tag=dongjie,tag=!respawning] run tp @s @e[tag=found_marker,limit=1,tag=dongjie]
 
 # 若没有或倒计时为零
-execute as @e[tag=found_marker,limit=1,tag=dongjie,scores={countdown=..0}] run tag @s remove dongjie
+execute as @e[tag=found_marker,limit=1,tag=dongjie,scores={countdown_dongjie=..0}] run tag @s remove dongjie
 execute unless entity @e[tag=found_marker,limit=1,tag=dongjie] run effect clear @s slowness
 execute unless entity @e[tag=found_marker,limit=1,tag=dongjie] run effect clear @s jump_boost

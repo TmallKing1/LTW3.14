@@ -1,6 +1,4 @@
 # 计分板初始化
-scoreboard objectives remove kills
-scoreboard objectives add kills dummy ["玩家击杀数"]
 scoreboard objectives remove player_atk
 scoreboard objectives add player_atk dummy ["伤害提升"]
 scoreboard objectives remove player_energy

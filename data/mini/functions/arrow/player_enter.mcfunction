@@ -9,7 +9,6 @@ function mini:main/give_effect
 
 # 设置玩家生命
 attribute @s generic.max_health base set 20
-gamerule naturalRegeneration true
 
 # 传送玩家
 tp @s[team=playing,tag=!rejoining] 1016.0 28 13016.0

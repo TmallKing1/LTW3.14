@@ -23,3 +23,6 @@ tag @s remove gandiandamage
 
 # 出界伤害
 tag @s remove outofarea
+
+# 元素爆发
+tag @s remove burst

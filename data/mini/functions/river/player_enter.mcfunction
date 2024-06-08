@@ -16,7 +16,6 @@ tag @s remove giving_mats
 # 设置玩家生命
 scoreboard players set @s[team=playing,tag=!rejoining] mini_heart 3
 function mini:main/player_max_health
-gamerule naturalRegeneration true
 
 # 传送玩家
 spreadplayers 1016.0 16016.0 10 10 false @s[team=playing,tag=!rejoining]

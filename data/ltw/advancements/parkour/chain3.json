@@ -1,0 +1,29 @@
+{
+    "parent": "ltw:parkour/chain2",
+    "display": {
+      "icon": {
+        "item": "minecraft:chainmail_chestplate",
+        "nbt": "{Enchantments:[{id:\"minecraft:blast_protection\",lvl:1}]}"
+      },
+      "title": {
+        "text": "命悬一线 · γ "
+      },
+      "description": [
+        {"text": "【连锁爆破】在剩余至少 5 颗心时获胜\n", "color":"gray"},
+        {"text": "奖励: ","color":"green"},
+        {"text": "2 绿宝石","color":"white"}
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_3"
+    },
+    "criteria": {
+      "a":{
+          "trigger": "minecraft:impossible"
+      }
+    }
+  }

@@ -1,0 +1,33 @@
+{
+  "parent": "ltw:activity/attack/damage3",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_block"
+    },
+    "title": {
+      "text": "杰出贡献 · 合"
+    },
+    "description": [
+      {
+        "text": "单次游戏累计造成 1000 点伤害\n",
+        "color": "white"
+      },
+      {
+        "text": "究极但不隐藏挑战！",
+        "color": "dark_gray",
+        "italic": true
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -10,16 +10,17 @@ scoreboard players reset * surviveRound
 
 # 幻境干扰
 
-execute store result score $random mem run random value 1..10
-execute if score $random mem matches 1..2 run scoreboard players set $ley_line_disorder mem 1
-execute if score $random mem matches 3..4 run scoreboard players set $ley_line_disorder mem 2
-execute if score $random mem matches 5..6 run scoreboard players set $ley_line_disorder mem 3
+execute store result score $random mem run random value 1..5
+execute if score $random mem matches 1 run scoreboard players set $ley_line_disorder mem 1
+execute if score $random mem matches 2 run scoreboard players set $ley_line_disorder mem 2
+execute if score $random mem matches 3 run scoreboard players set $ley_line_disorder mem 3
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 0
 team modify playing friendlyFire true
 team modify playing collisionRule always
 team modify playing deathMessageVisibility never
+gamerule naturalRegeneration true
 
 # 生成地图
 setblock 1000 4 3000 air

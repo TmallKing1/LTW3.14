@@ -1,0 +1,63 @@
+{
+  "parent": "ltw:story/traveler2",
+  "display": {
+    "icon": {
+      "item": "minecraft:barrier"
+    },
+    "title": {
+      "text": "探索时光 · γ "
+    },
+    "description": [
+      {
+        "text": "到达「深处的对视」\n",
+        "color": "gray"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "2 绿宝石",
+        "color": "white"
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_3"
+  },
+  "criteria": {
+    "01": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "position": {
+                  "x": {
+                    "min": -1.0,
+                    "max": 1.0
+                  },
+                  "y": {
+                    "min": 47.0,
+                    "max": 48.0
+                  },
+                  "z": {
+                    "min": -19.0,
+                    "max": -17.0
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

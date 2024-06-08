@@ -11,7 +11,6 @@ function mini:main/give_effect
 scoreboard players set @s[team=playing,tag=!rejoining] mini_heart 3
 function mini:main/player_max_health
 tag @s remove hotpm_hurt
-gamerule naturalRegeneration true
 
 # 清理 Tag
 tag @s remove pm_holding

@@ -10,6 +10,9 @@ execute as @a[scores={particle_type=4},gamemode=!spectator,tag=!invisible] at @s
 execute as @a[scores={particle_type=5},gamemode=!spectator,tag=!invisible] at @s run particle wax_on ~ ~0.5 ~ 0.25 0.3 0.25 2 1 force @a[distance=0.01..]
 execute as @a[scores={particle_type=6},gamemode=!spectator,tag=!invisible] at @s run particle minecraft:note ~ ~ ~ 0.4 0.2 0.4 0 1 force @a
 execute as @a[scores={particle_type=7},gamemode=!spectator,tag=!invisible] at @s run particle minecraft:dust 1 0 0 1 ~ ~0.5 ~ 0.2 0.2 0.2 0.5 1 force @a[distance=0.01..]
+execute as @a[scores={particle_type=8},gamemode=!spectator,tag=!invisible] at @s run particle flame ~ ~0.5 ~ 0.2 0.2 0.2 0.001 1 force @a[distance=0.01..]
+execute as @a[scores={particle_type=9},gamemode=!spectator,tag=!invisible] at @s run particle crit ~ ~0.5 ~ 0.2 0.2 0.2 0.001 1 force @a[distance=0.01..]
+execute as @a[scores={particle_type=10},gamemode=!spectator,tag=!invisible] at @s run particle enchanted_hit ~ ~0.5 ~ 0.2 0.2 0.2 0.001 1 force @a[distance=0.01..]
 execute as @a[scores={particle_type=11},gamemode=!spectator,tag=!invisible] at @s run particle soul_fire_flame ~ ~0.5 ~ 0.2 0.2 0.2 0.001 1 force @a[distance=0.01..]
 execute as @a[scores={particle_type=12},gamemode=!spectator,tag=!invisible] at @s run particle dust 10 10 10 1.5 ~ ~0.5 ~ 0.2 0.2 0.2 0.001 1 force @a[distance=0.01..]
 execute as @a[scores={particle_type=13},gamemode=!spectator,tag=!invisible] at @s run particle fishing ~ ~0.5 ~ 0.2 0.2 0.2 0.001 1 force @a[distance=0.01..]
@@ -24,6 +27,9 @@ execute as @e[tag=show_particle_4] at @s run particle witch ~ ~0.2 ~ 0.15 0.05 0
 execute as @e[tag=show_particle_5] at @s run particle wax_on ~ ~0.5 ~ 0.2 0.2 0.2 0.5 1 force @a
 execute as @e[tag=show_particle_6] at @s run particle minecraft:note ~ ~0.2 ~ 0.2 0.2 0.2 0 1 force @a
 execute as @e[tag=show_particle_7] at @s run particle minecraft:dust 1 0 0 1 ~ ~0.5 ~ 0.2 0.2 0.2 0.5 1 force @a
+execute as @e[tag=show_particle_8] at @s run particle flame ~ ~0.5 ~ 0.15 0.15 0.15 0.001 1 force @a
+execute as @e[tag=show_particle_9] at @s run particle crit ~ ~0.5 ~ 0.15 0.15 0.15 0.001 1 force @a
+execute as @e[tag=show_particle_10] at @s run particle enchanted_hit ~ ~0.5 ~ 0.15 0.15 0.15 0.001 1 force @a
 execute as @e[tag=show_particle_vip_1] at @s run particle soul_fire_flame ~ ~0.5 ~ 0.15 0.15 0.15 0.001 1 force @a
 execute as @e[tag=show_particle_vip_2] at @s run particle dust 10 10 10 1.5 ~ ~0.5 ~ 0.15 0.15 0.15 0.001 1 force @a
 execute as @e[tag=show_particle_vip_3] at @s run particle fishing ~ ~0.5 ~ 0.15 0.15 0.15 0.001 1 force @a

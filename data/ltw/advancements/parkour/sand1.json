@@ -1,0 +1,37 @@
+{
+    "parent": "ltw:parkour/root",
+    "display": {
+      "icon": {
+        "item": "minecraft:sand"
+      },
+      "title": {
+        "text": "屏住呼吸 · α "
+      },
+      "description": [
+        {
+          "text": "【水中寻宝】一局内存放 25 金钱\n",
+          "color": "gray"
+        },
+        {
+          "text": "奖励: ",
+          "color": "green"
+        },
+        {
+          "text": "1 绿宝石",
+          "color": "white"
+        }
+      ],
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_1"
+    },
+    "criteria": {
+      "a": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }

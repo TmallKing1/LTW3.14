@@ -13,6 +13,7 @@ execute if score $mini_type mem matches 10 run function mini:bullet/watcher_limi
 execute if score $mini_type mem matches 11 run function mini:boomer/watcher_limit
 execute if score $mini_type mem matches 12 run function mini:chain/watcher_limit
 execute if score $mini_type mem matches 13 run function mini:vase/watcher_limit
+execute if score $mini_type mem matches 14 run function mini:sand/watcher_limit
 execute if score $mini_type mem matches 101 run function mini:iron/watcher_limit
 execute if score $mini_type mem matches 102 run function mini:trade/watcher_limit
 execute if score $mini_type mem matches 103 run function mini:diamond/watcher_limit
@@ -23,3 +24,4 @@ execute if score $mini_type mem matches 202 run function mini:arrow/watcher_limi
 execute if score $mini_type mem matches 301 run function mini:duckrush/watcher_limit
 execute if score $mini_type mem matches 302 run function mini:element/watcher_limit
 execute if score $mini_type mem matches 303 run function mini:power/watcher_limit
+execute if score $mini_type mem matches 304 run function mini:attack/watcher_limit

@@ -1,3 +1,11 @@
+# 清空计数
+scoreboard players set @s anemo_count 0
+scoreboard players set @s geo_count 0
+scoreboard players set @s electro_count 0
+scoreboard players set @s hydro_count 0
+scoreboard players set @s pyro_count 0
+scoreboard players set @s cryo_count 0
+
 execute if score $element_size mem matches 1.. store result score $element_type mem run data get entity @e[type=marker,tag=found_marker,limit=1] data.elements[0]
 execute unless score $element_size mem matches 1.. run scoreboard players set $element_type mem 0
 function mini:element/game/player/display3

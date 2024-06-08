@@ -1,0 +1,33 @@
+{
+    "parent": "ltw:egg/root",
+    "display": {
+        "icon": {
+            "item": "minecraft:writable_book"
+        },
+        "title": "失落的日记",
+        "description": [
+            {
+                "text": "成功完成「失落的日记」解密。\n",
+                "color": "gray"
+            },
+            {
+                "text": "「把你在解密里的几个字符串操作题都整到洛谷上去！」",
+                "color": "dark_purple",
+                "italic": true
+            }
+        ],
+        "frame": "challenge",
+        "hidden": true
+    },
+    "criteria": {
+        "lost": {
+            "trigger": "impossible"
+        }
+    },
+    "requirements": [
+        [
+            "lost"
+        ]
+    ],
+    "rewards": {}
+}

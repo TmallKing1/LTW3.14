@@ -13,5 +13,11 @@ scoreboard players set @a[tag=mini_running,tag=!targeted_player] bossbar_color 2
 scoreboard players set @a[tag=!mini_running] bossbar_color 4
 function lib:bossbar/show
 
+# 幻境干扰 3 给予增益
+execute if score $ley_line_disorder mem matches 3 run effect give @a[tag=mini_running,tag=targeted_player] speed infinite 1 true
+execute if score $ley_line_disorder mem matches 3 run effect give @a[tag=mini_running,tag=targeted_player] jump_boost infinite 1 true
+execute if score $ley_line_disorder mem matches 3 run effect clear @a[tag=mini_running,tag=!targeted_player,nbt={active_effects:[{id:"minecraft:speed",amplifier:1b,duration:-1}]}] speed
+execute if score $ley_line_disorder mem matches 3 run effect clear @a[tag=mini_running,tag=!targeted_player,nbt={active_effects:[{id:"minecraft:speed",amplifier:1b,duration:-1}]}] jump_boost
+
 # 清除标签
 tag @a remove targeted_player

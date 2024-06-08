@@ -13,9 +13,10 @@ scoreboard players set $zombie_stage mem 0
 
 # 幻境干扰
 
-execute store result score $random mem run random value 1..10
-execute if score $random mem matches 1..3 run scoreboard players set $ley_line_disorder mem 1
-execute if score $random mem matches 4..5 run scoreboard players set $ley_line_disorder mem 2
+execute store result score $random mem run random value 1..5
+execute if score $random mem matches 1 run scoreboard players set $ley_line_disorder mem 1
+execute if score $random mem matches 2 run scoreboard players set $ley_line_disorder mem 2
+execute if score $random mem matches 3 run scoreboard players set $ley_line_disorder mem 3
 
 # 重置计分板
 scoreboard players reset * power_count
@@ -27,6 +28,7 @@ scoreboard players set $remove_resistance mem 1
 team modify playing friendlyFire false
 team modify playing collisionRule always
 team modify playing deathMessageVisibility always
+gamerule naturalRegeneration false
 
 # gamerule 调整
 gamerule doMobLoot false

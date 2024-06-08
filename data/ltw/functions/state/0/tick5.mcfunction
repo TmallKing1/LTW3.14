@@ -1,5 +1,5 @@
 # 让无状态玩家变为准备状态
-execute as @a[team=!debugging,team=!playing,team=!watching] run function ltw:state/0/state/join_watch
+execute as @a[team=!debugging,team=!playing,team=!watching,team=!playing_lost,team=!watching_lost] run function ltw:state/0/state/join_watch
 
 ## 给予主大厅进度
 #execute as @a at @s if entity @s[x=-1,y=22,z=-29,dx=5,dy=3,dz=3] run advancement grant @s only ltw:parkour/explore1
@@ -16,6 +16,8 @@ execute as @e[type=piglin,tag=shop_piglin_11,tag=lobby_entity] at @s unless enti
 
 # 检查已准备人数
 execute store result score $count mem if entity @a[team=playing]
+execute store result score $count1 mem if entity @a[team=playing_lost]
+scoreboard players operation $count mem += $count1 mem
 execute store result score #total_count mem if entity @a
 
 # 开始：提示开始
@@ -39,6 +41,7 @@ execute if score #start_sec mem matches 1..10 if score #start_div mem matches 3 
 
 # 20s：提示未准备
 execute if score #start_countdown mem matches 80 run tellraw @a[team=watching,tag=pass_setup] [{"text":"\n","color":"red"},{"text":">> ","bold": true},{"text": "请丢出最后一格的物品准备开始，否则将旁观下一局游戏！"},"\n "]
+execute if score #start_countdown mem matches 80 run tellraw @a[team=watching_lost,tag=pass_setup] [{"text":"\n","color":"red"},{"text":">> ","bold": true},{"text": "请丢出最后一格的物品准备开始，否则将旁观下一局游戏！"},"\n "]
 
 # 10s：提示玩家数量过多
 execute if score #start_countdown mem matches 40 if score $count mem matches 9.. run tellraw @a[tag=pass_setup] [{"text":"","color":"gold"},{"text":">> ","bold": true},{"text":"已超出游戏最多支持的 8 人人数上限, 将随机抽取 8 人开始游戏!"}]
@@ -46,6 +49,7 @@ execute if score #start_countdown mem matches 40 if score $count mem matches 9..
 # 5s：锁定准备状态
 execute if score #start_countdown mem matches 20 run tellraw @a[tag=pass_setup] [{"text":"","color":"red"},{"text":">> ","bold": true},{"text":"游戏即将开始，已准备玩家不得取消！"}]
 execute if score #start_countdown mem matches 20 run clear @a[team=playing] lime_dye{lobby_item: 1b, lobby_ready: 1b}
+execute if score #start_countdown mem matches 20 run clear @a[team=playing_lost] lime_dye{lobby_item: 1b, lobby_ready: 1b}
 
 # 0s：开始游戏
 execute if score #start_countdown mem matches ..0 run function ltw:state/0/start_game

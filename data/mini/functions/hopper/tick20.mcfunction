@@ -7,7 +7,7 @@ function mini:main/lld/time_bossbar
 execute unless score $ley_line_disorder mem matches 0 run function mini:main/lld/display_mode
 
 # 杀死出界的玩家
-execute as @a[tag=mini_running,x=-32,y=265,z=4968,dx=31,dy=54,dz=31] run damage @s 114 bad_respawn_point
+execute if score $countdown mem matches ..358 as @a[tag=mini_running,x=-32,y=265,z=4968,dx=31,dy=54,dz=31] run damage @s 114 bad_respawn_point
 
 # 显示倒计时
 execute if score $countdown mem matches ..10 run title @a times 3t 14t 2t

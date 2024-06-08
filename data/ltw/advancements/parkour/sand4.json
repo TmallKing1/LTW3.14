@@ -1,0 +1,34 @@
+{
+    "parent": "ltw:parkour/sand3",
+    "display": {
+      "icon": {
+        "item": "minecraft:brush"
+      },
+      "title": {
+        "text": "屏住呼吸 · Ω "
+      },
+      "description": [
+        {
+          "text": "【水中寻宝】在未购买水下呼吸增益的情况下一局内存放 140 金钱\n",
+          "color": "gray"
+        },
+        {
+          "text": "究极隐藏挑战！",
+          "color": "dark_gray",
+          "italic": true
+        }
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": true
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_4"
+    },
+    "criteria": {
+      "a": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }

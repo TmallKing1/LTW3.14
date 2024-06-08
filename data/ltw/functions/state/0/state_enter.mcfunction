@@ -5,6 +5,9 @@ forceload add 0 1900 50 2000
 forceload add -32 -17 45 -80
 forceload add 997 -976 949 -1024
 
+# 卸载数据包
+datapack disable "file/bypass_cooldown"
+
 # 世界边界
 worldborder set 1000000
 
@@ -32,6 +35,7 @@ scoreboard players set $remove_resistance mem 0
 team modify playing friendlyFire false
 team modify playing collisionRule never
 team modify playing nametagVisibility always
+gamerule naturalRegeneration true
 gamerule doMobLoot false
 gamerule doTileDrops false
 

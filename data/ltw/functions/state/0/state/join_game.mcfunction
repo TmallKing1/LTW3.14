@@ -10,6 +10,7 @@ execute at @s run function lib:sounds/hit
 
 # 处理数据
 team join playing @s
+team join playing_lost @s[tag=lost_enable]
 
 # 双倍奖励活动
 #clear @s purple_dye{lobby_item: 1b, reward_double: 1b}

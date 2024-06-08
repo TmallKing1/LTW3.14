@@ -44,7 +44,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{item_name:'{\"text\":\"金苹果 x3\",\"color\":\"light_purple\"}',is_bonus:1b,bonus_new:1b,bonus_return:1b,display:{Lore:['{\"text\":\"在部分小游戏中食用能使生命 +1\",\"italic\":false,\"color\":\"gray\"}'],Name:'{\"text\":\"金苹果\",\"italic\":false,\"color\":\"white\"}'}}"
+                            "tag": "{item_name:'{\"text\":\"生命果 x3\",\"color\":\"light_purple\"}',is_bonus:1b,bonus_new:1b,bonus_return:1b,display:{Lore:['{\"text\":\"在部分小游戏中食用能使生命 +1\",\"italic\":false,\"color\":\"gray\"}'],Name:'{\"text\":\"生命果\",\"italic\":false,\"color\":\"white\"}'}}"
                         }
                     ]
                 },
@@ -162,7 +162,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{item_name:'{\"text\":\"附魔金苹果\",\"color\":\"light_purple\"}',is_bonus:1b,bonus_new:1b,bonus_return:1b,display:{Lore:['{\"text\":\"在部分小游戏中食用能使当前生命加倍\",\"italic\":false,\"color\":\"gray\"}'],Name:'{\"text\":\"附魔金苹果\",\"italic\":false,\"color\":\"light_purple\"}'}}"
+                            "tag": "{item_name:'{\"text\":\"附魔生命果\",\"color\":\"light_purple\"}',is_bonus:1b,bonus_new:1b,bonus_return:1b,display:{Lore:['{\"text\":\"在部分小游戏中食用能使当前生命加倍\",\"italic\":false,\"color\":\"gray\"}'],Name:'{\"text\":\"附魔生命果\",\"italic\":false,\"color\":\"light_purple\"}'}}"
                         }
                     ]
                 },
@@ -207,6 +207,17 @@
                         {
                             "function": "minecraft:set_nbt",
                             "tag": "{display:{Name:'{\"text\":\"<免疫击退> 下界合金胸甲\",\"italic\":false,\"color\":\"light_purple\"}'},item_name:'{\"text\":\"<免疫击退> 下界合金胸甲\",\"color\":\"light_purple\"}',is_bonus:1b,bonus_new:1b,bonus_return:1b,AttributeModifiers:[{UUID:[I;23,38,0,2],Amount:8,AttributeName:\"generic.armor\",Name:\"armor\",Slot:\"chest\",Operation:0},{UUID:[I;23,38,0,3],Amount:8,AttributeName:\"generic.armor_toughness\",Name:\"armor1\",Slot:\"chest\",Operation:0},{UUID:[I;23,38,0,1],Amount:100,AttributeName:\"generic.knockback_resistance\",Name:\"kn\",Slot:\"chest\",Operation:0}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 10,
+                    "name": "minecraft:iron_sword",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{display:{Name:'{\"text\":\"速击铁剑\",\"italic\":false,\"color\":\"light_purple\"}'},item_name:'{\"text\":\"速击铁剑\",\"color\":\"light_purple\"}',is_bonus:1b,bonus_new:1b,bonus_return:1b,AttributeModifiers:[{UUID:[I;23,38,0,2],Amount:4,AttributeName:\"generic.attack_damage\",Name:\"attack\",Slot:\"mainhand\",Operation:0},{UUID:[I;23,38,0,3],Amount:0.5,AttributeName:\"generic.attack_speed\",Name:\"attacks\",Slot:\"mainhand\",Operation:1}]}"
                         }
                     ]
                 }

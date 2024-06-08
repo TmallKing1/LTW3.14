@@ -1,4 +1,4 @@
-# 初始化连锁爆破地图
+# 初始化会心一击地图
 forceload add 1000 19000 1063 19063
 
 scoreboard players reset * kills
@@ -25,4 +25,6 @@ scoreboard players set $remove_resistance mem 0
 team modify playing friendlyFire true
 team modify playing collisionRule always
 team modify playing deathMessageVisibility never
+gamerule naturalRegeneration false
+
 schedule function mini:power/game_init2 15t replace

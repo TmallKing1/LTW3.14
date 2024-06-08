@@ -20,7 +20,6 @@ scoreboard players enable @s buy_trigger
 effect clear @s
 effect give @s saturation infinite 0 true
 effect give @s instant_health 1 10 true
-gamerule naturalRegeneration true
 effect give @s resistance infinite 4 true
 effect give @s weakness infinite 4 true
 
@@ -37,16 +36,16 @@ tag @s[tag=!new_checked] add new_checked
 tellraw @s[tag=!bc_2] ["",{"text": ">> ","color": "aqua","bold": true},"由于数据删除，服务器为玩家补偿 10 枚魔法符咒！"]
 scoreboard players add @s[tag=!bc_2] primogem 640
 tag @s[tag=!bc_2] add bc_2
-give @s diamond_chestplate{AttributeModifiers:[{}]}
-# 版本更新补偿
-tellraw @s[tag=!bc_1_1] ["",{"text": ">> ","color": "aqua","bold": true},"成功领取 1.1 版本更新奖励：240 魔法精华！"]
-scoreboard players add @s[tag=!bc_1_1] primogem 240
-tag @s[tag=!bc_1_1] add bc_1_1
 
 # 版本更新补偿
-tellraw @s[tag=!bc_1_1_1,scores={stat_total=1..}] ["",{"text": ">> ","color": "aqua","bold": true},"成功领取维护补偿：120 魔法精华！"]
-scoreboard players add @s[tag=!bc_1_1_1,scores={stat_total=1..}] primogem 120
-tag @s[tag=!bc_1_1_1] add bc_1_1_1
+tellraw @s[tag=!bc_1_4,scores={stat_total=1..}] ["",{"text": ">> ","color": "aqua","bold": true},"成功领取 1.4 版本更新奖励：120 魔法精华！"]
+scoreboard players add @s[tag=!bc_1_4,scores={stat_total=1..}] primogem 120
+tag @s[tag=!bc_1_4] add bc_1_4
+
+# 停服维护补偿
+tellraw @s[tag=!bc_1_3_1,scores={stat_total=1..}] ["",{"text": ">> ","color": "aqua","bold": true},"成功领取停服维护补偿：480 魔法精华！"]
+scoreboard players add @s[tag=!bc_1_3_1,scores={stat_total=1..}] primogem 480
+tag @s[tag=!bc_1_3_1] add bc_1_3_1
 
 # 活动：黎明盛会
 tag @s remove double_reward
@@ -84,13 +83,6 @@ scoreboard players add @s powerup_00014 0
 scoreboard players add @s powerup_00015 0
 
 scoreboard players add @s powerup_current 0
-
-# 重置活动数据
-scoreboard players add @s 2kills 0
-scoreboard players add @s 3kills 0
-scoreboard players add @s 4kills 0
-scoreboard players add @s element_reaction 0
-scoreboard players add @s act_turns 0
 
 # 默认进入待机状态
 function ltw:state/0/state/join_watch

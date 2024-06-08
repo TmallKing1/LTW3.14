@@ -1,0 +1,28 @@
+{
+    "parent": "ltw:vs/vase2",
+    "display": {
+      "icon": {
+        "item": "minecraft:decorated_pot"
+      },
+      "title": {
+        "text": "罐中窥宝 · γ "
+      },
+      "description": [
+        {"text": "【破罐之王】坚持到第 10 回合，并获得胜利\n", "color":"gray"},
+        {"text": "奖励: ","color":"green"},
+        {"text": "2 绿宝石","color":"white"}
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_3"
+    },
+    "criteria": {
+      "a":{
+          "trigger": "minecraft:impossible"
+      }
+    }
+  }

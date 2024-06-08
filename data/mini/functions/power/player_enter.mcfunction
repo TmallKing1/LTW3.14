@@ -10,7 +10,6 @@ function mini:main/give_effect
 # 设置玩家生命
 attribute @s generic.max_health base set 40
 effect give @s regeneration 2 15 true
-gamerule naturalRegeneration false
 
 # 设置初始攻击力加成和能量值
 scoreboard players reset @s last_damage_type

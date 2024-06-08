@@ -1,7 +1,9 @@
-# 初始化跑酷地图
+# 初始化砸罐子地图
 forceload add 2000 2000 2063 2023
 
 scoreboard players reset * vase_broken
+scoreboard players reset * vase_broken_pure
+scoreboard players reset * creeper_vase_damage
 scoreboard players reset * attack_count
 scoreboard players set $show_score mem 1
 scoreboard players set $countdown_fast mem 0
@@ -20,14 +22,18 @@ setblock 2032 4 2000 air
 time set 21200t
 
 # 幻境干扰
-#execute store result score $random mem run random value 1..10
-#execute if score $random mem matches 1..5 run scoreboard players set $ley_line_disorder mem 1
+execute store result score $random mem run random value 1..6
+execute if score $random mem matches 1 run scoreboard players set $ley_line_disorder mem 1
+execute if score $random mem matches 2 run scoreboard players set $ley_line_disorder mem 2
+execute if score $random mem matches 3 run scoreboard players set $ley_line_disorder mem 3
+execute if score $random mem matches 4 run scoreboard players set $ley_line_disorder mem 4
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 0
 team modify playing friendlyFire false
 team modify playing collisionRule always
 team modify playing deathMessageVisibility never
+gamerule naturalRegeneration false
 
 # Gamerule 调整
 gamerule doTileDrops true

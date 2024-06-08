@@ -11,3 +11,7 @@ kill @e[tag=vase_marker]
 # 计算积分
 scoreboard players set @a[team=playing] mini_score 0
 execute as @a[team=playing] run scoreboard players operation @s mini_score = @s vase_broken
+
+# 给予进度
+advancement grant @a[team=playing,scores={vase_broken_pure=60..}] only ltw:vs/vase1
+advancement grant @a[team=playing,scores={creeper_vase_damage=30..}] only ltw:vs/vase2

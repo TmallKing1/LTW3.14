@@ -25,6 +25,7 @@ execute if score $mini_type mem matches 10 run function mini:bullet/player_enter
 execute if score $mini_type mem matches 11 run function mini:boomer/player_enter
 execute if score $mini_type mem matches 12 run function mini:chain/player_enter
 execute if score $mini_type mem matches 13 run function mini:vase/player_enter
+execute if score $mini_type mem matches 14 run function mini:sand/player_enter
 execute if score $mini_type mem matches 101 run function mini:iron/player_enter
 execute if score $mini_type mem matches 102 run function mini:trade/player_enter
 execute if score $mini_type mem matches 103 run function mini:diamond/player_enter
@@ -35,3 +36,4 @@ execute if score $mini_type mem matches 202 run function mini:arrow/player_enter
 execute if score $mini_type mem matches 301 run function mini:duckrush/player_enter
 execute if score $mini_type mem matches 302 run function mini:element/player_enter
 execute if score $mini_type mem matches 303 run function mini:power/player_enter
+execute if score $mini_type mem matches 304 run function mini:attack/player_enter

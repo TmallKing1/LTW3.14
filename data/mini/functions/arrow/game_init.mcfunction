@@ -24,5 +24,8 @@ team modify playing friendlyFire false
 execute if score $ley_line_disorder mem matches 3 run team modify playing friendlyFire true
 team modify playing collisionRule always
 team modify playing deathMessageVisibility never
+gamerule naturalRegeneration true
+
 kill @e[type=tnt]
+
 schedule function mini:arrow/game_init2 1t replace

@@ -13,7 +13,6 @@ scoreboard players set @s[team=playing,tag=!rejoining] countdown_fast 0
 scoreboard players set @s[team=playing,tag=!rejoining] countdown 0
 scoreboard players set @s[team=playing,tag=!rejoining] countdown_invulnerable 0
 function mini:main/player_max_health
-gamerule naturalRegeneration true
 
 # 传送玩家
 spreadplayers 1014.0 14014.0 3 10 under 10 false @s[team=playing,tag=!rejoining]

@@ -8,7 +8,6 @@ recipe give @s[team=playing] *
 
 # 设置玩家生命
 attribute @s generic.max_health base set 20
-gamerule naturalRegeneration false
 
 # 清除相关 Tag
 tag @s remove respawn_protection

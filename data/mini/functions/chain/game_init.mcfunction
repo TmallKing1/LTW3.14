@@ -30,10 +30,13 @@ fill 999 4 17095 998 3 17000 air
 execute store result score $random mem run random value 1..5
 execute if score $random mem matches 1 run scoreboard players set $ley_line_disorder mem 1
 execute if score $random mem matches 2 run scoreboard players set $ley_line_disorder mem 2
+execute if score $random mem matches 3 run scoreboard players set $ley_line_disorder mem 3
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 0
 team modify playing friendlyFire true
 team modify playing collisionRule always
 team modify playing deathMessageVisibility never
+gamerule naturalRegeneration true
+
 schedule function mini:chain/game_init2 15t replace

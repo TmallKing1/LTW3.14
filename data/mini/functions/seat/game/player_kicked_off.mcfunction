@@ -7,3 +7,6 @@ tag @a[tag=seat_damage_dealt,limit=1] add seat_adv_failed
 
 tp @s ~ ~0.5 ~
 effect give @s blindness 2
+
+# 幻境干扰 3
+execute if score $ley_line_disorder mem matches 3 run tag @s add mc_angry

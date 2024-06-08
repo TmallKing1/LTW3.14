@@ -10,7 +10,6 @@ function mini:main/give_effect
 # 设置玩家生命
 scoreboard players set @s[team=playing,tag=!rejoining] mini_heart 3
 function mini:main/player_max_health
-gamerule naturalRegeneration true
 
 # 清理 Tag
 tag @s remove seat_adv_failed

@@ -12,7 +12,6 @@ tag @s remove summon_axolotl
 
 # 设置玩家生命
 attribute @s generic.max_health base set 20
-gamerule naturalRegeneration false
 
 # 计分板重置
 scoreboard players reset @s kills

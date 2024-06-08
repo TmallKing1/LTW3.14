@@ -9,6 +9,7 @@ execute if score $boom_count1 mem matches 1.. run function mini:chain/game/get_m
 
 # 爆炸
 tellraw @a ["", {"text": ">> ","color": "gold","bold": true}, {"selector": "@a[tag=targeted_player]","color": "gold"}, {"text": " 裂开了！"}]
+tag @a[tag=targeted_player] add chain_hurt
 execute as @a[tag=targeted_player] run function mini:main/player_lose_heart
 tag @a remove targeted_player
 

@@ -26,6 +26,10 @@ tellraw @a[team=playing,scores={temp=0,total_score=1..}] [" 你得到的 ",{"sco
 # 局中金粒
 tellraw @a[team=playing,scores={gold_extra=1..}] [" 在游戏过程中，你拿到了额外的 ",{"score":{"name": "*","objective": "gold_extra"},"color":"gold"},{"text": " 金粒","color":"gold"},"！"]
 
+# 1.2 版本活动：发动总攻
+#execute as @a[team=playing,scores={damage_dealt_back=1..}] run scoreboard players operation @s gold += @s damage_dealt_back
+#tellraw @a[team=playing,scores={damage_dealt_back=1..}] [" 因为你在活动轮中的成绩，你获得了额外的 ",{"score":{"name": "*","objective": "damage_dealt_back"},"color":"gold"},{"text": " 金粒","color":"gold"},"！"]
+
 # 局中绿宝石
 tellraw @a[team=playing,scores={green_extra=1..}] [" 由于达成了进度，你得到了 ",{"score":{"name": "*","objective": "green_extra"},"color":"green"},{"text": " 绿宝石","color":"green"}," 完成奖励！"]
 

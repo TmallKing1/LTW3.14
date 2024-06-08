@@ -1,0 +1,28 @@
+{
+    "parent": "ltw:activity/attack",
+    "display": {
+      "icon": {
+        "item": "minecraft:splash_potion",
+        "nbt": "{Potion:\"minecraft:strong_harming\"}"
+      },
+      "title": {
+        "text": "造成伤害"
+      },
+      "description": [
+        {
+          "text": "",
+          "color": "white"
+        }
+      ],
+      "frame": "goal",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "rewards": {},
+    "criteria": {
+      "a": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }

@@ -8,7 +8,7 @@ scoreboard players remove @a[tag=mini_running,scores={damage_cd=1..}] damage_cd 
 execute as @e[type=fishing_bobber] at @s if block ~ ~-0.25 ~ water run kill
 
 # 静息治疗处理
-execute as @a[tag=mini_running,gamemode=!spectator] run function mini:element/game/player/healing
+#execute as @a[tag=mini_running,gamemode=!spectator] run function mini:element/game/player/healing
 
 # 清除标签防止bug
 tag @a remove element_damage_taken

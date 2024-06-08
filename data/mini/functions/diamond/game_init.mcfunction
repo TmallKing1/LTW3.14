@@ -28,9 +28,10 @@ team modify playing deathMessageVisibility always
 team modify playing nametagVisibility never
 gamerule fireDamage true
 gamerule drowningDamage true
+gamerule naturalRegeneration false
 
 # Gamerule 调整
-gamerule doLimitedCrafting false
+gamerule doLimitedCrafting true
 gamerule keepInventory true
 gamerule doTileDrops true
 gamerule doEntityDrops true

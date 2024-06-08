@@ -4,7 +4,7 @@ execute as @e[tag=found_marker] run function mini:element/game/element/get_attac
 
 # 若无附着元素，则为自己挂火
 execute if score $element_type mem matches 0 run data modify entity @e[tag=found_marker,limit=1] data.element_attach set value 5
-execute if score $element_type mem matches 0 run scoreboard players set @e[tag=found_marker,limit=1] countdown_fast 100
+execute if score $element_type mem matches 0 run scoreboard players set @e[tag=found_marker,limit=1] countdown_attach 100
 
 # 若自己被冻结，则解冻
 execute if entity @e[tag=found_marker,tag=dongjie] run tag @e[tag=target,limit=1,tag=dongjie] add dongjie_jiechu

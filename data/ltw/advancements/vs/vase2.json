@@ -1,0 +1,28 @@
+{
+    "parent": "ltw:vs/vase1",
+    "display": {
+      "icon": {
+        "item": "minecraft:brick"
+      },
+      "title": {
+        "text": "罐中窥宝 · β "
+      },
+      "description": [
+        {"text": "【破罐之王】单局游戏中使用爆炸罐子造成 30 次伤害\n", "color":"gray"},
+        {"text": "奖励: ","color":"green"},
+        {"text": "2 绿宝石","color":"white"}
+      ],
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_2"
+    },
+    "criteria": {
+      "a":{
+          "trigger": "minecraft:impossible"
+      }
+    }
+  }

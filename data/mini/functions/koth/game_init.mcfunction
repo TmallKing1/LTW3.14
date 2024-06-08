@@ -13,9 +13,10 @@ scoreboard players reset * power_count
 
 # 幻境干扰
 
-execute store result score $random mem run random value 1..4
+execute store result score $random mem run random value 1..5
 execute if score $random mem matches 1 run scoreboard players set $ley_line_disorder mem 1
 execute if score $random mem matches 2 run scoreboard players set $ley_line_disorder mem 2
+execute if score $random mem matches 3 run scoreboard players set $ley_line_disorder mem 3
 
 # 初始化
 scoreboard players set $remove_resistance mem 0

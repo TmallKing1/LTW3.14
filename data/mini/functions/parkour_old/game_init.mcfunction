@@ -23,5 +23,6 @@ team modify playing friendlyFire false
 team modify playing collisionRule never
 team modify playing deathMessageVisibility never
 gamerule fallDamage false
+gamerule naturalRegeneration true
 
 schedule function mini:parkour_old/game_init2 15t replace

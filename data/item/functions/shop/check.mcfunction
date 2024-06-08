@@ -1,7 +1,7 @@
 # 范围检测
 execute if score @s buy_trigger matches 001..099 at @s unless entity @s[x=-3,z=-63,y=6,dx=25,dy=6,dz=30] run function item:shop/error/piglin
 execute if score @s buy_trigger matches 100..199 at @s unless entity @s[x=1,z=-63,y=20,dx=5,dy=4,dz=6] run function item:shop/error/piglin
-execute if score @s buy_trigger matches 200..299 at @s unless entity @s[x=-22,z=-75,y=18,dx=10,dy=4,dz=5] unless entity @s[x=985,y=21,z=-1010,dx=17,dy=10,dz=18] run function item:shop/error/villager
+execute if score @s buy_trigger matches 200..299 at @s unless entity @s[x=-22,z=-75,y=18,dx=10,dy=8,dz=5] unless entity @s[x=985,y=21,z=-1010,dx=17,dy=10,dz=18] run function item:shop/error/villager
 execute if score @s buy_trigger matches 777..1000 at @s unless entity @s[x=-3,z=-49,y=27,dx=5,dy=4,dz=5] run function item:shop/error/dice
 execute if score @s buy_trigger matches 1101..1110 at @s unless entity @s[x=21,y=8,z=-31,dx=4,dy=3,dz=4] run function item:shop/error/material
 execute if score @s buy_trigger matches 2000..2001 at @s unless entity @s[x=19,y=52,z=-42,dx=11,dy=11,dz=7] run function item:shop/error/wish
@@ -54,6 +54,9 @@ execute if score @s buy_trigger matches 214 if score $state mem matches 0 run fu
 execute if score @s buy_trigger matches 215 if score $state mem matches 0 run function item:shop/buy/215_particle
 execute if score @s buy_trigger matches 216 if score $state mem matches 0 run function item:shop/buy/216_particle
 execute if score @s buy_trigger matches 217 if score $state mem matches 0 run function item:shop/buy/217_particle
+execute if score @s buy_trigger matches 218 if score $state mem matches 0 run function item:shop/buy/218_particle
+execute if score @s buy_trigger matches 219 if score $state mem matches 0 run function item:shop/buy/219_particle
+execute if score @s buy_trigger matches 220 if score $state mem matches 0 run function item:shop/buy/220_particle
 execute if score @s buy_trigger matches 221 if score $state mem matches 0 run function item:shop/buy/221_particle
 execute if score @s buy_trigger matches 222 if score $state mem matches 0 run function item:shop/buy/222_particle
 execute if score @s buy_trigger matches 223 if score $state mem matches 0 run function item:shop/buy/223_particle

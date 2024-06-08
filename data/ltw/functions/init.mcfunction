@@ -76,6 +76,10 @@ scoreboard objectives remove vote_game_disp
 scoreboard objectives add vote_game_disp dummy "游戏投票人数"
 scoreboard objectives remove vote_value
 scoreboard objectives add vote_value dummy "投票数值"
+scoreboard objectives remove kills
+scoreboard objectives add kills dummy "玩家击杀数"
+scoreboard objectives remove kills_auto
+scoreboard objectives add kills_auto minecraft.killed:player "玩家击杀数"
 scoreboard objectives remove music_time
 scoreboard objectives add music_time dummy "BGM 时间"
 scoreboard objectives remove nether_portal
@@ -113,13 +117,9 @@ scoreboard objectives add adv_totem dummy "不死图腾"
 
 # 活动参与局数
 scoreboard objectives add act_turns dummy "活动局数"
-scoreboard objectives add element_reaction dummy "元素反应次数"
-scoreboard objectives add 2kills dummy "双杀次数"
-scoreboard objectives add 3kills dummy "三杀次数"
-scoreboard objectives add 4kills dummy "四杀次数"
 
 # 常量与变量初始化
-scoreboard players set #mini_total mem 12
+scoreboard players set #mini_total mem 14
 scoreboard players set #-1 mem -1
 scoreboard players set #0 mem 0
 scoreboard players set #1 mem 1
@@ -132,8 +132,12 @@ scoreboard players set #7 mem 7
 scoreboard players set #8 mem 8
 scoreboard players set #9 mem 9
 scoreboard players set #10 mem 10
+scoreboard players set #11 mem 11
+scoreboard players set #12 mem 12
+scoreboard players set #14 mem 14
 scoreboard players set #16 mem 16
 scoreboard players set #20 mem 20
+scoreboard players set #45 mem 45
 scoreboard players set #50 mem 50
 scoreboard players set #60 mem 60
 scoreboard players set #81 mem 81
@@ -160,6 +164,22 @@ team modify watching color gray
 team modify watching collisionRule never
 team modify watching deathMessageVisibility never
 team modify watching seeFriendlyInvisibles false
+
+# 特殊玩家队伍
+team remove playing_lost
+team add playing_lost "玩家"
+team modify playing_lost prefix [{"text": "⭐ ","color": "light_purple"}]
+team modify playing_lost color green
+team modify playing_lost collisionRule never
+team modify playing_lost deathMessageVisibility never
+team modify playing_lost seeFriendlyInvisibles false
+team remove watching_lost
+team add watching_lost "旁观者"
+team modify watching_lost prefix [{"text": "⭐ ","color": "light_purple"}]
+team modify watching_lost color gray
+team modify watching_lost collisionRule never
+team modify watching_lost deathMessageVisibility never
+team modify watching_lost seeFriendlyInvisibles false
 
 # 非玩家队伍
 team remove white
@@ -226,6 +246,7 @@ function lib:bossbar/init
 function ltw:state/0/state_enter
 
 # 重置随机数组
+data modify storage ltw:mini suggested_games set value [3,4,7,9,10,11,13,14]
 data modify storage ltw:mini types set value []
 data modify storage ltw:mini qualities set value []
 data modify storage ltw:mini colormatch.types set value []

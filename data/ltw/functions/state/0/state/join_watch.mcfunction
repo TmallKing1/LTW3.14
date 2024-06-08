@@ -9,3 +9,4 @@ execute at @s run function lib:sounds/hit2
 
 # 处理数据
 team join watching @s
+team join watching_lost @s[tag=lost_enable]

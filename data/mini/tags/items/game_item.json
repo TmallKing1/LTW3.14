@@ -32,6 +32,12 @@
         "minecraft:chicken_spawn_egg",
         "minecraft:crossbow",
         "minecraft:iron_sword",
-        "minecraft:snowball"
+        "minecraft:snowball",
+        "minecraft:golden_sword",
+        "minecraft:gold_nugget",
+        "minecraft:raw_gold",
+        "minecraft:gold_ingot",
+        "minecraft:gold_block",
+        "minecraft:brush"
     ]
 }

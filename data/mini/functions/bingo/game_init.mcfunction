@@ -28,11 +28,12 @@ team modify playing friendlyFire true
 team modify playing collisionRule always
 team modify playing deathMessageVisibility always
 team modify playing nametagVisibility never
+gamerule naturalRegeneration false
 gamerule fireDamage true
 gamerule drowningDamage true
 
 # Gamerule 调整
-gamerule doLimitedCrafting false
+gamerule doLimitedCrafting true
 gamerule keepInventory true
 gamerule doTileDrops true
 gamerule doEntityDrops true

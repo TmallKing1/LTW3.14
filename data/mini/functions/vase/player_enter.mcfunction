@@ -9,7 +9,6 @@ function mini:main/give_effect
 
 # 设置玩家生命
 attribute @s generic.max_health base set 20
-gamerule naturalRegeneration false
 
 # 传送玩家
 spreadplayers 2034.0 2012.0 3 9 under 8 false @s[team=playing,tag=!rejoining]
@@ -18,6 +17,9 @@ spreadplayers 2034.0 2012.0 3 9 under 8 false @s[team=playing,tag=!rejoining]
 scoreboard players reset @s attack_count
 scoreboard players set @s[team=playing,tag=!rejoining] attack_count 0
 scoreboard players set @s[team=playing,tag=!rejoining] countdown_fast 0
+
+# 重置 Tag
+tag @s remove vase_regenerated
 
 # 调整模式
 gamemode spectator @s[team=!debugging]

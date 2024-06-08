@@ -9,3 +9,8 @@ execute as @e[tag=bonus_phantom] at @s run particle dust 1 0 0 2 ~ ~ ~ 0.2 0 0.2
 # 替换幻翼掉落物
 execute as @e[type=item,nbt={Item:{id:"minecraft:egg"}}] at @s run function mini:phantom/game/new_item
 kill @e[type=experience_orb]
+
+# 幻境干扰 3 效果
+execute as @e[type=phantom,tag=invisible] unless score @s countdown_fast matches 1.. run effect give @s invisibility 1 0 true
+execute as @e[type=phantom,tag=invisible] if score @s countdown_fast matches 1.. run effect clear @s invisibility
+execute as @e[type=trident] at @s run scoreboard players set @e[type=phantom,tag=invisible,distance=..6] countdown_fast 50

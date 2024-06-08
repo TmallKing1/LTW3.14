@@ -13,6 +13,7 @@ scoreboard players set $remove_resistance mem 0
 team modify playing friendlyFire false
 team modify playing collisionRule always
 team modify playing deathMessageVisibility never
+gamerule naturalRegeneration true
 
 # 生成地图
 setblock 1000 4 14000 air

@@ -12,6 +12,7 @@ execute if score $mini_type mem matches 10 run function mini:bullet/tick2
 execute if score $mini_type mem matches 11 run function mini:boomer/tick2
 execute if score $mini_type mem matches 12 run function mini:chain/tick2
 execute if score $mini_type mem matches 13 run function mini:vase/tick2
+execute if score $mini_type mem matches 14 run function mini:sand/tick2
 execute if score $mini_type mem matches 101 run function mini:iron/tick2
 execute if score $mini_type mem matches 102 run function mini:trade/tick2
 execute if score $mini_type mem matches 103 run function mini:diamond/tick2

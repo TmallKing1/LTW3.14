@@ -19,13 +19,14 @@ scoreboard players add @a[tag=mini_running] mini_score 1
 
 # 进入旁观
 gamemode spectator
+effect give @s night_vision infinite 0 true
 
 # 检查游戏是否结束
 function mini:main/check_game_end
 
 # 奖励
-execute if score $player_alive mem matches 1.. run tellraw @a ["",{"text": ">> ","color": "gold","bold": true},{"text": "所有存活玩家获得 10 破罐数！","color": "gold"}]
-execute if score $player_alive mem matches 1.. run scoreboard players add @a[tag=mini_running] vase_broken 10
+execute if entity @a[tag=mini_running] run tellraw @a ["",{"text": ">> ","color": "gold","bold": true},{"text": "所有存活玩家获得 10 破罐数！","color": "gold"}]
+execute if entity @a[tag=mini_running] run scoreboard players add @a[tag=mini_running] vase_broken 10
 
 # 仅剩一人提示
 execute if score $player_alive mem matches 1 run title @a[team=!debugging] times 10t 3s 10t

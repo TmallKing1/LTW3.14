@@ -17,6 +17,7 @@ tp @a[tag=seat_waiting] 1016.0 11 10016.0
 # 清除玩家标签
 tag @a remove in_minecart
 tag @a remove seat_waiting
+tag @a remove mc_angry
 
 # 设置普通赛状态
 scoreboard players set $extra_time mem 0

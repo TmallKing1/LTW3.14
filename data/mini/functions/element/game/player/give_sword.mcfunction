@@ -1,3 +1,6 @@
+# 检测副手施放元素爆发
+execute if data entity @s Inventory[{Slot: -106b, id: "minecraft:wooden_sword",tag:{game_item: 1b}}] run function mini:element/game/player/burst
+
 clear @s wooden_sword{game_item:1b}
 
 # 返还格子上的物品

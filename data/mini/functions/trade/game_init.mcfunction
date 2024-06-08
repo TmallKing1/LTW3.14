@@ -19,11 +19,12 @@ scoreboard players set $remove_resistance mem 1
 team modify playing friendlyFire false
 team modify playing collisionRule never
 team modify playing deathMessageVisibility always
+gamerule naturalRegeneration false
 gamerule fireDamage false
 gamerule drowningDamage true
 
 # Gamerule 调整
-gamerule doLimitedCrafting false
+gamerule doLimitedCrafting true
 gamerule keepInventory true
 gamerule doTileDrops true
 gamerule doEntityDrops true

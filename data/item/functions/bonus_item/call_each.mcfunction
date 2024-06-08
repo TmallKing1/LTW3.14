@@ -9,7 +9,7 @@ data remove storage item:bonus item_buff[0]
 function lib:sounds/hit
 
 # 显示拾取提示（获得积分的提示由 add_score 显示，获得随机物品则该物品不显示）
-execute unless data storage item:bonus item.tag.bonus_add_score unless data storage item:bonus item.tag.bonus_stole_score unless data storage item:bonus item.tag.bonus_gold unless data storage item:bonus item.tag.bonus_add_power unless data storage item:bonus item.tag.bonus_add_cash unless data storage item:bonus item.tag.bonus_random_bonus[0] unless data storage item:bonus item.tag.bonus_essence run tellraw @a ["",{"text": ">> ","color":"aqua","bold": true},{"selector": "@s","color":"aqua"}," 获得了 ",{"nbt": "item.tag.item_name","storage":"item:bonus","interpret": true}]
+execute unless data storage item:bonus item.tag.bonus_add_score unless data storage item:bonus item.tag.bonus_stole_score unless data storage item:bonus item.tag.bonus_gold unless data storage item:bonus item.tag.bonus_add_power unless data storage item:bonus item.tag.bonus_add_cash unless data storage item:bonus item.tag.bonus_add_gold unless data storage item:bonus item.tag.bonus_random_bonus[0] unless data storage item:bonus item.tag.bonus_essence run tellraw @a ["",{"text": ">> ","color":"aqua","bold": true},{"selector": "@s","color":"aqua"}," 获得了 ",{"nbt": "item.tag.item_name","storage":"item:bonus","interpret": true}]
 
 # 如果有 clean_inventory 标签则清空物品栏
 execute if data storage item:bonus item.tag{clean_inventory: 1b} run function item:bonus_item/clear_inventory
@@ -28,6 +28,9 @@ execute if data storage item:bonus item.tag.bonus_add_power run function item:bo
 
 # 如果有 add_cash 标签则增加现金
 execute if data storage item:bonus item.tag.bonus_add_cash run function item:bonus_item/add_cash
+
+# 如果有 add_gold 标签则增加所持金
+execute if data storage item:bonus item.tag.bonus_add_gold run function item:bonus_item/add_gold
 
 # 如果有 give_items 标签则给予物品
 execute if data storage item:bonus item.tag.bonus_give_items[0] run function item:bonus_item/give_items

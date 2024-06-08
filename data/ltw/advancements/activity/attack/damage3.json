@@ -1,0 +1,29 @@
+{
+  "parent": "ltw:activity/attack/damage2",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_ingot"
+    },
+    "title": {
+      "text": "杰出贡献 · 转"
+    },
+    "description": [
+      {
+        "text": "单次游戏累计造成 500 点伤害\n",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_3"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

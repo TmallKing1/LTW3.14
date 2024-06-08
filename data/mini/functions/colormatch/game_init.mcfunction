@@ -14,9 +14,10 @@ scoreboard players set #max_speed mem 0
 
 # 幻境干扰
 
-execute store result score $random mem run random value 0..10
-execute if score $random mem matches 1..3 run scoreboard players set $ley_line_disorder mem 1
-execute if score $random mem matches 4..5 run scoreboard players set $ley_line_disorder mem 2
+execute store result score $random mem run random value 1..5
+execute if score $random mem matches 1 run scoreboard players set $ley_line_disorder mem 1
+execute if score $random mem matches 2 run scoreboard players set $ley_line_disorder mem 2
+execute if score $random mem matches 3 run scoreboard players set $ley_line_disorder mem 3
 
 # 刷新地基
 function mini:colormatch/game/prepare_round

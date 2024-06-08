@@ -9,3 +9,4 @@ bossbar set mini:lld value 0
 execute if score $mini_type mem matches 101..104 if score $ley_line_disorder mem matches 4 run function mini:main/lld/events/water
 execute if score $mini_type mem matches 104 if score $ley_line_disorder mem matches 3 run function mini:hopper/game/lld/3_disorder
 execute if score $mini_type mem matches 201 if score $ley_line_disorder mem matches 5 run function mini:ass/game/lld/5_summon
+execute if score $mini_type mem matches 302 if score $ley_line_disorder mem matches 1 run function mini:element/game/lld/1_enhance

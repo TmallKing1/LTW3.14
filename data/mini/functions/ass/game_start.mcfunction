@@ -16,5 +16,5 @@ bossbar set mini:red name "强制死亡模式"
 # 幻境干扰 5 boss栏
 execute if score $ley_line_disorder mem matches 5 run bossbar set mini:lld visible true
 execute if score $ley_line_disorder mem matches 5 run bossbar set mini:lld color pink
-execute if score $ley_line_disorder mem matches 5 run bossbar set mini:lld name [{"text": "| 幻境稳定程度 |","color": "#EC00B8"}]
+execute if score $ley_line_disorder mem matches 5 run bossbar set mini:lld name [{"text": "| 幻境不稳定度 |","color": "#EC00B8"}]
 execute if score $ley_line_disorder mem matches 5 run execute store result bossbar mini:lld max run scoreboard players get $period_lld_max mem

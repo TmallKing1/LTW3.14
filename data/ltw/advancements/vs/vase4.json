@@ -1,0 +1,28 @@
+{
+    "parent": "ltw:vs/vase3",
+    "display": {
+      "icon": {
+        "item": "minecraft:decorated_pot",
+        "nbt": "{BlockEntityTag:{sherds:[\"minecraft:prize_pottery_sherd\",\"minecraft:prize_pottery_sherd\",\"minecraft:prize_pottery_sherd\",\"minecraft:prize_pottery_sherd\"],id:\"decorated_pot\"},Enchantments:[{id:\"protection\",lvl:1}]}"
+      },
+      "title": {
+        "text": "罐中窥宝 · Ω "
+      },
+      "description": [
+        {"text": "【破罐之王】在不使用生命恢复罐子的情况下获胜\n", "color":"gray"},
+        {"text": "究极隐藏挑战！","color":"dark_gray","italic": true}
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": true
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_4"
+    },
+    "criteria": {
+      "a":{
+          "trigger": "minecraft:impossible"
+      }
+    }
+  }

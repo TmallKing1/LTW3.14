@@ -1,0 +1,28 @@
+{
+    "parent": "ltw:activity/root",
+    "display": {
+      "icon": {
+        "item": "minecraft:honeycomb",
+        "nbt": "{Enchantments:[{id:\"sharpness\",lvl:1}]}"
+      },
+      "title": {
+        "text": "元素战争 Extend"
+      },
+      "description": [
+        {
+          "text": "1.4版本「白兰与魔芋」限时活动",
+          "color": "white"
+        }
+      ],
+      "frame": "goal",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": false
+    },
+    "rewards": {},
+    "criteria": {
+      "a": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }

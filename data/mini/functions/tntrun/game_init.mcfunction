@@ -44,5 +44,6 @@ scoreboard players set $remove_resistance mem 0
 team modify playing friendlyFire true
 team modify playing collisionRule always
 team modify playing deathMessageVisibility never
+gamerule naturalRegeneration true
 
 schedule function mini:tntrun/game_init2 15t replace

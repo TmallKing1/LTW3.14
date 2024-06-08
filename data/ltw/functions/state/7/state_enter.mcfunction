@@ -21,3 +21,4 @@ scoreboard players set $first_selection mem 1
 scoreboard players set $remove_resistance mem 0
 team modify playing friendlyFire false
 team modify playing collisionRule always
+gamerule naturalRegeneration true

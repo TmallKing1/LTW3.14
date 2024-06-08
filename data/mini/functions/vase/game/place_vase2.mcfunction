@@ -1,3 +1,8 @@
+# LLD 1
+execute if score $ley_line_disorder mem matches 1 store result score $random mem run random value 1..10
+execute if score $ley_line_disorder mem matches 1 if score $random mem matches 1 run setblock ~ ~ ~ decorated_pot{sherds:["explorer_pottery_sherd","explorer_pottery_sherd","explorer_pottery_sherd","explorer_pottery_sherd"],item:{id:"minecraft:acacia_button",Count: 1b}}
+execute if score $ley_line_disorder mem matches 1 if score $random mem matches 1 run return 0
+
 # 随机决定放哪种罐子
 execute store result score $random mem run random value 1..100
 

@@ -33,4 +33,5 @@ scoreboard players set $remove_resistance mem 0
 team modify playing friendlyFire true
 team modify playing collisionRule always
 team modify playing deathMessageVisibility never
+gamerule naturalRegeneration false
 schedule function mini:circle/game_init2 1t replace

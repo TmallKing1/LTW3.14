@@ -1,0 +1,45 @@
+{
+  "parent": "ltw:activity/element_extended/burst",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_nugget"
+    },
+    "title": {
+      "text": "元素战争 EX · 全力以赴 · 起"
+    },
+    "description": [
+      {
+        "text": "使用 2 次元素爆发。\n",
+        "color": "white"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "126 魔法精华",
+        "color": "light_purple"
+      },
+      {
+        "text": "，",
+        "color": "gray"
+      },
+      {
+        "text": "3 金锭",
+        "color": "gold"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_act_1"
+  },
+  "criteria": {
+    "a": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

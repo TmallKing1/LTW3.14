@@ -13,6 +13,7 @@ execute if score $mini_type mem matches 10 run function mini:bullet/game_end
 execute if score $mini_type mem matches 11 run function mini:boomer/game_end
 execute if score $mini_type mem matches 12 run function mini:chain/game_end
 execute if score $mini_type mem matches 13 run function mini:vase/game_end
+execute if score $mini_type mem matches 14 run function mini:sand/game_end
 execute if score $mini_type mem matches 101 run function mini:iron/game_end
 execute if score $mini_type mem matches 102 run function mini:trade/game_end
 execute if score $mini_type mem matches 103 run function mini:diamond/game_end
@@ -65,6 +66,12 @@ execute if score $mini_type mem matches 11 run advancement grant @a[tag=mini_ran
 execute if score $mini_type mem matches 11 if score $countdown mem matches 1.. run advancement grant @a[tag=mini_rank1] only ltw:blood/boomer2
 execute if score $mini_type mem matches 11 run advancement grant @a[tag=mini_rank1,scores={health_disp=20..}] only ltw:blood/boomer3
 execute if score $mini_type mem matches 11 run advancement grant @a[tag=mini_rank1,x=2000,y=22,z=1000,dx=32,dy=16,dz=32] only ltw:blood/boomer4
+execute if score $mini_type mem matches 12 run advancement grant @a[tag=mini_rank1,scores={mini_heart=2..}] only ltw:parkour/chain1
+execute if score $mini_type mem matches 12 run advancement grant @a[tag=mini_rank1,scores={mini_heart=3..}] only ltw:parkour/chain2
+execute if score $mini_type mem matches 12 run advancement grant @a[tag=mini_rank1,scores={mini_heart=5..}] only ltw:parkour/chain3
+execute if score $mini_type mem matches 12 run advancement grant @a[tag=mini_rank1,tag=!chain_hurt] only ltw:parkour/chain4
+execute if score $mini_type mem matches 13 if score $current_turn mem matches 10.. run advancement grant @a[tag=mini_rank1] only ltw:vs/vase3
+execute if score $mini_type mem matches 13 run advancement grant @a[tag=mini_rank1,tag=!vase_regenerated] only ltw:vs/vase4
 execute if score $mini_type mem matches 201 run advancement grant @a[tag=mini_rank1,scores={health_disp=8..}] only ltw:blood/ass1
 execute if score $mini_type mem matches 201 if score $countdown mem matches 1.. run advancement grant @a[tag=mini_rank1] only ltw:blood/ass2
 execute if score $mini_type mem matches 201 run advancement grant @a[tag=mini_rank1,scores={health_disp=20..}] only ltw:blood/ass3
@@ -72,6 +79,21 @@ execute if score $mini_type mem matches 201 run advancement grant @a[tag=mini_ra
 execute if score $mini_type mem matches 202 run advancement grant @a[tag=mini_rank1,scores={layer=3..}] only ltw:parkour/arrow2
 execute if score $mini_type mem matches 202 if score $countdown mem matches 1.. run advancement grant @a[tag=mini_rank1,scores={layer=3..}] only ltw:parkour/arrow3
 execute if score $mini_type mem matches 202 if score $countdown mem matches 0 if score 强制死亡持续时间 layer matches 40.. run advancement grant @a[tag=mini_rank1] only ltw:parkour/arrow4
+
+# 元素战争给予金粒
+execute if score $mini_type mem matches 302 run scoreboard players add @a[tag=mini_rank1] gold 9
+execute if score $mini_type mem matches 302 run scoreboard players add @a[tag=mini_rank1] gold_extra 9
+execute if score $mini_type mem matches 302 run tellraw @a[tag=mini_rank1] ["",{"text": ">> ","color": "green","bold": true},{"text": "你获得了 1 金锭！","color": "green"}]
+execute if score $mini_type mem matches 302 run scoreboard players add @a[tag=mini_rank2] gold 7
+execute if score $mini_type mem matches 302 run scoreboard players add @a[tag=mini_rank2] gold_extra 7
+execute if score $mini_type mem matches 302 run tellraw @a[tag=mini_rank2] ["",{"text": ">> ","color": "green","bold": true},{"text": "你获得了 7 金粒！","color": "green"}]
+execute if score $mini_type mem matches 302 run scoreboard players add @a[tag=mini_rank3] gold 5
+execute if score $mini_type mem matches 302 run scoreboard players add @a[tag=mini_rank3] gold_extra 5
+execute if score $mini_type mem matches 302 run tellraw @a[tag=mini_rank3] ["",{"text": ">> ","color": "green","bold": true},{"text": "你获得了 5 金粒！","color": "green"}]
+execute if score $mini_type mem matches 302 run scoreboard players add @a[tag=mini_rank4,scores={kills=1..}] gold 3
+execute if score $mini_type mem matches 302 run scoreboard players add @a[tag=mini_rank4,scores={kills=1..}] gold_extra 3
+execute if score $mini_type mem matches 302 run tellraw @a[tag=mini_rank4,scores={kills=1..}] ["",{"text": ">> ","color": "green","bold": true},{"text": "你获得了 3 金粒！","color": "green"}]
+
 
 # 清理怪东西
 clear @a[team=!debugging] #mini:game_item{game_item: 1b}

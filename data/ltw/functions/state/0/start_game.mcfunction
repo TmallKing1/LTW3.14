@@ -1,6 +1,7 @@
 # 开始游戏
 
 # 确认实际玩家
+team join playing @a[team=playing_lost]
 tag @a remove selected_player
 tag @a[team=playing,sort=random,limit=8] add selected_player
 
@@ -33,6 +34,16 @@ scoreboard players operation @a game_id = $ game_id
 # 设置轮数为 0
 #scoreboard players set $round mem 0
 
+# 1.2版本活动：发动总攻
+# 设置分数
+#scoreboard players set $attack_end mem 0
+#scoreboard players reset * damage_dealt
+#scoreboard players reset * damage_dealt_back
+
+# 1.4 版本活动：元素战争 EX
+# 设置轮数为 0
+scoreboard players set $round mem 1
+
 # 等待中 Bossbar
 bossbar set ltw:waiting visible false
 
@@ -41,9 +52,12 @@ scoreboard players set @a[team=playing] player_id 0
 scoreboard players set $player_id mem 0
 execute if entity @a[team=playing,scores={player_id=0}] run function ltw:state/0/set_player_id
 
+# 玩家出生点
+spawnpoint @a[team=!debugging] -12 7 -102
+
 # 重置物品
 clear @a[team=playing]
-# 1.0 版本活动：开局不重置物品，打完第零局再重置
+# 1.0/1.4 版本活动：开局不重置物品，打完第零局再重置（注释下面一条指令）
 execute as @a[team=playing] at @s run function item:shop/refresh_equip
 
 # 重置小游戏编号数组

@@ -1,0 +1,53 @@
+{
+    "parent": "ltw:activity/element_extended",
+    "display": {
+      "icon": {
+        "item": "minecraft:dragon_egg"
+      },
+      "title": {
+        "text": "元素战争 EX · 终末"
+      },
+      "description": [
+        {
+          "text": "完成本章的所有「合」进度。\n",
+          "color": "white"
+        },
+        {
+          "text": "奖励: ",
+          "color": "green"
+        },
+        {
+          "text": "下界合金质 盔甲纹饰材质\n",
+          "color": "aqua"
+        },
+        {
+          "text": "（此进度不计入战绩）",
+          "color": "dark_gray"
+        }
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": true
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_act_4_special"
+    },
+    "criteria": {
+      "a": {
+        "trigger": "minecraft:location",
+        "conditions": {
+          "player": {
+            "type_specific": {
+              "type": "player",
+              "advancements": {
+                "ltw:activity/element_extended/burst4": true,
+                "ltw:activity/element_extended/reaction4": true,
+                "ltw:activity/element_extended/turns4": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }

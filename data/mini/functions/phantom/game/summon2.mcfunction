@@ -24,6 +24,7 @@ attribute @e[tag=bonus_phantom,tag=new_phantom,limit=1] generic.max_health base 
 
 # 幻境干扰
 execute if score $ley_line_disorder mem matches 1 as @e[tag=new_phantom,limit=1] run data modify entity @s Size set value 3
+execute if score $random mem matches 1 if score $ley_line_disorder mem matches 3 run tag @e[tag=new_phantom,limit=1,tag=!bonus_phantom] add invisible
 
 # 确认属性修改
 effect give @e[tag=new_phantom] instant_damage 1 10 true

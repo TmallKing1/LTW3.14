@@ -5,9 +5,11 @@ title @s actionbar ""
 
 # 显示 Title
 title @s times 5t 53t 2t
-execute unless score $double_reward mem matches 1 run title @s subtitle ""
-execute if score $double_reward mem matches 1 run title @s subtitle {"text": "双倍奖励模式","color": "light_purple"}
-title @s title {"text": "选择奖励"}
+execute unless score $test_mode mem matches 1 unless score $double_reward mem matches 1 run title @s subtitle ""
+execute unless score $test_mode mem matches 1 if score $double_reward mem matches 1 run title @s subtitle {"text": "双倍奖励模式","color": "light_purple"}
+execute unless score $test_mode mem matches 1 unless score $round mem matches 0 run title @s title {"text": "选择奖励"}
+execute if score $test_mode mem matches 1 run title @s title {"text": "游戏结束"}
+execute if score $round mem matches 0 run title @s title {"text": "游戏结束"}
 
 # 重置玩家血量上限
 attribute @s generic.max_health base set 20
@@ -15,7 +17,6 @@ attribute @s generic.max_health base set 20
 # 状态效果
 effect clear @s
 effect give @s saturation infinite 0 true
-gamerule naturalRegeneration true
 effect give @s night_vision infinite 0 true
 
 # 显示小游戏结果
