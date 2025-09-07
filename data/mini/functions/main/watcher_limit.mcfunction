@@ -21,6 +21,7 @@ execute if score $mini_type mem matches 104 run function mini:hopper/watcher_lim
 execute if score $mini_type mem matches 105 run function mini:bingo/watcher_limit
 execute if score $mini_type mem matches 201 run function mini:ass/watcher_limit
 execute if score $mini_type mem matches 202 run function mini:arrow/watcher_limit
+execute if score $mini_type mem matches 203 run function mini:potion/watcher_limit
 execute if score $mini_type mem matches 301 run function mini:duckrush/watcher_limit
 execute if score $mini_type mem matches 302 run function mini:element/watcher_limit
 execute if score $mini_type mem matches 303 run function mini:power/watcher_limit

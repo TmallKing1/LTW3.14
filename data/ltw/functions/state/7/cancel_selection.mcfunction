@@ -6,5 +6,4 @@ clear @s barrier
 execute unless entity @s[tag=selecting] run return 0
 
 tag @s remove selecting
-execute unless entity @a[tag=selecting] run function ltw:state/7/next
 tellraw @a ["",{"text": ">> ","color":"red","bold": true},{"selector": "@s","color":"red"}," 未选择奖励……"]

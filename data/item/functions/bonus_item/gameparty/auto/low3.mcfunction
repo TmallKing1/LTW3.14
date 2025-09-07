@@ -13,5 +13,8 @@ execute if score #quality mem matches ..12 as @e[type=item,x=0,y=0,z=0,dx=0,dy=0
 execute if score #quality mem matches 13 run loot spawn 0 0 0 loot item:score1
 execute if score #quality mem matches 13 as @e[type=item,x=0,y=0,z=0,dx=0,dy=0,dz=0,limit=1] positioned ~ ~ ~ run function item:bonus_item/gameparty/wrap/white
 # 白色：1x
-execute if score #quality mem matches 14.. if score $round mem matches ..4 run function item:bonus_item/gameparty/mixed/white
-execute if score #quality mem matches 14.. if score $round mem matches 5.. run function item:bonus_item/gameparty/score/white
+execute if score #quality mem matches 14.. unless score #gamemode mem matches 2 if score $round mem matches ..4 run function item:bonus_item/gameparty/mixed/white
+execute if score #quality mem matches 14.. unless score #gamemode mem matches 2 if score $round mem matches 5.. run function item:bonus_item/gameparty/score/white
+
+execute if score #quality mem matches 14.. if score #gamemode mem matches 2 if score $round mem matches ..1 run function item:bonus_item/gameparty/score/white
+execute if score #quality mem matches 14.. if score #gamemode mem matches 2 if score $round mem matches 2.. run function item:bonus_item/gameparty/reverse/white

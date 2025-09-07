@@ -1,5 +1,5 @@
 # 显示提示
-execute if score $zombie_stage mem matches 1 if score $countdown mem matches 20 run tellraw @a[team=playing,scores={green_total=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：僵尸也会受到来自水的伤害！尝试利用这一特性快速击败它们吧。","bold":false},"\n "]
+execute if score $zombie_stage mem matches 1 if score $countdown mem matches 20 run tellraw @a[team=playing,scores={stat_level=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：僵尸也会受到来自水的伤害！尝试利用这一特性快速击败它们吧。","bold":false},"\n "]
 
 # 水中生物处理
 execute as @a at @s if block ~ ~ ~ water run effect give @s instant_damage 1 1

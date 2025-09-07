@@ -73,7 +73,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{display:{Name:'{\"text\":\"<锋利 I，亡灵杀手 IV> 剪刀\",\"italic\":false,\"color\":\"aqua\"}'},item_name:'{\"text\":\"<锋利 I，亡灵杀手 IV> 剪刀\",\"color\":\"aqua\"}',Enchantments:[{id:\"sharpness\",lvl:1},{id:\"smite\",lvl:4}],is_bonus:1b,bonus_new:1b,bonus_return:1b}"
+                            "tag": "{display:{Name:'{\"text\":\"<伤害 +1，亡灵杀手 IV> 剪刀\",\"italic\":false,\"color\":\"aqua\"}'},item_name:'{\"text\":\"<伤害 +1，亡灵杀手 IV> 剪刀\",\"color\":\"aqua\"}',Enchantments:[{id:\"smite\",lvl:4}],AttributeModifiers:[{Name:\"damage\",Amount:1, AttributeName:\"minecraft:generic.attack_damage\", Operation: 0, Slot: \"mainhand\", UUID:[I;2,0,2,4]}],is_bonus:1b,bonus_new:1b,bonus_return:1b}"
                         }
                     ]
                 },
@@ -217,7 +217,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{item_name:'{\"text\":\"<荆棘 XIV> 皮革外套\",\"color\":\"aqua\"}',is_bonus:1b,bonus_new:1b,bonus_return:1b,Enchantments:[{id:\"thorns\",lvl:14}],display:{Name:'{\"text\":\"<荆棘 XIV> 皮革外套\",\"italic\":false,\"color\":\"aqua\"}'}}"
+                            "tag": "{item_name:'{\"text\":\"<荆棘 XIV> 皮革外套\",\"color\":\"aqua\"}',is_bonus:1b,bonus_new:1b,bonus_return:1b,Enchantments:[{id:\"minecraft:thorns\",lvl:14}],display:{Name:'{\"text\":\"<荆棘 XIV> 皮革外套\",\"italic\":false,\"color\":\"aqua\"}'}}"
                         }
                     ]
                 },

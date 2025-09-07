@@ -14,11 +14,11 @@ execute as @a[tag=targeted_player] run function mini:main/player_lose_heart
 tag @a remove targeted_player
 
 # 特效
-execute as @e[type=tnt,tag=chain_tnt] at @s run particle explosion_emitter ~ ~ ~ 0 0 0 0 1 force @a
-execute as @e[type=tnt,tag=chain_tnt] at @s run playsound entity.generic.explode block @a ~ ~ ~
+execute as @e[tag=chain_tnt] at @s run particle explosion_emitter ~ ~ ~ 0 0 0 0 1 force @a
+execute as @e[tag=chain_tnt] at @s run playsound entity.generic.explode block @a ~ ~ ~
 
 # 清理原有 TNT
-kill @e[type=tnt,tag=chain_tnt]
+kill @e[tag=chain_tnt]
 
 # 若还有两名以上玩家，则开始新的一轮
 execute if score $player_alive mem matches 2.. run function mini:chain/game/start_round

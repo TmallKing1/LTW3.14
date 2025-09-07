@@ -1,5 +1,5 @@
 # 显示提示
-execute if score $zombie_stage mem matches 1 if score $countdown mem matches 20 run tellraw @a[team=playing,scores={green_total=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：僵尸掉进虚空会立即死亡！尝试利用这一特性快速击败它们吧。","bold":false},"\n "]
+execute if score $zombie_stage mem matches 1 if score $countdown mem matches 20 run tellraw @a[team=playing,scores={stat_level=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：僵尸掉进虚空会立即死亡！尝试利用这一特性快速击败它们吧。","bold":false},"\n "]
 
 # 虚空中生物处理
 execute as @a[tag=mini_running] unless entity @s[x=1988.0,y=-5.0,z=11988.0,dx=44,dy=27,dz=44] run effect give @s levitation 1 25

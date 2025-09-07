@@ -72,6 +72,10 @@ execute if score @s buy_trigger matches 1000 if score $state mem matches 0 run f
 execute if score @s buy_trigger matches 1101 if score $state mem matches 0 run function item:shop/buy/1101_gold_material
 execute if score @s buy_trigger matches 1102 if score $state mem matches 0 run function item:shop/buy/1102_diamond_material
 execute if score @s buy_trigger matches 1103 if score $state mem matches 0 run function item:shop/buy/1103_netherite_material
+# 世界强化
+execute if score @s buy_trigger matches 1201 if score $state mem matches 0 run function item:shop/buy/1201_world_boost
+execute if score @s buy_trigger matches 1202 if score $state mem matches 0 run function item:shop/buy/1202_world_boost
+execute if score @s buy_trigger matches 1203 if score $state mem matches 0 run function item:shop/buy/1203_world_boost
 
 # 幻境抽取
 execute if score @s buy_trigger matches 2000 if score $state mem matches 0 run function item:shop/buy/2000_wish_1x

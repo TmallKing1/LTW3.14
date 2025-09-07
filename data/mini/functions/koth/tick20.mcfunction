@@ -18,6 +18,9 @@ execute if score $new_item_cd mem matches ..14 run scoreboard players set #new_i
 # 如果上述条件均满足，则刷出新物品
 execute if score #new_item mem matches 0 run function mini:koth/game/new_item
 
+# 100s：教学
+execute if score $countdown mem matches 100 run tellraw @s[team=playing,scores={stat_level=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：如果觉得自己打不过其他人，也可以选择去道具生成处蹲点……","bold":false},"\n "]
+
 # 90s：双倍提示
 execute if score $countdown mem matches 90 run title @a subtitle {"text":"⚠ 双倍能量将在三十秒后开启！ ⚠","color":"yellow"}
 execute if score $countdown mem matches 90 run title @a times 1t 90t 3t

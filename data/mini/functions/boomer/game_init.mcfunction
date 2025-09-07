@@ -3,6 +3,7 @@ forceload add 2000 1000 2032 1032
 
 scoreboard players set $countdown_fast mem 0
 scoreboard players set $show_score mem 0
+execute if score #gamemode mem matches 2 run scoreboard players set $show_score mem 1
 scoreboard players set $new_item_cd mem 0
 scoreboard players set $survival mem 0
 
@@ -21,7 +22,7 @@ execute if score $random mem matches 3 run scoreboard players set $ley_line_diso
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 1
-team modify playing friendlyFire true
+scoreboard players set $pvp_mode mem 2
 team modify playing collisionRule always
 team modify playing deathMessageVisibility always
 gamerule naturalRegeneration false

@@ -5,6 +5,7 @@ team join playing @a[team=watching_lost]
 clear @a[team=!debugging]
 function ltw:state/0/start_game
 scoreboard players set $round mem 6
+execute if score #gamemode mem matches 2 run scoreboard players set $round mem 1
 scoreboard players set $mini_type mem 10
 function mini:main/game_init
 function ltw:state/4/state_enter

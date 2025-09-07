@@ -15,8 +15,8 @@ execute if score $countdown mem matches ..10 run title @a title [""]
 execute if score $countdown mem matches ..10 as @a at @s run function lib:sounds/hit2
 
 # 180s：教学
-execute if score $countdown mem matches 180 run tellraw @s[team=playing,scores={emerald=0}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：手持蜜脾打开任务面板，收集横/纵向一条线上三个物品即为成功！","bold":false},"\n "]
-execute if score $countdown mem matches 180 run tellraw @s[team=playing,scores={emerald=1..}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：地牢的箱子中有积分与书等资源，寻找地牢也是不错的选择！","bold":false},"\n "]
+execute if score $countdown mem matches 180 run tellraw @s[team=playing,scores={stat_level=..5}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：手持蜜脾打开任务面板，收集横/纵向一条线上三个物品即为成功！","bold":false},"\n "]
+execute if score $countdown mem matches 180 run tellraw @s[team=playing,scores={stat_level=6..}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：地牢的箱子中有积分与书等资源，寻找地牢也是不错的选择！","bold":false},"\n "]
 
 # 150s：提示空投
 execute if score $countdown mem matches 150 run title @a subtitle {"text":"⚠ 空投将在三十秒后释放！ ⚠","color":"red"}

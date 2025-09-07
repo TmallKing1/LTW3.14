@@ -10,7 +10,7 @@ execute if score $ley_line_disorder mem matches 2 run bossbar set mini:red name 
 execute if score $ley_line_disorder mem matches 2 run bossbar set mini:blue name ["炸弹稳定度 [",{"score":{"name": "$countdown_fast","objective": "mem"},"color": "aqua"},"]"]
 
 # TNT 颜色
-team join gold @e[type=tnt, tag=chain_tnt]
+team join gold @e[tag=chain_tnt]
 
 # 玩家 Bossbar 颜色
 function mini:chain/game/bossbar_color

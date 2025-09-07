@@ -2,10 +2,10 @@
 forceload remove 976 8976 1023 9023
 
 # 给予进度
-advancement grant @a[team=playing,scores={power_count=80..}] only ltw:vs/koth1
-advancement grant @a[team=playing,scores={power_count=120..}] only ltw:vs/koth2
-advancement grant @a[team=playing,scores={power_count=200..}] only ltw:vs/koth3
-advancement grant @a[team=playing,scores={power_count=300..}] only ltw:vs/koth4
+execute unless score #gamemode mem matches 2 run advancement grant @a[team=playing,scores={power_count=80..}] only ltw:vs/koth1
+execute unless score #gamemode mem matches 2 run advancement grant @a[team=playing,scores={power_count=120..}] only ltw:vs/koth2
+execute unless score #gamemode mem matches 2 run advancement grant @a[team=playing,scores={power_count=200..}] only ltw:vs/koth3
+execute unless score #gamemode mem matches 2 run advancement grant @a[team=playing,scores={power_count=300..}] only ltw:vs/koth4
 
 # 计算积分
 scoreboard players set @a[team=playing] mini_score 0

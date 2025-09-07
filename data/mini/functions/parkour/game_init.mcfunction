@@ -3,6 +3,7 @@ forceload add 1000 1000 1064 1064
 
 scoreboard players set $tempo_enable mem 1
 scoreboard players set $show_score mem 0
+execute if score #gamemode mem matches 2 run scoreboard players set $show_score mem 1
 scoreboard players set $countdown_fast mem 0
 scoreboard players set $survival mem 0
 scoreboard players set $game_end_mode mem 1
@@ -21,8 +22,9 @@ execute if score $random mem matches 1 run scoreboard players set $ley_line_diso
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 0
-execute unless score $ley_line_disorder mem matches 1 run team modify playing friendlyFire false
-execute if score $ley_line_disorder mem matches 1 run team modify playing friendlyFire true
+execute unless score $ley_line_disorder mem matches 1 run scoreboard players set $pvp_mode mem 0
+execute if score $ley_line_disorder mem matches 1 run scoreboard players set $pvp_mode mem 2
+execute if score #gamemode mem matches -2 run scoreboard players set $pvp_mode mem 0
 team modify playing collisionRule never
 team modify playing deathMessageVisibility never
 gamerule naturalRegeneration true

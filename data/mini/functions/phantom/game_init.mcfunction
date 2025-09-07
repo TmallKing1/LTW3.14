@@ -37,7 +37,7 @@ execute if score $ley_line_disorder mem matches 2 run fill 1030 16 6054 1031 16 
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 1
-team modify playing friendlyFire false
+scoreboard players set $pvp_mode mem 0
 team modify playing collisionRule always
 team modify playing deathMessageVisibility always
 gamerule naturalRegeneration false

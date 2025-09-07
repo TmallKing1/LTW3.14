@@ -10,7 +10,6 @@ kill @e[type=minecart,tag=seat_mc]
 # 清理玩家 Tag
 tag @a remove in_minecart
 tag @a remove seat_waiting
-tag @a remove checking
 
 # HUD
 scoreboard players set $bossbar_type mem 0

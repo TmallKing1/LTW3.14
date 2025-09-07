@@ -1,0 +1,97 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "weight": 2,
+                    "name": "minecraft:creeper_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"随机随机品质道具\",\"color\":\"white\"}',is_bonus:1b,bonus_new:1b,bonus_reverse_item:{count:1,white:15,green:30,blue:40,purple:15}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 2,
+                    "name": "minecraft:skeleton_skull",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"随机随机品质道具\",\"color\":\"white\"}',is_bonus:1b,bonus_new:1b,bonus_reverse_item:{count:1,white:10,green:30,blue:40,purple:20}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 2,
+                    "name": "minecraft:wither_skeleton_skull",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"随机随机品质道具\",\"color\":\"white\"}',is_bonus:1b,bonus_new:1b,bonus_reverse_item:{count:1,white:5,green:30,blue:45,purple:20}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 1,
+                    "name": "minecraft:dragon_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"清空物品栏，换取 4 个随机随机品质道具\",\"color\":\"white\"}',is_bonus:1b,bonus_new:1b,clean_inventory:1b,bonus_reverse_item:{count:4,white:5,green:35,blue:40,purple:20}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 1,
+                    "name": "minecraft:pink_petals",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"随机 -7~7 积分\",\"color\":\"white\"}',is_bonus:1b,bonus_new:1b,bonus_reverse_score:{max:7,reverse:25}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 1,
+                    "name": "minecraft:pink_petals",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"随机 -8~8 积分\",\"color\":\"white\"}',is_bonus:1b,bonus_new:1b,bonus_reverse_score:{max:8,reverse:30}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 1,
+                    "name": "minecraft:pink_petals",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"随机 -9~9 积分\",\"color\":\"white\"}',is_bonus:1b,bonus_new:1b,bonus_reverse_score:{max:9,reverse:35}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 1,
+                    "name": "minecraft:goat_horn",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"随机获得或失去积分\",\"color\":\"white\"}',is_bonus:1b,bonus_new:1b,bonus_reverse_score:{max:5,reverse:40,no_zero:1b}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

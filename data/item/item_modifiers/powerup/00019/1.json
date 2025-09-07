@@ -1,0 +1,52 @@
+[
+    {
+        "function": "set_name",
+        "name": {
+            "text": "红色床",
+            "color": "light_purple",
+            "italic": false
+        }
+    },
+    {
+        "function": "set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "text": "无属性",
+                "color": "gray",
+                "italic": false
+            },
+            {
+                "text": "特殊模型",
+                "color": "aqua",
+                "italic": false
+            },
+            "",
+            [
+                {
+                    "text": "收集进度: ",
+                    "color": "gray",
+                    "italic": false
+                },
+                {
+                    "score": {
+                        "name": "@s",
+                        "objective": "powerup_00019"
+                    },
+                    "color": "green",
+                    "italic": false
+                },
+                {
+                    "text": " / 5",
+                    "color": "gray",
+                    "italic": false
+                }
+            ],
+            {
+                "text": "点击取消装备！",
+                "color": "yellow",
+                "italic": false
+            }
+        ]
+    }
+]

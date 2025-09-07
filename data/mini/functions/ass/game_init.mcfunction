@@ -2,6 +2,7 @@
 forceload add 1000 7000 1032 7032
 
 scoreboard players reset * creeperUsed
+scoreboard players reset * deaths
 scoreboard players set $countdown_fast mem 0
 scoreboard players set $show_score mem 0
 scoreboard players set $new_item_cd mem 0
@@ -16,24 +17,21 @@ execute if score $random mem matches 3 run scoreboard players set $ley_line_diso
 execute if score $random mem matches 4 run scoreboard players set $ley_line_disorder mem 4
 execute if score $random mem matches 5 run scoreboard players set $ley_line_disorder mem 5
 
-# 测试用：强制幻境干扰 5
-execute if score $test_mode mem matches 1 run scoreboard players set $ley_line_disorder mem 5
-
-# 幻境干扰 5
-execute if score $ley_line_disorder mem matches 5 run scoreboard players set $period_lld_max mem 120
-execute if score $ley_line_disorder mem matches 5 run scoreboard players set $period_lld_warn mem 100
-execute if score $ley_line_disorder mem matches 5 run scoreboard players set $period_lld_warned mem 0
-
 # 生成地图
+execute unless score #gamemode mem matches 2 run fill 999 4 6999 1032 37 7032 air
+execute if score #gamemode mem matches 2 run fill 999 4 6999 1032 37 7032 bedrock
 setblock 1000 4 7000 minecraft:structure_block[mode=load]{mode: "LOAD", posX: 0, posY: 1, posZ: 0, name: "mini:ass"}
 setblock 1000 5 7000 minecraft:redstone_block
-setblock 1000 4 7000 air
+setblock 1000 4 7000 bedrock
+execute if score #gamemode mem matches 2 run fill 999 4 6999 1032 37 7032 air replace barrier
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 1
-team modify playing friendlyFire true
+scoreboard players set $pvp_mode mem 2
 team modify playing collisionRule always
 team modify playing deathMessageVisibility always
 gamerule naturalRegeneration false
+execute if score #gamemode mem matches 2 run gamerule doTileDrops true
+execute if score #gamemode mem matches 2 run gamerule mobGriefing true
 
 schedule function mini:ass/game_init2 15t replace

@@ -17,6 +17,12 @@ setblock 2000 4 3000 air
 setblock 2030 22 3013 minecraft:oak_wall_sign[facing=west,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:['""','""','""','""']},front_text:{color:"orange",has_glowing_text:1b,messages:['"[ 购买 ]"','"水下呼吸 15s"','{"clickEvent":{"action":"run_command","value":"/function mini:sand/game/buy_effect"},"text":""}','"10 G"']},is_waxed:1b}
 setblock 2030 22 3015 minecraft:oak_wall_sign[facing=west,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:['""','""','""','""']},front_text:{color:"orange",has_glowing_text:1b,messages:['"[ 购买 ]"','"破损金剑(仅本轮)"','{"clickEvent":{"action":"run_command","value":"/function mini:sand/game/buy_sword"},"text":""}','"15 G"']},is_waxed:1b}
 
+# 调整水面
+execute if score #gamemode mem matches 2 run fill 2000 24 3000 2028 16 3028 air replace water
+
+# 封闭区域
+execute if score #gamemode mem matches 2 run fill 2028 21 3012 2028 25 3016 prismarine
+
 # 调整时间
 time set 8600t
 
@@ -26,9 +32,9 @@ execute if score $random mem matches 1 run scoreboard players set $ley_line_diso
 execute if score $random mem matches 2 run scoreboard players set $ley_line_disorder mem 2
 execute if score $random mem matches 3 run scoreboard players set $ley_line_disorder mem 3
 
-# 伤害管理
+# 伤害管理（特殊伤害计算方式）
 scoreboard players set $remove_resistance mem 0
-team modify playing friendlyFire true
+scoreboard players set $pvp_mode mem 1
 team modify playing collisionRule always
 team modify playing deathMessageVisibility always
 gamerule drowningDamage true

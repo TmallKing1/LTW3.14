@@ -1,0 +1,33 @@
+{
+    "parent": "ltw:egg/root",
+    "display": {
+        "icon": {
+            "item": "minecraft:blue_stained_glass_pane"
+        },
+        "title": "破碎的记忆",
+        "description": [
+            {
+                "text": "成功完成「破碎的记忆」解密。\n",
+                "color": "gray"
+            },
+            {
+                "text": "「玻璃碎片」",
+                "color": "dark_purple",
+                "italic": true
+            }
+        ],
+        "frame": "challenge",
+        "hidden": true
+    },
+    "criteria": {
+        "broken": {
+            "trigger": "impossible"
+        }
+    },
+    "requirements": [
+        [
+            "broken"
+        ]
+    ],
+    "rewards": {}
+}

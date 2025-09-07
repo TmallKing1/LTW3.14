@@ -20,6 +20,7 @@ execute if score $mini_type mem matches 104 run function mini:hopper/tick2
 execute if score $mini_type mem matches 105 run function mini:bingo/tick2
 execute if score $mini_type mem matches 201 run function mini:ass/tick2
 execute if score $mini_type mem matches 202 run function mini:arrow/tick2
+execute if score $mini_type mem matches 203 run function mini:potion/tick2
 execute if score $mini_type mem matches 301 run function mini:duckrush/tick2
 execute if score $mini_type mem matches 302 run function mini:element/tick2
 execute if score $mini_type mem matches 303 run function mini:power/tick2

@@ -7,8 +7,10 @@ title @s times 5t 53t 2t
 title @s subtitle ""
 execute if score $round mem matches 1..6 if score $double_reward mem matches 1 run title @s subtitle {"text": "双倍奖励!","color": "light_purple"}
 execute if score $round mem matches 0 run title @s title {"text":"活动轮","color":"aqua"}
-execute if score $round mem matches 1..5 run title @s title ["第 ",{"score": {"objective": "mem","name": "$round"}},"/6 轮"]
-execute if score $round mem matches 6 run title @s title {"text":"最终轮","color":"gold"}
+execute unless score #gamemode mem matches 2 if score $round mem matches 1..5 run title @s title ["第 ",{"score": {"objective": "mem","name": "$round"}},"/6 轮"]
+execute unless score #gamemode mem matches 2 if score $round mem matches 6 run title @s title {"text":"最终轮","color":"gold"}
+execute if score #gamemode mem matches 2 if score $round mem matches 2..6 run title @s title [{"text": "","color": "red"},"第 ",{"score": {"objective": "mem","name": "$round"}},"/1 轮"]
+execute if score #gamemode mem matches 2 if score $round mem matches 1 run title @s title {"text":"最初轮","color":"dark_red"}
 
 # 状态效果
 effect clear @s

@@ -1,4 +1,4 @@
-execute store result score $random mem run random value 1001..1007
+execute store result score $random mem run random value 1001..1011
 execute if score $random mem matches 1001 run function item:powerup/wish/four/00006
 execute if score $random mem matches 1002 run function item:powerup/wish/four/00007
 execute if score $random mem matches 1003 run function item:powerup/wish/four/00008
@@ -6,3 +6,7 @@ execute if score $random mem matches 1004 run function item:powerup/wish/four/00
 execute if score $random mem matches 1005 run function item:powerup/wish/four/00010
 execute if score $random mem matches 1006 run function item:powerup/wish/four/00012
 execute if score $random mem matches 1007 run function item:powerup/wish/four/00014
+execute if score $random mem matches 1008 run function item:powerup/wish/four/00016
+execute if score $random mem matches 1009 run function item:powerup/wish/four/00017
+execute if score $random mem matches 1010 run function item:powerup/wish/four/00018
+execute if score $random mem matches 1011 run function item:powerup/wish/four/00019

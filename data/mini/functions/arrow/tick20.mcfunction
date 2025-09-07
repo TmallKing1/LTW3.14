@@ -2,6 +2,9 @@
 execute if score $countdown_second mem matches 10.. run bossbar set mini:green name ["剩余时间 [",{"score":{"name": "$countdown_minute","objective": "mem"},"color": "green"},{"text": ":","color": "green"},{"score":{"name": "$countdown_second","objective": "mem"},"color": "green"},"]"]
 execute unless score $countdown_second mem matches 10.. run bossbar set mini:green name ["剩余时间 [",{"score":{"name": "$countdown_minute","objective": "mem"},"color": "green"},{"text": ":0","color": "green"},{"score":{"name": "$countdown_second","objective": "mem"},"color": "green"},"]"]
 
+# 30s：教学
+execute if score $countdown mem matches 30 unless score $ley_line_disorder mem matches -1 run tellraw @s[team=playing,scores={stat_level=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：强制死亡启动时，会有箭持续生成，引爆玩家脚下的 TNT！","bold":false},"\n "]
+
 # 强制死亡的箭触发
 execute if score $bossbar_color mem matches 1 as @a[team=playing,tag=mini_running] at @s run function mini:arrow/game/force_death
 

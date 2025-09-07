@@ -18,7 +18,7 @@ scoreboard players set $bossbar_display_mode mem 0
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 1
-team modify playing friendlyFire true
+scoreboard players set $pvp_mode mem 2
 team modify playing collisionRule always
 team modify playing deathMessageVisibility always
 team modify playing nametagVisibility never

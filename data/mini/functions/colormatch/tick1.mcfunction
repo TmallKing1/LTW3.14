@@ -2,3 +2,6 @@
 execute as @e[tag=bonus_item] store result score @s temp run data get entity @s Motion[1] 1000
 execute as @e[tag=bonus_item] if entity @s[x=1000,y=20,z=4000,dx=100,dy=100,dz=100,scores={temp=-15..}] run data merge entity @s {NoGravity:0b}
 execute as @e[tag=bonus_item] unless entity @s[x=1000,y=20,z=4000,dx=100,dy=100,dz=100,scores={temp=-15..}] run data merge entity @s {NoGravity:1b}
+
+# 玩家踩方块判定
+execute if score $ley_line_disorder mem matches -1 as @a[tag=mini_running] at @s run function mini:colormatch/game/jump_check

@@ -98,6 +98,13 @@
         "ancient_debris",
         "magma_block",
         "ghast_tear",
-        "oak_planks"
+        "oak_planks",
+        "creeper_head",
+        "skeleton_skull",
+        "wither_skeleton_skull",
+        "dragon_head",
+        "goat_horn",
+        "pink_petals",
+        "nautilus_shell"
     ]
 }

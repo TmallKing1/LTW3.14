@@ -1,5 +1,5 @@
 # 标记离自己最近的 TNT
-tag @e[type=tnt,tag=chain_tnt,limit=1,sort=nearest] add targeted_tnt
+tag @e[tag=chain_tnt,limit=1,sort=nearest] add targeted_tnt
 
 # 计算 X、Y、Z 坐标差并平方
 execute store result score $deltaX mem run data get entity @s Pos[0] 100

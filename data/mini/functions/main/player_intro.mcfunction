@@ -21,6 +21,7 @@ execute if score $mini_type mem matches 104 run function mini:hopper/player_intr
 execute if score $mini_type mem matches 105 run function mini:bingo/player_intro
 execute if score $mini_type mem matches 201 run function mini:ass/player_intro
 execute if score $mini_type mem matches 202 run function mini:arrow/player_intro
+execute if score $mini_type mem matches 203 run function mini:potion/player_intro
 execute if score $mini_type mem matches 301 run function mini:duckrush/player_intro
 execute if score $mini_type mem matches 302 run function mini:element/player_intro
 execute if score $mini_type mem matches 303 run function mini:power/player_intro

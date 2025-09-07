@@ -7,6 +7,7 @@ scoreboard players set $survival mem 0
 scoreboard players set $new_item_cd mem 0
 scoreboard players set $game_end_mode mem 0
 scoreboard players reset * surviveRound
+scoreboard players reset * pm_harmless
 
 # 幻境干扰
 
@@ -17,7 +18,7 @@ execute if score $random mem matches 3 run scoreboard players set $ley_line_diso
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 0
-team modify playing friendlyFire true
+scoreboard players set $pvp_mode mem 2
 team modify playing collisionRule always
 team modify playing deathMessageVisibility never
 gamerule naturalRegeneration true

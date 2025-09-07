@@ -34,7 +34,7 @@ execute if score $random mem matches 3 run scoreboard players set $ley_line_diso
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 0
-team modify playing friendlyFire true
+scoreboard players set $pvp_mode mem 2
 team modify playing collisionRule always
 team modify playing deathMessageVisibility never
 gamerule naturalRegeneration true

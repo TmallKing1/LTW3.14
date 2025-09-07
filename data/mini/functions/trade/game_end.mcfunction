@@ -15,8 +15,5 @@ gamerule drowningDamage false
 scoreboard players set @a[team=playing] mini_score 0
 execute as @a[team=playing] run scoreboard players operation @s mini_score += @s emerald
 
-# 清理物品栏
-clear @a[team=playing]
-
 # 刷新头戴物品
 execute as @a[team=playing] run function item:shop/refresh_head

@@ -33,5 +33,6 @@ execute if score $current_turn mem matches 9 as @a[tag=mini_running] run attribu
 execute if score $current_turn mem matches 10 as @a[tag=mini_running] run attribute @s generic.max_health base set 2
 effect give @a[tag=mini_running] instant_damage
 
-# 设置倒计时：20 秒
-scoreboard players set $countdown mem 20
+# 设置倒计时：20 秒 / 15 秒
+execute unless score $ley_line_disorder mem matches -1 run scoreboard players set $countdown mem 20
+execute if score $ley_line_disorder mem matches -1 run scoreboard players set $countdown mem 15

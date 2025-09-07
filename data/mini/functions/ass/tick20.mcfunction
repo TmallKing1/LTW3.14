@@ -3,21 +3,23 @@ execute if score $countdown_second mem matches 10.. run bossbar set mini:green n
 execute unless score $countdown_second mem matches 10.. run bossbar set mini:green name ["剩余时间 [",{"score":{"name": "$countdown_minute","objective": "mem"},"color": "green"},{"text": ":0","color": "green"},{"score":{"name": "$countdown_second","objective": "mem"},"color": "green"},"]"]
 
 # 80s：幻境干扰教学
-execute if score $countdown mem matches 80 if score $ley_line_disorder mem matches 3 run tellraw @a[team=playing,scores={green_total=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：受幻境干扰影响，苦力怕可以直接被扔出去，但放不下来了！","bold":false},"\n "]
+execute if score $countdown mem matches 80 if score $ley_line_disorder mem matches 3 run tellraw @a[team=playing,scores={stat_level=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：受幻境干扰影响，苦力怕可以直接被扔出去，但放不下来了！","bold":false},"\n "]
 
 # 60s：教学
-execute if score $countdown mem matches 60 run tellraw @a[team=playing,scores={green_total=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：在召唤苦力怕后稍等一下再击退，能让它在飞到目标时立即爆炸！","bold":false},"\n "]
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 60 run tellraw @a[team=playing,scores={stat_level=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：在召唤苦力怕后稍等一下再击退，能让它在飞到目标时立即爆炸！","bold":false},"\n "]
 
 # 强制死亡机制
-execute if score $countdown mem matches 21 run tellraw @a ["",{"text": ">> ","color": "gold","bold": true},{"text": "强制死亡将在 20 秒后开启！","color": "gold"}]
-execute if score $countdown mem matches 1 run scoreboard players set $bossbar_color mem 1
-execute if score $countdown mem matches 1 run function lib:bossbar/show
-execute if score $countdown mem matches 1 as @a at @s run function lib:sounds/music/mini_fast
-execute if score $countdown mem matches 1 as @a at @s run function lib:sounds/dragon_growl
-execute if score $countdown mem matches 1 if score $player_alive mem matches 3.. run effect clear @a resistance
-execute if score $countdown mem matches 1 if score $player_alive mem matches ..2 run tellraw @a ["\n",{"text": ">> ","color": "gold","bold": true},{"text": "强制死亡已开启！\n ","color": "gold"}]
-execute if score $countdown mem matches 1 if score $player_alive mem matches 3.. run tellraw @a ["\n",{"text": ">> ","color": "gold","bold": true},{"text": "强制死亡已开启！苦力怕现在会造成更多伤害！\n ","color": "gold"}]
-execute if score $countdown mem matches ..0 run effect give @a[team=playing] wither infinite 1 true
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 21 run tellraw @a ["",{"text": ">> ","color": "gold","bold": true},{"text": "强制死亡将在 20 秒后开启！","color": "gold"}]
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 run scoreboard players set $bossbar_color mem 1
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 run function lib:bossbar/show
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 as @a at @s run function lib:sounds/music/mini_fast
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 as @a at @s run function lib:sounds/dragon_growl
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 if score $player_alive mem matches 3.. run effect clear @a resistance
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 if score $player_alive mem matches ..2 run tellraw @a ["\n",{"text": ">> ","color": "gold","bold": true},{"text": "强制死亡已开启！\n ","color": "gold"}]
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 if score $player_alive mem matches 3.. run tellraw @a ["\n",{"text": ">> ","color": "gold","bold": true},{"text": "强制死亡已开启！苦力怕现在会造成更多伤害！\n ","color": "gold"}]
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches ..0 run effect give @a[team=playing] wither infinite 1 true
+
+execute if score $ley_line_disorder mem matches -1 if score $countdown mem matches 0 run function mini:main/game_end
 
 # 回复生命值
 execute if score $countdown mem matches 1.. if score $foursec mem matches 1 if score $foursec mem matches 1 run effect give @a[team=playing] regeneration 1 10 true

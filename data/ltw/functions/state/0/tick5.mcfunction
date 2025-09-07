@@ -59,10 +59,11 @@ execute if score #start_countdown mem matches 1..998 run bossbar set ltw:waiting
 execute if score #start_countdown mem matches 999.. unless score $start_bossbar_display mem matches 1 run bossbar set ltw:waiting name [{"text":"","color":"red"},{"score":{"name":"$count","objective":"mem"}},"/",{"score":{"name":"#total_count","objective":"mem"}}," 人已准备 | 需要 3 人以开始游戏"]
 execute if score #start_countdown mem matches 999.. if score $start_bossbar_display mem matches 1 run bossbar set ltw:waiting name [{"text":"","color":"red"},"海内存知己 天涯若比邻"]
 
-execute unless score #start_actionbar mem matches 1.. if score #gamemode mem matches 0 run title @a[team=!debugging,tag=pass_setup] actionbar [{"text":"当前模式：","color":"aqua"},{"text": "改版模式","color": "red"}]
-execute unless score #start_actionbar mem matches 1.. if score #gamemode mem matches 1 run title @a[team=!debugging,tag=pass_setup] actionbar [{"text":"当前模式：","color":"aqua"},{"text": "经典模式","color": "green"}]
-execute unless score #start_actionbar mem matches 1.. if score #gamemode mem matches 2 run title @a[team=!debugging,tag=pass_setup] actionbar [{"text":"当前模式：","color":"aqua"},{"text": "双倍奖励模式","color": "gold"}]
-execute if score #start_actionbar mem matches 1.. if score #start_countdown mem matches ..999 run title @a[team=!debugging,tag=pass_setup] actionbar {"text": "游戏即将开始, 请使用快捷栏最后一格确定自己是否参与!","color": "green"}
-execute if score #start_actionbar mem matches 1.. if score #start_countdown mem matches 999.. run title @a[team=!debugging,tag=pass_setup] actionbar {"text": "已准备人数不足, 游戏取消!","color": "red"}
+execute unless score #start_actionbar mem matches 1.. if score #gamemode mem matches 0 run title @a[team=!debugging,tag=pass_setup,tag=!world_conflict] actionbar [{"text": "改版模式","color": "red"},{"text": "：","color": "gray"},{"text": "具有幻境干扰等额外特性的模式","color": "white"}]
+execute unless score #start_actionbar mem matches 1.. if score #gamemode mem matches 1 run title @a[team=!debugging,tag=pass_setup,tag=!world_conflict] actionbar [{"text": "经典模式","color": "green"},{"text": "：","color": "gray"},{"text": "以原版《游艺街》为基础，仅添加改版游戏","color": "white"}]
+execute unless score #start_actionbar mem matches 1.. if score #gamemode mem matches 2 run title @a[team=!debugging,tag=pass_setup,tag=!world_conflict] actionbar [{"text": "逆转模式","color": "light_purple"},{"text": "：","color": "gray"},{"text": "体验逆转异变下的 LTWπ 游戏玩法","color": "white"}]
+execute unless score #start_actionbar mem matches 1.. if score #gamemode mem matches 3 run title @a[team=!debugging,tag=pass_setup,tag=!world_conflict] actionbar [{"text": "奖励增益模式","color": "gold"},{"text": "：","color": "gray"},{"text": "必定触发双倍奖励的改版模式，同时本局结束后获得总奖励增加","color": "white"}]
+execute if score #start_actionbar mem matches 1.. if score #start_countdown mem matches ..999 run title @a[team=!debugging,tag=pass_setup,tag=!world_conflict] actionbar {"text": "游戏即将开始, 请使用快捷栏最后一格确定自己是否参与!","color": "green"}
+execute if score #start_actionbar mem matches 1.. if score #start_countdown mem matches 999.. run title @a[team=!debugging,tag=pass_setup,tag=!world_conflict] actionbar {"text": "已准备人数不足, 游戏取消!","color": "red"}
 execute store result bossbar ltw:waiting value run scoreboard players get #start_countdown mem
 bossbar set ltw:waiting players @a

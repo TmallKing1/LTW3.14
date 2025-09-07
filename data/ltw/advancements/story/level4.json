@@ -1,0 +1,47 @@
+{
+  "parent": "ltw:story/level3",
+  "display": {
+    "icon": {
+      "item": "minecraft:written_book"
+    },
+    "title": {
+      "text": "脚踏实地 · Ω "
+    },
+    "description": [
+      {
+        "text": "达到等级 100\n",
+        "color": "gray"
+      },
+      {
+        "text": "究极隐藏挑战！",
+        "color": "dark_gray",
+        "italic": true
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_4"
+  },
+  "criteria": {
+    "goal": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "scores": {
+              "stat_level": {
+                "min": 100
+              }
+            },
+            "condition": "entity_scores",
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  }
+}

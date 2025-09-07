@@ -13,6 +13,9 @@ function tgciy:tick
 scoreboard objectives add mem dummy "全局变量"
 execute unless score #10 mem matches 10 run function ltw:init
 
+# 对箭的处理
+function item:special/arrow
+
 # 调用其他模块
 execute if score $state mem matches 0 run function ltw:state/0/tick1
 execute if score $state mem matches 5 run function ltw:state/5/tick1

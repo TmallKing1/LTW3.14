@@ -1,5 +1,6 @@
 # 解除进度
 advancement revoke @s only mini:bullet/kill_zombie
+advancement revoke @s only mini:bullet/kill_skeleton
 
 # 增加能量值
 scoreboard players add @s[x=1003.6,y=6,z=18003.6,dx=12.8,dy=61,dz=12.8] power_count 4

@@ -1,0 +1,2 @@
+execute if score $ley_line_disorder mem matches -1 store result score $random mem run random value 1..3
+execute if score $ley_line_disorder mem matches -1 run scoreboard players operation @s power_count -= $random mem

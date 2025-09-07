@@ -3,6 +3,9 @@ function lib:sounds/music/lobby
 title @s clear
 title @s actionbar ""
 
+# 等级初始化
+scoreboard players add @s level 0
+
 # 重置玩家血量上限
 attribute @s generic.max_health base set 20
 
@@ -10,6 +13,7 @@ attribute @s generic.max_health base set 20
 recipe take @a *
 xp set @s 0 points
 xp set @s 0 levels
+function ltw:state/0/display_level
 
 # 开启触发器
 scoreboard players enable @s setup_trigger
@@ -33,25 +37,17 @@ tag @s[tag=!new_checked] add pass_setup
 tag @s[tag=!new_checked] add new_checked
 
 # 删档补偿
-tellraw @s[tag=!bc_2] ["",{"text": ">> ","color": "aqua","bold": true},"由于数据删除，服务器为玩家补偿 10 枚魔法符咒！"]
 scoreboard players add @s[tag=!bc_2] primogem 640
 tag @s[tag=!bc_2] add bc_2
 
 # 版本更新补偿
-tellraw @s[tag=!bc_1_4,scores={stat_total=1..}] ["",{"text": ">> ","color": "aqua","bold": true},"成功领取 1.4 版本更新奖励：120 魔法精华！"]
-scoreboard players add @s[tag=!bc_1_4,scores={stat_total=1..}] primogem 120
-tag @s[tag=!bc_1_4] add bc_1_4
-
-# 停服维护补偿
-tellraw @s[tag=!bc_1_3_1,scores={stat_total=1..}] ["",{"text": ">> ","color": "aqua","bold": true},"成功领取停服维护补偿：480 魔法精华！"]
-scoreboard players add @s[tag=!bc_1_3_1,scores={stat_total=1..}] primogem 480
-tag @s[tag=!bc_1_3_1] add bc_1_3_1
+tellraw @s[tag=!bc_1_6,scores={stat_level=1..}] ["",{"text": ">> ","color": "aqua","bold": true},"成功领取 1.6 版本更新奖励：4 魔法符咒！"]
+scoreboard players add @s[tag=!bc_1_6,scores={stat_level=1..}] primogem 256
+tag @s[tag=!bc_1_6] add bc_1_6
 
 # 活动：黎明盛会
 tag @s remove double_reward
-#execute unless score @s double_reward matches 0..8 if score @s stat_total matches 10.. run tag @s add double_reward
 #execute unless score @s double_reward matches 0..8 run scoreboard players set @s double_reward 8
-#execute if score @s double_reward matches 0 run tag @s remove double_reward
 
 # 传送玩家
 tp @s[team=!debugging,tag=pass_setup] -10 8 -32 135 0
@@ -66,23 +62,15 @@ execute as @s[team=!debugging] run function item:shop/refresh_diamond
 execute as @s[team=!debugging] run function item:shop/refresh_essence
 
 # 重置抽卡物品
-scoreboard players add @s powerup_00001 0
-scoreboard players add @s powerup_00002 0
-scoreboard players add @s powerup_00003 0
-scoreboard players add @s powerup_00004 0
-scoreboard players add @s powerup_00005 0
-scoreboard players add @s powerup_00006 0
-scoreboard players add @s powerup_00007 0
-scoreboard players add @s powerup_00008 0
-scoreboard players add @s powerup_00009 0
-scoreboard players add @s powerup_00010 0
-scoreboard players add @s powerup_00011 0
-scoreboard players add @s powerup_00012 0
-scoreboard players add @s powerup_00013 0
-scoreboard players add @s powerup_00014 0
-scoreboard players add @s powerup_00015 0
+function item:powerup/enderchest/reset
 
-scoreboard players add @s powerup_current 0
+# 世界模式数据初始化
+function ltw:state/0/world/player_enter
+
+# 星人
+tag @s[tag=lost_enable] add lost
+execute if entity @s[tag=lost,tag=!lost_enable] run item replace entity @s inventory.26 with nether_star{display:{Name:'{"text": "切换「失落的日记」标识显示","color": "light_purple","italic": false}',Lore:['{"text": "点击切换你的「失落的日记」标识（紫色星星）显示状态","color": "gray","italic": false}','[{"text": "当前状态：","color": "gray","italic": false},{"text": "隐藏","color": "red","italic": false}]']},lobby_item:1b,lost_enable:0b}
+execute if entity @s[tag=lost,tag=lost_enable] run item replace entity @s inventory.26 with nether_star{display:{Name:'{"text": "切换「失落的日记」标识显示","color": "light_purple","italic": false}',Lore:['{"text": "点击切换你的「失落的日记」标识（紫色星星）显示状态","color": "gray","italic": false}','[{"text": "当前状态：","color": "gray","italic": false},{"text": "显示","color": "green","italic": false}]']},lobby_item:1b,lost_enable:1b}
 
 # 默认进入待机状态
 function ltw:state/0/state/join_watch

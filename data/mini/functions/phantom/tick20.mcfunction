@@ -1,12 +1,12 @@
 
 # 60s：教学
-execute if score $countdown mem matches 60 run tellraw @a[team=playing,scores={green_total=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：如果有近战武器，或许可以冲进幻翼群里直接近战……","bold":false},"\n "]
+execute if score $countdown mem matches 60 run tellraw @a[team=playing,scores={stat_level=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：如果有近战武器，或许可以冲进幻翼群里直接近战……","bold":false},"\n "]
 
 # 给予进度
-execute as @a[team=playing,scores={temp=1..,kill_phantom=8..17}] run advancement grant @s only ltw:blood/phantom1
-execute as @a[team=playing,scores={temp=1..,kill_phantom=18..27}] run advancement grant @s only ltw:blood/phantom2
-execute as @a[team=playing,scores={temp=1..,kill_phantom=28..34}] run advancement grant @s only ltw:blood/phantom3
-execute as @a[team=playing,scores={temp=1..,kill_phantom=35..40}] run advancement grant @s only ltw:blood/phantom4
+execute as @a[team=playing,scores={temp=1..,kill_phantom=8..17}] unless score #gamemode mem matches 2 run advancement grant @s only ltw:blood/phantom1
+execute as @a[team=playing,scores={temp=1..,kill_phantom=18..27}] unless score #gamemode mem matches 2 run advancement grant @s only ltw:blood/phantom2
+execute as @a[team=playing,scores={temp=1..,kill_phantom=28..34}] unless score #gamemode mem matches 2 run advancement grant @s only ltw:blood/phantom3
+execute as @a[team=playing,scores={temp=1..,kill_phantom=35..40}] unless score #gamemode mem matches 2 run advancement grant @s only ltw:blood/phantom4
 
 # 判断是否符合刷出新物品的条件：0 为可以，其他为不可以
 scoreboard players set #new_item mem 0

@@ -11,6 +11,7 @@ tag @s add mini_rank4
 tag @s add rejoining
 function mini:main/update_player_count
 execute if score $state mem matches 0 run function ltw:state/0/player_enter
+execute if score $state mem matches 2 run function ltw:state/2/player_enter
 execute if score $state mem matches 3 run function ltw:state/3/player_enter
 execute if score $state mem matches 4 run function ltw:state/4/player_enter
 execute if score $state mem matches 5 run function ltw:state/5/player_enter

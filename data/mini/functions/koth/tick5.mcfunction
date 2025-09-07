@@ -1,0 +1,1 @@
+execute if score $ley_line_disorder mem matches -1 as @a[team=playing,tag=mini_running] at @s if block ~ 9 ~ red_mushroom_block run function mini:koth/game/power_multiply

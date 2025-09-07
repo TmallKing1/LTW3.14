@@ -13,6 +13,7 @@ attribute @s generic.max_health base set 20
 # 计分板重置
 tag @s remove diamond_got
 scoreboard players reset @s diamond_count
+scoreboard players reset @s diamond_disp
 scoreboard players set @s[team=playing,tag=!rejoining] diamond_count 0
 
 # 调整模式

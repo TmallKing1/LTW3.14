@@ -1,0 +1,50 @@
+{
+  "parent": "ltw:story/level2",
+  "display": {
+    "icon": {
+      "item": "minecraft:writable_book"
+    },
+    "title": {
+      "text": "脚踏实地 · γ "
+    },
+    "description": [
+      {
+        "text": "达到等级 60\n",
+        "color": "gray"
+      },
+      {
+        "text": "奖励: ",
+        "color": "green"
+      },
+      {
+        "text": "2 绿宝石",
+        "color": "white"
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "function": "ltw:advancement/bonus_3"
+  },
+  "criteria": {
+    "goal": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "scores": {
+              "stat_level": {
+                "min": 60
+              }
+            },
+            "condition": "entity_scores",
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  }
+}

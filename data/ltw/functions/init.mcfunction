@@ -33,6 +33,8 @@ forceload add 0 0
 forceload add 0 1900 50 2000
 forceload add -32 -17 45 -80
 forceload add 997 -976 949 -1024
+## 世界模式
+forceload add 960 -2064 1038 -1940
 setblock 0 0 0 jukebox
 setblock 0 0 1 shulker_box
 setblock 0 1 0 minecraft:acacia_wall_sign[facing=north]
@@ -60,6 +62,8 @@ scoreboard objectives remove total_score
 scoreboard objectives add total_score dummy "积分"
 scoreboard objectives remove total_score_disp
 scoreboard objectives add total_score_disp dummy "积分"
+scoreboard objectives remove health_alive
+scoreboard objectives add health_alive dummy "生命值"
 scoreboard objectives remove leave_game
 scoreboard objectives add leave_game minecraft.custom:leave_game "离开游戏"
 scoreboard objectives remove effect_floating
@@ -68,6 +72,8 @@ scoreboard objectives remove game_id
 scoreboard objectives add game_id dummy "游戏编号"
 scoreboard objectives remove round_id
 scoreboard objectives add round_id dummy "小游戏编号"
+scoreboard objectives remove exp_temp
+scoreboard objectives add exp_temp dummy "等级缓存"
 scoreboard objectives remove player_id
 scoreboard objectives add player_id dummy "玩家编号"
 scoreboard objectives remove vote_game
@@ -90,8 +96,6 @@ scoreboard objectives remove setup_trigger
 scoreboard objectives add setup_trigger trigger "触发器_视频设置"
 scoreboard objectives remove vote_trigger
 scoreboard objectives add vote_trigger trigger "触发器_游戏投票"
-#scoreboard objectives remove double_reward
-#scoreboard objectives add double_reward dummy "双倍奖励次数"
 scoreboard objectives remove 777
 scoreboard objectives add 777 dummy "三七代币"
 scoreboard objectives add nbs_tgciy dummy
@@ -101,7 +105,10 @@ scoreboard players set $ game_id 0
 scoreboard players set $ round_id 0
 
 # 统计数据
+scoreboard objectives add stat_level dummy "等级"
+scoreboard objectives add stat_level_exp dummy "经验值"
 scoreboard objectives add stat_total dummy "总场次"
+scoreboard objectives add stat_total_reverse dummy "逆转模式总场次"
 scoreboard objectives add stat_win dummy "总胜场"
 scoreboard objectives add stat_lld_win dummy "幻境干扰胜场"
 scoreboard objectives add stat_adv_1 dummy "完成的 α 进度数"
@@ -117,6 +124,7 @@ scoreboard objectives add adv_totem dummy "不死图腾"
 
 # 活动参与局数
 scoreboard objectives add act_turns dummy "活动局数"
+scoreboard objectives add double_reward dummy "双倍奖励次数"
 
 # 常量与变量初始化
 scoreboard players set #mini_total mem 14
@@ -138,12 +146,16 @@ scoreboard players set #14 mem 14
 scoreboard players set #16 mem 16
 scoreboard players set #20 mem 20
 scoreboard players set #45 mem 45
+scoreboard players set #49 mem 49
 scoreboard players set #50 mem 50
 scoreboard players set #60 mem 60
+scoreboard players set #64 mem 64
 scoreboard players set #81 mem 81
 scoreboard players set #100 mem 100
-scoreboard players set #64 mem 64
+scoreboard players set #256 mem 256
+scoreboard players set #1024 mem 1024
 scoreboard players set #2500 mem 2500
+scoreboard players set #10000 mem 10000
 
 # 玩家队伍
 # team remove debugging
@@ -189,7 +201,7 @@ team remove green
 team add green "绿色"
 team modify green color green
 team modify green friendlyFire false
-team remove aqua
+team remove dark_blue
 team add dark_blue "蓝色"
 team modify dark_blue color dark_blue
 team modify dark_blue friendlyFire false
@@ -219,6 +231,9 @@ team add green_test "绿色（显示测试用）"
 team modify green_test color green
 team add orange_test "橙色（显示测试用）"
 team modify orange_test color gold
+team remove mobs
+team add mobs "生物"
+team modify mobs friendlyFire false
 
 # 世界边界
 worldborder warning distance 0
@@ -241,12 +256,13 @@ schedule function ltw:clock/tick20 20t replace
 function mini:main/init
 function item:init
 function lib:bossbar/init
+function ltw:state/0/world/init
 
 # 状态
 function ltw:state/0/state_enter
 
 # 重置随机数组
-data modify storage ltw:mini suggested_games set value [3,4,7,9,10,11,13,14]
+data modify storage ltw:mini suggested_games set value [2,3,4,5,8,9,11,13]
 data modify storage ltw:mini types set value []
 data modify storage ltw:mini qualities set value []
 data modify storage ltw:mini colormatch.types set value []

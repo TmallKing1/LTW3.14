@@ -1,5 +1,5 @@
 # 玩家死亡时由玩家自己触发
-
+execute if score $ley_line_disorder mem matches -1 run return run function mini:vase/game/resurrection
 # 计数
 tag @s remove mini_running
 function mini:main/update_player_count

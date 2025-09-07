@@ -1,0 +1,64 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "weight": 1,
+                    "name": "minecraft:creeper_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"随机随机品质道具\",\"color\":\"gold\"}',is_bonus:1b,bonus_new:1b,bonus_reverse_item:{count:1,white:85,green:5,blue:5,purple:5}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 2,
+                    "name": "minecraft:skeleton_skull",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"随机随机品质道具\",\"color\":\"gold\"}',is_bonus:1b,bonus_new:1b,bonus_reverse_item:{count:1,white:70,green:15,blue:10,purple:5}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 3,
+                    "name": "minecraft:wither_skeleton_skull",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"随机随机品质道具\",\"color\":\"gold\"}',is_bonus:1b,bonus_new:1b,bonus_reverse_item:{count:1,white:50,green:25,blue:20,purple:5}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 1,
+                    "name": "minecraft:dragon_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"清空物品栏，换取 4 个随机随机品质道具\",\"color\":\"gold\"}',is_bonus:1b,bonus_new:1b,clean_inventory:1b,bonus_reverse_item:{count:4,white:75,green:10,blue:10,purple:5}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 4,
+                    "name": "minecraft:goat_horn",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"随机获得或失去积分\",\"color\":\"gold\"}',is_bonus:1b,bonus_new:1b,bonus_reverse_score:{max:1,reverse:50,no_zero:1b}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

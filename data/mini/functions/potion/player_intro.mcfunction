@@ -1,0 +1,5 @@
+# 向单个玩家展示小游戏介绍
+tp @s[team=!debugging] 2003.84 12.33 4003.11 -401.40 5.25
+effect give @s[team=!debugging] night_vision infinite 0 true
+execute if score $ley_line_disorder mem matches 0.. run tellraw @s ["",{"text":"\n >> 炸药突袭 >>  ","color":"gold","bold":true},{"text": "作者：小猪之最Thepig","color": "aqua"},"\n\n 用玻璃瓶收集地图中的水使其变为可使用的药水，\n 喷溅型伤害药水和治疗药水可通过按 ",{"keybind":"key.swapOffhand","color": "gold"}," 自由切换，\n 倒计时结束时剩余生命值最多的玩家获胜！\n\n",{"text": " <可以杀死玩家> ","color":"red"},"\n "]
+execute if score $ley_line_disorder mem matches -1 run tellraw @s ["",{"text":"\n >> 炸药突袭 >>  ","color":"dark_red","bold":true},{"text": "作者：小猪之最Thepig","color": "aqua"},"\n\n 在生存模式中使用炸药削减其他玩家的生命值，\n 但 ",{"text": "治疗药水","color": "gold"}," 使用时也会对附近玩家产生治疗效果！\n\n",{"text": " <生存模式> ","color":"aqua"},{"text": " <可以杀死玩家> ","color":"red"},"\n "]

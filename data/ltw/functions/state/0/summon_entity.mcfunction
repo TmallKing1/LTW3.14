@@ -1,5 +1,5 @@
 # 召唤信息盔甲架
-execute unless entity @e[type=text_display,tag=lobby_info_1,tag=lobby_entity] run summon text_display -17 10 -39 {Tags: ["lobby_info_1", "lobby_entity"], text: '["",{"text": "游艺街","color": "aqua"}," ",{"text": "小猪之最改版服","color": "red","bold": true},"\\n",{"text": "1.4 版本「白兰与魔芋」","color": "gold"},"\\n",{"text": "交流群：","color": "white"},{"text": "607471033","color": "yellow","obfuscated": false},"\\n",{"text": "原作者：","color": "white"},{"text": "龙腾猫跃、00ll00、HerobrineXia","color": "light_purple"},"\\n",{"text": "改版作者：","color": "white"},{"text": "小猪之最Thepig","color": "blue"}]', billboard: "center", brightness: {block: 15, sky: 15}, background: 0, alignment: "center"}
+execute unless entity @e[type=text_display,tag=lobby_info_1,tag=lobby_entity] run summon text_display -17 10 -39 {Tags: ["lobby_info_1", "lobby_entity"], text: '["",{"text": "游艺街","color": "aqua"}," ",{"text": "小猪之最改版服","color": "red","bold": true},"\\n",{"text": "1.6 版本「眼前延伸的世界」","color": "gold"},"\\n",{"text": "交流群：","color": "white"},{"text": "607471033","color": "yellow","obfuscated": false},"\\n",{"text": "原作者：","color": "white"},{"text": "龙腾猫跃、00ll00、HerobrineXia","color": "light_purple"},"\\n",{"text": "改版作者：","color": "white"},{"text": "小猪之最Thepig","color": "blue"}]', billboard: "center", brightness: {block: 15, sky: 15}, background: 0, alignment: "center"}
 execute unless entity @e[type=text_display,tag=lobby_info_2,tag=lobby_entity] run summon text_display -25.5 10.1 -38.5 {Tags: ["lobby_info_2", "lobby_entity"], text: '["",{"text": "前往 ","color": "white"},{"text": "创作者&赞助者大厅","color": "aqua"}]', billboard: "center", brightness: {block: 15, sky: 15}, background: 0, alignment: "center"}
 
 execute unless entity @e[type=text_display,tag=lobby_info_11,tag=lobby_entity] run summon text_display 995 23 -1000 {Tags: ["lobby_info_11", "lobby_entity"], text: '[{"text":"赞助者の建筑","color":"green"},"\\n",{"text":"↓跳进洞里↓","color":"gold"}]', billboard: "center", brightness: {block: 15, sky: 15}, background: 0, alignment: "center"}
@@ -53,3 +53,6 @@ team join green_test @e[tag=visual_2]
 execute unless entity @e[tag=donate_1,tag=lobby_entity] run summon item_frame 941 2 -997 {Tags: ["donate_1", "lobby_entity"], Facing: 5b, Item: {Count: 1, id: "shears", tag: {Enchantments: [{id: "sharpness", lvl: 255}]}}, Fixed: 1b}
 execute unless entity @e[tag=donate_2,tag=lobby_entity] run summon glow_item_frame 939 3 -1005 {Tags: ["donate_2", "lobby_entity"], Facing: 5b, Item: {Count: 1, id: "shears"}, Fixed: 1b}
 execute unless entity @e[tag=donate_3,tag=lobby_entity] run summon glow_item_frame 939 3 -1006 {Tags: ["donate_3", "lobby_entity"], Facing: 5b, Item: {Count: 1, id: "shears"}, Fixed: 1b}
+
+# 召唤世界模式实体
+function ltw:state/0/world/summon

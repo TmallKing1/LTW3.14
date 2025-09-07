@@ -38,6 +38,9 @@
         "minecraft:raw_gold",
         "minecraft:gold_ingot",
         "minecraft:gold_block",
-        "minecraft:brush"
+        "minecraft:brush",
+        "minecraft:glass_bottle",
+        "minecraft:potion",
+        "minecraft:splash_potion"
     ]
 }

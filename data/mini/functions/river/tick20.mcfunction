@@ -19,8 +19,10 @@ execute if score $new_item_cd mem matches ..14 run scoreboard players set #new_i
 execute if score #new_item mem matches 0 run function mini:river/game/new_speci
 
 # 显示剩余时间 Bossbar
-execute if score $countdown_second mem matches 10.. run bossbar set mini:blue name ["剩余时间 [",{"score":{"name": "$countdown_second","objective": "mem"},"color": "aqua"},{"text": "/","color": "aqua"},{"score":{"name": "$countdown_max","objective": "mem"},"color": "aqua"},"]"]
-execute unless score $countdown_second mem matches 10.. run bossbar set mini:blue name ["剩余时间 [",{"score":{"name": "$countdown_second","objective": "mem"},"color": "aqua"},{"text": "/","color": "aqua"},{"score":{"name": "$countdown_max","objective": "mem"},"color": "aqua"},"]"]
+execute unless score $ley_line_disorder mem matches -1 if score $countdown_second mem matches 10.. run bossbar set mini:blue name ["剩余时间 [",{"score":{"name": "$countdown_second","objective": "mem"},"color": "aqua"},{"text": "/","color": "aqua"},{"score":{"name": "$countdown_max","objective": "mem"},"color": "aqua"},"]"]
+execute unless score $ley_line_disorder mem matches -1 unless score $countdown_second mem matches 10.. run bossbar set mini:blue name ["剩余时间 [",{"score":{"name": "$countdown_second","objective": "mem"},"color": "aqua"},{"text": "/","color": "aqua"},{"score":{"name": "$countdown_max","objective": "mem"},"color": "aqua"},"]"]
+execute if score $ley_line_disorder mem matches -1 if score $countdown_second mem matches 10.. run bossbar set mini:blue name ["剩余时间 [",{"score":{"name": "$countdown_minute","objective": "mem"},"color": "aqua"},{"text": ":","color": "aqua"},{"score":{"name": "$countdown_second","objective": "mem"},"color": "aqua"},"]"]
+execute if score $ley_line_disorder mem matches -1 unless score $countdown_second mem matches 10.. run bossbar set mini:blue name ["剩余时间 [",{"score":{"name": "$countdown_minute","objective": "mem"},"color": "aqua"},{"text": ":0","color": "aqua"},{"score":{"name": "$countdown_second","objective": "mem"},"color": "aqua"},"]"]
 
 # 显示倒计时
 execute if score $countdown mem matches ..10 run title @a times 3t 14t 2t

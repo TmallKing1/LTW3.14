@@ -9,6 +9,3 @@ execute as @e[type=minecart,tag=seat_mc] run scoreboard players add $current_min
 execute unless score $current_minecart mem matches 0 run tp @s 1016.0 27 10016.0
 execute unless score $current_minecart mem matches 0 run tag @s remove in_minecart
 execute unless score $current_minecart mem matches 0 run tag @s add seat_waiting
-
-# 如果是最后一个矿车，则给自己添加一个检测 Tag，用于检测自己在虚空上
-execute if score $current_minecart mem matches 0 run tag @s add checking

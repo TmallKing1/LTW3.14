@@ -140,7 +140,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{display:{Name:'{\"text\":\"<锋利 II，亡灵杀手 V> 剪刀\",\"italic\":false,\"color\":\"light_purple\"}'},item_name:'{\"text\":\"<锋利 II，亡灵杀手 V> 剪刀\",\"color\":\"light_purple\"}',Enchantments:[{id:\"sharpness\",lvl:2},{id:\"smite\",lvl:5}],is_bonus:1b,bonus_new:1b,bonus_return:1b}"
+                            "tag": "{display:{Name:'{\"text\":\"<伤害 +1.5，亡灵杀手 V> 剪刀\",\"italic\":false,\"color\":\"light_purple\"}'},item_name:'{\"text\":\"<伤害 +1.5，亡灵杀手 V> 剪刀\",\"color\":\"light_purple\"}',Enchantments:[{id:\"smite\",lvl:5}],AttributeModifiers:[{Name:\"damage\",Amount:1.5, AttributeName:\"minecraft:generic.attack_damage\", Operation: 0, Slot: \"mainhand\", UUID:[I;2,0,2,4]}],is_bonus:1b,bonus_new:1b,bonus_return:1b}"
                         }
                     ]
                 },
@@ -218,6 +218,17 @@
                         {
                             "function": "minecraft:set_nbt",
                             "tag": "{display:{Name:'{\"text\":\"速击铁剑\",\"italic\":false,\"color\":\"light_purple\"}'},item_name:'{\"text\":\"速击铁剑\",\"color\":\"light_purple\"}',is_bonus:1b,bonus_new:1b,bonus_return:1b,AttributeModifiers:[{UUID:[I;23,38,0,2],Amount:4,AttributeName:\"generic.attack_damage\",Name:\"attack\",Slot:\"mainhand\",Operation:0},{UUID:[I;23,38,0,3],Amount:0.5,AttributeName:\"generic.attack_speed\",Name:\"attacks\",Slot:\"mainhand\",Operation:1}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 10,
+                    "name": "minecraft:nautilus_shell",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item_name:'{\"text\":\"奖励物资摧毁者\",\"color\":\"light_purple\"}',is_bonus:1b,bonus_new:1b,bonus_return:1b,display:{Lore:['[{\"text\":\"将此物品切换到副手即可摧毁 10 格内距离自己最近的奖励物资\",\"italic\":false,\"color\":\"gray\"}]','{\"text\":\"无法在选择奖励阶段使用\",\"color\":\"gray\",\"italic\":false}'],Name:'{\"text\":\"奖励物资摧毁者\",\"italic\":false,\"color\":\"light_purple\"}'},bonus_destroyer: 1b}"
                         }
                     ]
                 }

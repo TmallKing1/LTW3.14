@@ -10,7 +10,8 @@ scoreboard players enable @s[tag=canvote] vote_trigger
 
 # 显示标题
 title @s times 10 60 10
-title @s[tag=canvote] subtitle "使用物品栏最后一格的书，投票决定下一场游戏吧！"
+execute unless score #gamemode mem matches 2 run title @s[tag=canvote] subtitle "使用物品栏最后一格的书，投票决定下一场游戏吧！"
+execute if score #gamemode mem matches 2 run title @s[tag=canvote] subtitle "使用物品栏最后一格的书，投票决定开场游戏吧！"
 title @s title {"text": "投票模式","color": "gold"}
 
 # 传送玩家

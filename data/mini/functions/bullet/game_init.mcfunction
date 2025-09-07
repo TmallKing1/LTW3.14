@@ -1,7 +1,6 @@
 # 初始化子弹地图
 forceload add 999 17999 1019 18019
 
-scoreboard players reset * power_count
 scoreboard players reset * kill_villager
 
 scoreboard players set $show_score mem 1
@@ -9,7 +8,7 @@ scoreboard players set $new_item_cd mem 0
 scoreboard players set $survival mem 0
 scoreboard players set $game_end_mode mem 1
 scoreboard players set $levitation mem 0
-scoreboard players set $villager_id mem 0
+scoreboard players set $ villager_id 0
 
 # 调整时间
 time set 21200t
@@ -29,7 +28,8 @@ execute if score $random mem matches 3 run scoreboard players set $ley_line_diso
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 0
-team modify playing friendlyFire true
+scoreboard players set $pvp_mode mem 2
+execute if score #gamemode mem matches 2 run scoreboard players set $pvp_mode mem 0
 team modify playing collisionRule always
 team modify playing deathMessageVisibility never
 schedule function mini:bullet/game_init2 1t replace

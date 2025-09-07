@@ -2,6 +2,7 @@
 execute if score $mini_type mem matches 3 run function mini:hotpm/game/damage_taken
 execute if score $mini_type mem matches 6 run function mini:koth/game/damage_taken
 execute if score $mini_type mem matches 7 run function mini:seat/game/damage_taken
+execute if score $mini_type mem matches 10 run function mini:bullet/game/damage_taken
 execute if score $mini_type mem matches 101 run function mini:iron/game/damage_taken
 execute if score $mini_type mem matches 103 run function mini:diamond/game/damage_taken
 execute if score $mini_type mem matches 104 run function mini:hopper/game/damage_taken

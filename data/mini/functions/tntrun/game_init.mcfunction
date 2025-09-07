@@ -33,6 +33,19 @@ setblock 1032 51 2000 minecraft:redstone_block
 setblock 1032 52 2032 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "chengzi_SC", rotation: "NONE", posX: 0, mode: "LOAD", posY: -10, sizeX: 9, posZ: 0, integrity: 1.0f, showair: 0b, name: "mini:tntrun111", sizeY: 10, sizeZ: 8, showboundingbox: 0b}
 setblock 1032 51 2032 minecraft:redstone_block
 
+# 逆转模式下，去除钻石块
+execute if score #gamemode mem matches 2 run setblock 1013 23 2026 dead_horn_coral_block
+execute if score #gamemode mem matches 2 run setblock 1024 23 2030 dead_horn_coral_block
+execute if score #gamemode mem matches 2 run setblock 1029 23 2025 dead_horn_coral_block
+execute if score #gamemode mem matches 2 run setblock 1025 23 2014 dead_horn_coral_block
+execute if score #gamemode mem matches 2 run setblock 1014 23 2010 dead_horn_coral_block
+execute if score #gamemode mem matches 2 run setblock 1009 23 2015 dead_horn_coral_block
+execute if score #gamemode mem matches 2 run setblock 1013 28 2020 dead_horn_coral_block
+execute if score #gamemode mem matches 2 run setblock 1019 28 2026 dead_horn_coral_block
+execute if score #gamemode mem matches 2 run setblock 1025 28 2020 dead_horn_coral_block
+execute if score #gamemode mem matches 2 run setblock 1019 28 2014 dead_horn_coral_block
+execute if score #gamemode mem matches 2 run setblock 1019 28 2020 dead_horn_coral_block
+
 # 幻境干扰
 
 execute store result score $random mem run random value 1..4
@@ -41,7 +54,7 @@ execute if score $random mem matches 2 run scoreboard players set $ley_line_diso
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 0
-team modify playing friendlyFire true
+scoreboard players set $pvp_mode mem 2
 team modify playing collisionRule always
 team modify playing deathMessageVisibility never
 gamerule naturalRegeneration true

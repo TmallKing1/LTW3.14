@@ -4,6 +4,8 @@ forceload add 0 0
 forceload add 0 1900 50 2000
 forceload add -32 -17 45 -80
 forceload add 997 -976 949 -1024
+## 世界模式
+forceload add 960 -2064 1038 -1940
 
 # 卸载数据包
 datapack disable "file/bypass_cooldown"
@@ -38,6 +40,7 @@ team modify playing nametagVisibility always
 gamerule naturalRegeneration true
 gamerule doMobLoot false
 gamerule doTileDrops false
+gamerule mobGriefing false
 
 # 重置游戏模式
 scoreboard players set #gamemode mem 0

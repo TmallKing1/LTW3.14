@@ -14,8 +14,8 @@ execute unless score $allow_bow mem matches 1 run kill @e[type=arrow]
 execute if score $ley_line_disorder mem matches 1 run tag @e[type=spectral_arrow] add crit_
 
 # 接触 TNT 的弓箭检测
-execute as @e[type=spectral_arrow,nbt={inGround: 1b, inBlockState: {Name: "minecraft:tnt"}}] at @s run function mini:arrow/game/check_tnt
-execute as @e[type=arrow,nbt={inGround: 1b, inBlockState: {Name: "minecraft:tnt"}}] at @s run function mini:arrow/game/check_tnt
+execute unless score $ley_line_disorder mem matches -1 as @e[type=#arrows,nbt={inGround: 1b, inBlockState: {Name: "minecraft:tnt"}}] at @s run function mini:arrow/game/check_tnt
+execute if score $ley_line_disorder mem matches -1 as @e[type=#arrows,nbt={inGround: 1b}] at @s run function mini:arrow/game/check_tnt_reverse
 
 # 清除入地的箭
 execute as @e[type=arrow,nbt={inGround: 1b}] run kill

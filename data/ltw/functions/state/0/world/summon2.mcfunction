@@ -1,0 +1,12 @@
+# 生成标记和展示实体
+$summon marker $(X) $(Y) $(Z) {Tags:["world_entity","new_entity"]}
+$execute store result score @e[tag=new_entity] stage_step run data get storage ltw:world Steps[$(Index)]
+$execute store result score @e[tag=new_entity] stage_type run data get storage ltw:world Types[$(Index)]
+$execute store result score @e[tag=new_entity] stage_reward run data get storage ltw:world Rewards[$(Index)]
+$scoreboard players set @e[tag=new_entity] stage_index $(Index)
+execute if score @e[tag=new_entity,limit=1] stage_type matches 0 at @e[tag=new_entity,limit=1] run summon block_display ~ ~ ~ {billboard:"fixed",block_state:{Name:"minecraft:quartz_slab"},Tags:["world_entity"],transformation:{left_rotation:{axis:[0.0f,1.0f,0.0f],angle:0.0f},right_rotation:{axis:[0.0f,1.0f,0.0f],angle:0.0f},scale:[1.0f,1.0f,1.0f],translation:[-0.5f,0.0f,-0.5f]}}
+execute if score @e[tag=new_entity,limit=1] stage_type matches 1 at @e[tag=new_entity,limit=1] run summon block_display ~ ~ ~ {billboard:"fixed",block_state:{Name:"minecraft:prismarine_slab"},Tags:["world_entity"],transformation:{left_rotation:{axis:[0.0f,1.0f,0.0f],angle:0.0f},right_rotation:{axis:[0.0f,1.0f,0.0f],angle:0.0f},scale:[1.0f,1.0f,1.0f],translation:[-0.5f,0.0f,-0.5f]}}
+execute if score @e[tag=new_entity,limit=1] stage_type matches 2 at @e[tag=new_entity,limit=1] run summon block_display ~ ~ ~ {billboard:"fixed",block_state:{Name:"minecraft:purpur_slab"},Tags:["world_entity"],transformation:{left_rotation:{axis:[0.0f,1.0f,0.0f],angle:0.0f},right_rotation:{axis:[0.0f,1.0f,0.0f],angle:0.0f},scale:[1.0f,1.0f,1.0f],translation:[-0.5f,0.0f,-0.5f]}}
+execute if score @e[tag=new_entity,limit=1] stage_type matches 3 at @e[tag=new_entity,limit=1] run summon block_display ~ ~ ~ {billboard:"fixed",block_state:{Name:"minecraft:cherry_slab"},Tags:["world_entity"],transformation:{left_rotation:{axis:[0.0f,1.0f,0.0f],angle:0.0f},right_rotation:{axis:[0.0f,1.0f,0.0f],angle:0.0f},scale:[1.0f,1.0f,1.0f],translation:[-0.5f,0.0f,-0.5f]}}
+execute if score @e[tag=new_entity,limit=1] stage_type matches -3..-1 at @e[tag=new_entity,limit=1] run summon block_display ~ ~ ~ {billboard:"fixed",block_state:{Name:"minecraft:nether_brick_slab"},Tags:["world_entity"],transformation:{left_rotation:{axis:[0.0f,1.0f,0.0f],angle:0.0f},right_rotation:{axis:[0.0f,1.0f,0.0f],angle:0.0f},scale:[1.0f,1.0f,1.0f],translation:[-0.5f,0.0f,-0.5f]}}
+tag @e remove new_entity

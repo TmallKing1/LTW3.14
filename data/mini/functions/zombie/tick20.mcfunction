@@ -3,7 +3,7 @@ execute if score $map mem matches 1 run function mini:zombie/maps/1/tick20
 execute if score $map mem matches 2 run function mini:zombie/maps/2/tick20
 
 # 显示提示
-execute if score $zombie_stage mem matches 0 if score $countdown mem matches 30 run tellraw @a[team=playing,scores={green_total=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：如果你没有其它武器的话，不妨试试无攻击间隔的 1.8 高科技木剑……","bold":false},"\n "]
+execute if score $zombie_stage mem matches 0 if score $countdown mem matches 30 run tellraw @a[team=playing,scores={stat_level=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：如果你没有其它武器的话，不妨试试无攻击间隔的 1.8 高科技木剑……","bold":false},"\n "]
 
 # 给所有玩家增加能量值
 execute unless score $ley_line_disorder mem matches 3 run scoreboard players add @a[tag=mini_running] power_count 1

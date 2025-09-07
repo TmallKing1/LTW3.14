@@ -12,6 +12,7 @@ scoreboard players set @s[team=playing,tag=!rejoining] mini_heart 3
 function mini:main/player_max_health
 tag @s remove colormatch_hurt
 tag @s remove colormatch_adv_success
+tag @s remove in_air
 
 # 传送玩家
 tp @s[team=playing,tag=!rejoining] 1062 19 4012

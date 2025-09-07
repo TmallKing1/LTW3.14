@@ -2,3 +2,7 @@
 execute as @e[tag=bonus_item] store result score @s temp run data get entity @s Motion[1] 1000
 execute as @e[tag=bonus_item] if entity @s[x=1000,y=13,z=3000,dx=100,dy=100,dz=100,scores={temp=-6..}] run data merge entity @s {NoGravity:0b}
 execute as @e[tag=bonus_item] unless entity @s[x=1000,y=13,z=3000,dx=100,dy=100,dz=100,scores={temp=-6..}] run data merge entity @s {NoGravity:1b}
+
+# 荆棘检测
+execute as @a[tag=thorns_check_mainhand] run function mini:hotpm/game/thorns_check_mainhand
+execute as @a[tag=thorns_check_offhand] run function mini:hotpm/game/thorns_check_offhand

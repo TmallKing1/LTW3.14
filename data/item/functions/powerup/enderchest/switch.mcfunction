@@ -19,6 +19,10 @@ execute unless data entity @s EnderItems[{Count: 1b, Slot: 11b, tag: {powerup_se
 execute unless data entity @s EnderItems[{Count: 1b, Slot: 12b, tag: {powerup_set: 1b}}] run function item:powerup/enderchest/switches/00013
 execute unless data entity @s EnderItems[{Count: 1b, Slot: 13b, tag: {powerup_set: 1b}}] run function item:powerup/enderchest/switches/00014
 execute unless data entity @s EnderItems[{Count: 1b, Slot: 14b, tag: {powerup_set: 1b}}] run function item:powerup/enderchest/switches/00015
+execute unless data entity @s EnderItems[{Count: 1b, Slot: 15b, tag: {powerup_set: 1b}}] run function item:powerup/enderchest/switches/00016
+execute unless data entity @s EnderItems[{Count: 1b, Slot: 16b, tag: {powerup_set: 1b}}] run function item:powerup/enderchest/switches/00017
+execute unless data entity @s EnderItems[{Count: 1b, Slot: 17b, tag: {powerup_set: 1b}}] run function item:powerup/enderchest/switches/00018
+execute unless data entity @s EnderItems[{Count: 1b, Slot: 18b, tag: {powerup_set: 1b}}] run function item:powerup/enderchest/switches/00019
 
 # 显示提示
 execute if entity @s[tag=detected_powerup,tag=!switch,tag=switch_on] run tellraw @s [{"text": ">> ","color": "green","bold": true},{"text": "已成功激活！","color": "green","bold": false}]

@@ -3,18 +3,25 @@ execute if score $countdown_second mem matches 10.. run bossbar set mini:green n
 execute unless score $countdown_second mem matches 10.. run bossbar set mini:green name ["剩余时间 [",{"score":{"name": "$countdown_minute","objective": "mem"},"color": "green"},{"text": ":0","color": "green"},{"score":{"name": "$countdown_second","objective": "mem"},"color": "green"},"]"]
 
 # 30s：教学
-execute if score $countdown mem matches 30 run tellraw @a[team=playing,scores={green_total=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：边界最终会汇于中心, 不要离得太远！","bold":false},"\n"]
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 30 run tellraw @a[team=playing,scores={stat_level=..10}] [{"text":"\n>> ","color":"light_purple","bold": true},{"text":"提示：边界最终会汇于中心, 不要离得太远！","bold":false},"\n"]
 
 # 边界收缩
-execute if score $countdown mem matches 21 run tellraw @a ["",{"text": ">> ","color": "gold","bold": true},{"text": "边界将在 20 秒后收缩！","color": "gold"}]
-execute if score $countdown mem matches 1 run scoreboard players set $bossbar_color mem 1
-execute if score $countdown mem matches 1 run function lib:bossbar/show
-execute if score $countdown mem matches 1 as @a at @s run function lib:sounds/music/mini_fast
-execute if score $countdown mem matches 1 as @a at @s run function lib:sounds/curse
-execute if score $countdown mem matches 1 if score $player_alive mem matches 3.. run effect clear @a resistance
-execute if score $countdown mem matches 1 if score $player_alive mem matches ..2 run tellraw @a ["\n",{"text": ">> ","color": "gold","bold": true},{"text": "边界开始向中心收缩！\n","color": "gold"}]
-execute if score $countdown mem matches 1 if score $player_alive mem matches 3.. run tellraw @a ["\n",{"text": ">> ","color": "gold","bold": true},{"text": "边界开始向中心收缩！TNT造成的伤害提升了！\n","color": "gold"}]
-execute if score $countdown mem matches 1 run worldborder set 1 30
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 21 run tellraw @a ["",{"text": ">> ","color": "gold","bold": true},{"text": "边界将在 20 秒后收缩！","color": "gold"}]
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 run scoreboard players set $bossbar_color mem 1
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 run function lib:bossbar/show
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 as @a at @s run function lib:sounds/music/mini_fast
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 as @a at @s run function lib:sounds/curse
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 if score $player_alive mem matches 3.. run effect clear @a resistance
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 if score $player_alive mem matches ..2 run tellraw @a ["\n",{"text": ">> ","color": "gold","bold": true},{"text": "边界开始向中心收缩！\n","color": "gold"}]
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 if score $player_alive mem matches 3.. run tellraw @a ["\n",{"text": ">> ","color": "gold","bold": true},{"text": "边界开始向中心收缩！TNT造成的伤害提升了！\n","color": "gold"}]
+execute unless score $ley_line_disorder mem matches -1 if score $countdown mem matches 1 run worldborder set 1 30
+
+# 游戏结束
+execute if score $ley_line_disorder mem matches -1 if score $countdown mem matches ..10 run title @a times 3t 14t 2t
+execute if score $ley_line_disorder mem matches -1 if score $countdown mem matches ..10 run title @a subtitle {"score":{"name":"$countdown","objective":"mem"}}
+execute if score $ley_line_disorder mem matches -1 if score $countdown mem matches ..10 run title @a title [""]
+execute if score $ley_line_disorder mem matches -1 if score $countdown mem matches ..10 as @a at @s run function lib:sounds/hit2
+execute if score $ley_line_disorder mem matches -1 if score $countdown mem matches 0 run function mini:main/game_end
 
 # 回复生命值
 execute if score $countdown mem matches 1.. if score $foursec mem matches 1 if score $foursec mem matches 1 run effect give @a[team=playing] regeneration 1 10 true

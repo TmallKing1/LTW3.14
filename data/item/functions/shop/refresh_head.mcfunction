@@ -46,3 +46,7 @@ item replace entity @s[scores={powerup_current=15,powerup_00015=2}] armor.head w
 item replace entity @s[scores={powerup_current=15,powerup_00015=3}] armor.head with player_head{SkullOwner: "JK137", display: {Lore: ['{"text": ""}', '{"text": "戴在头上时：","color": "gray","italic": false}', '{"text": "物品栏被清空时有 15% 概率获得额外 3 金粒","color": "blue","italic": false}']}, Unbreakable: 1b, jk_head: 3}
 item replace entity @s[scores={powerup_current=15,powerup_00015=4}] armor.head with player_head{SkullOwner: "JK137", display: {Lore: ['{"text": ""}', '{"text": "戴在头上时：","color": "gray","italic": false}', '{"text": "物品栏被清空时有 20% 概率获得额外 3 金粒","color": "blue","italic": false}']}, Unbreakable: 1b, jk_head: 4}
 item replace entity @s[scores={powerup_current=15,powerup_00015=5}] armor.head with player_head{SkullOwner: "JK137", display: {Lore: ['{"text": ""}', '{"text": "戴在头上时：","color": "gray","italic": false}', '{"text": "物品栏被清空时有 25% 概率获得额外 3 金粒","color": "blue","italic": false}']}, Unbreakable: 1b, jk_head: 5}
+item replace entity @s[scores={powerup_current=16,powerup_00016=5..}] armor.head with end_rod{Unbreakable: 1b}
+item replace entity @s[scores={powerup_current=17,powerup_00017=5..}] armor.head with bone{Unbreakable: 1b}
+item replace entity @s[scores={powerup_current=18,powerup_00018=5..}] armor.head with lead{Unbreakable: 1b}
+item replace entity @s[scores={powerup_current=19,powerup_00019=5..}] armor.head with red_bed{Unbreakable: 1b}

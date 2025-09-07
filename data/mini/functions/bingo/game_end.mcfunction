@@ -21,8 +21,5 @@ execute as @a[tag=!bingo_finished,team=playing] run scoreboard players operation
 #advancement grant @a[team=playing,scores={diamond_count=18..}] only ltw:blood/diamond3
 #advancement grant @a[team=playing,scores={diamond_count=30..}] only ltw:blood/diamond4
 
-# 清理物品栏
-clear @a[team=playing]
-
 # 刷新头戴物品
 execute as @a[team=playing] run function item:shop/refresh_head

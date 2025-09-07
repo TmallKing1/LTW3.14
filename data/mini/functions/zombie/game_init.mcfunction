@@ -19,13 +19,11 @@ execute if score $random mem matches 2 run scoreboard players set $ley_line_diso
 execute if score $random mem matches 3 run scoreboard players set $ley_line_disorder mem 3
 
 # 重置计分板
-scoreboard players reset * power_count
-scoreboard players reset * power_count_temp
 scoreboard players reset * kill_zombie
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 1
-team modify playing friendlyFire false
+scoreboard players set $pvp_mode mem 0
 team modify playing collisionRule always
 team modify playing deathMessageVisibility always
 gamerule naturalRegeneration false

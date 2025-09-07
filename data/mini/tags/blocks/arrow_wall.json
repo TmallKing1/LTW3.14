@@ -1,0 +1,19 @@
+{
+    "values": [
+        "amethyst_block",
+        "stone",
+        "deepslate",
+        "coal_ore",
+        "iron_ore",
+        "lapis_ore",
+        "gold_ore",
+        "copper_ore",
+        "deepslate_diamond_ore",
+        "deepslate_lapis_ore",
+        "deepslate_iron_ore",
+        "deepslate_redstone_ore",
+        "deepslate_emerald_ore",
+        "deepslate_copper_ore",
+        "deepslate_gold_ore"
+    ]
+}

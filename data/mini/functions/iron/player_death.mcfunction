@@ -36,15 +36,15 @@ function mini:iron/game/pop_slot
 # 返还剩余物品给玩家
 scoreboard players remove #iron_count temp 2
 scoreboard players operation #iron_count temp *= #2 mem
-scoreboard players operation #iron_count temp /= #3 mem
-execute if score #iron_count temp matches 1.. run function mini:iron/game/give_iron
+execute store result storage mini:final Return.Count int 1 run scoreboard players operation #iron_count temp /= #3 mem
+execute if score #iron_count temp matches 1.. run function mini:iron/game/give_iron with storage mini:final Return
 scoreboard players remove #raw_iron_count temp 2
 scoreboard players operation #raw_iron_count temp *= #2 mem
-scoreboard players operation #raw_iron_count temp /= #3 mem
-execute if score #raw_iron_count temp matches 1.. run function mini:iron/game/give_raw_iron
+execute store result storage mini:final Return.Count int 1 run scoreboard players operation #raw_iron_count temp /= #3 mem
+execute if score #raw_iron_count temp matches 1.. run function mini:iron/game/give_raw_iron with storage mini:final Return
 scoreboard players remove #cobblestone_count temp 2
 scoreboard players operation #cobblestone_count temp *= #2 mem
-scoreboard players operation #cobblestone_count temp /= #3 mem
-execute if score #cobblestone_count temp matches 1.. run function mini:iron/game/give_cobblestone
+execute store result storage mini:final Return.Count int 1 run scoreboard players operation #cobblestone_count temp /= #3 mem
+execute if score #cobblestone_count temp matches 1.. run function mini:iron/game/give_cobblestone with storage mini:final Return
 # 删除marker
 kill @e[type=armor_stand,tag=dead_marker]

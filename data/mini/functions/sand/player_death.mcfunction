@@ -10,11 +10,13 @@ execute store result entity @e[type=armor_stand,tag=dead_marker,limit=1] Pos[1] 
 execute store result entity @e[type=armor_stand,tag=dead_marker,limit=1] Pos[2] double 0.1 run scoreboard players get @s posZ
 # 死亡掉落现金
 scoreboard players operation $gold_temp mem = @s gold_inhand
-scoreboard players set @s gold_inhand 0
+execute if score $ley_line_disorder mem matches -1 run scoreboard players operation @s gold_inhand /= #2 mem
+execute if score $ley_line_disorder mem matches -1 run scoreboard players operation $gold_temp mem -= @s gold_inhand
+execute unless score $ley_line_disorder mem matches -1 run scoreboard players set @s gold_inhand 0
 execute if score $gold_temp mem matches 1.. at @e[type=armor_stand,tag=dead_marker,limit=1] run summon item ~ ~ ~ {Item: {id: "raw_gold_block", Count: 1, tag: {Enchantments: [{id: "protection", lvl: 1}], is_bonus: 1b, bonus_new: 1b}}, Tags: ["gold_item"]}
 execute as @e[tag=gold_item] run function mini:sand/game/gold_item
 # 删除marker
 kill @e[type=armor_stand,tag=dead_marker]
 
 # 给予进度
-advancement grant @a[team=playing,scores={kills_auto=1..}] only ltw:parkour/sand2
+execute unless score #gamemode mem matches 2 run advancement grant @a[team=playing,scores={kills_auto=1..}] only ltw:parkour/sand2

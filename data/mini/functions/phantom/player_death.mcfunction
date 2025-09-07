@@ -4,4 +4,5 @@ execute unless score $ley_line_disorder mem matches 2 run tellraw @s ["",{"text"
 execute unless score $ley_line_disorder mem matches 2 run effect give @s blindness 6 0
 execute unless score $ley_line_disorder mem matches 2 run effect give @s resistance 2 4 true
 execute if score $ley_line_disorder mem matches 2 run function mini:main/player_failed
+execute if score $ley_line_disorder mem matches -1 run effect give @a[tag=mini_running] instant_health 1 10
 execute as @a at @s run function lib:sounds/error

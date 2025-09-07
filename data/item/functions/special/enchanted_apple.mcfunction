@@ -11,7 +11,7 @@ execute unless score @s mini_heart matches 1.. run effect give @s instant_health
 execute unless score @s mini_heart matches 1.. run tellraw @a ["",{"text": ">> ","color":"aqua","bold": true},{"selector": "@s","color":"aqua"}," 食用了附魔生命果，生命值回满！"]
 
 # 炸弹狂魔下判定玩家进度失败
-execute if score $mini_type mem matches 4 run tag @s[tag=!hotpm_hurt] add hotpm_hurt
+execute if score $mini_type mem matches 3 run tag @s[tag=!hotpm_hurt] add hotpm_hurt
 
 # $remove_resistance 信息在小游戏初始化时提供
 # 去除buff

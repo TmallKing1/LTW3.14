@@ -1,5 +1,5 @@
 # 玩家死亡时由玩家自己触发
-
+execute if score $ley_line_disorder mem matches -1 run return run function mini:boomer/game/resurrection
 tag @s remove mini_running
 gamemode spectator
 effect give @s night_vision infinite 0 true

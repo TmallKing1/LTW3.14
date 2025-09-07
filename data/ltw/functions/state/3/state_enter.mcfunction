@@ -2,14 +2,16 @@
 scoreboard players set $state mem 3
 
 # 双倍奖励处理
-## 前 5 轮每轮有 1/4 概率为双倍奖励，最终轮有 3/4 概率为双倍奖励
+## 非逆转模式：前 5 轮每轮有 1/4 概率为双倍奖励，最终轮有 3/4 概率为双倍奖励
 execute store result score $random mem run random value 0..3
 scoreboard players set $double_reward mem 0
-execute if score $round mem matches 1..5 if score $random mem matches 0 run scoreboard players set $double_reward mem 1
-execute if score $round mem matches 6 if score $random mem matches 0..2 run scoreboard players set $double_reward mem 1
+execute unless score #gamemode mem matches 2 if score $round mem matches 1..5 if score $random mem matches 0 run scoreboard players set $double_reward mem 1
+execute unless score #gamemode mem matches 2 if score $round mem matches 6 if score $random mem matches 0..2 run scoreboard players set $double_reward mem 1
+execute if score #gamemode mem matches 2 if score $round mem matches 2..6 if score $random mem matches 0 run scoreboard players set $double_reward mem 1
+execute if score #gamemode mem matches 2 if score $round mem matches 1 if score $random mem matches 0..2 run scoreboard players set $double_reward mem 1
 ## 游戏模式
 execute if score #gamemode mem matches 1 run scoreboard players set $double_reward mem 0
-execute if score #gamemode mem matches 2 run scoreboard players set $double_reward mem 1
+execute if score #gamemode mem matches 3 run scoreboard players set $double_reward mem 1
 
 # 1.2 版本活动：发动总攻，轮数为 5
 #execute if score $round mem matches 5 store result score $random mem run random value 1..2
@@ -54,12 +56,11 @@ execute store result score $random mem run random value 0..1
 execute if score $mini_type mem matches 1 if score $random mem matches 1 run scoreboard players set $mini_type mem 0
 
 # 前置/后置小游戏
-# 如果为第 1 轮，则有 40% 概率选用刺客，40% 概率选用掘战，20% 概率不变
+# 如果为第 1 轮，则随机选择一个首轮小游戏
 # 如果为第 6 轮且为改版模式，则不动，根据投票选择
-# 如果为第 6 轮且为经典模式，则在四个游戏中随机选取一个
+# 如果为第 6 轮且为经典模式，则在五个游戏中随机选取一个
 execute store result score $random mem run random value 1..5
-execute if score $round mem matches 1 if score $random mem matches 1..2 run scoreboard players set $mini_type mem 201
-execute if score $round mem matches 1 if score $random mem matches 3..4 run scoreboard players set $mini_type mem 202
+execute if score $round mem matches 1 store result score $mini_type mem run random value 201..203
 execute if score #gamemode mem matches 1 if score $round mem matches 6 if score $random mem matches 1 run scoreboard players set $mini_type mem 101
 execute if score #gamemode mem matches 1 if score $round mem matches 6 if score $random mem matches 2 run scoreboard players set $mini_type mem 102
 execute if score #gamemode mem matches 1 if score $round mem matches 6 if score $random mem matches 3 run scoreboard players set $mini_type mem 103

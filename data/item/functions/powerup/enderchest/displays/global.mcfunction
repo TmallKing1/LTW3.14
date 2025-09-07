@@ -86,11 +86,27 @@ execute unless score @s powerup_00015 matches 0 if score @s powerup_current matc
 execute if score @s powerup_00015 matches 0 run item modify entity @s enderchest.14 item:powerup/00015/0
 execute unless score @s powerup_00015 matches 0 unless score @s powerup_current matches 15 run item modify entity @s enderchest.14 item:powerup/00015/-1
 
+item replace entity @s enderchest.15 with end_rod{powerup_set: 1b, Unbreakable: 1b}
+execute unless score @s powerup_00016 matches 0..4 if score @s powerup_current matches 16 run item modify entity @s enderchest.15 item:powerup/00016/1
+execute if score @s powerup_00016 matches 0..4 run item modify entity @s enderchest.15 item:powerup/00016/0
+execute unless score @s powerup_00016 matches 0..4 unless score @s powerup_current matches 16 run item modify entity @s enderchest.15 item:powerup/00016/-1
 
-item replace entity @s enderchest.15 with light_gray_stained_glass_pane{powerup_set: 1b, display: {Name: '""'}}
-item replace entity @s enderchest.16 with light_gray_stained_glass_pane{powerup_set: 1b, display: {Name: '""'}}
-item replace entity @s enderchest.17 with light_gray_stained_glass_pane{powerup_set: 1b, display: {Name: '""'}}
-item replace entity @s enderchest.18 with light_gray_stained_glass_pane{powerup_set: 1b, display: {Name: '""'}}
+item replace entity @s enderchest.16 with bone{powerup_set: 1b, Unbreakable: 1b}
+execute unless score @s powerup_00017 matches 0..4 if score @s powerup_current matches 17 run item modify entity @s enderchest.16 item:powerup/00017/1
+execute if score @s powerup_00017 matches 0..4 run item modify entity @s enderchest.16 item:powerup/00017/0
+execute unless score @s powerup_00017 matches 0..4 unless score @s powerup_current matches 17 run item modify entity @s enderchest.16 item:powerup/00017/-1
+
+item replace entity @s enderchest.17 with lead{powerup_set: 1b, Unbreakable: 1b}
+execute unless score @s powerup_00018 matches 0..4 if score @s powerup_current matches 18 run item modify entity @s enderchest.17 item:powerup/00018/1
+execute if score @s powerup_00018 matches 0..4 run item modify entity @s enderchest.17 item:powerup/00018/0
+execute unless score @s powerup_00018 matches 0..4 unless score @s powerup_current matches 18 run item modify entity @s enderchest.17 item:powerup/00018/-1
+
+item replace entity @s enderchest.18 with red_bed{powerup_set: 1b, Unbreakable: 1b}
+execute unless score @s powerup_00019 matches 0..4 if score @s powerup_current matches 19 run item modify entity @s enderchest.18 item:powerup/00019/1
+execute if score @s powerup_00019 matches 0..4 run item modify entity @s enderchest.18 item:powerup/00019/0
+execute unless score @s powerup_00019 matches 0..4 unless score @s powerup_current matches 19 run item modify entity @s enderchest.18 item:powerup/00019/-1
+
+
 item replace entity @s enderchest.19 with light_gray_stained_glass_pane{powerup_set: 1b, display: {Name: '""'}}
 item replace entity @s enderchest.20 with light_gray_stained_glass_pane{powerup_set: 1b, display: {Name: '""'}}
 item replace entity @s enderchest.21 with light_gray_stained_glass_pane{powerup_set: 1b, display: {Name: '""'}}

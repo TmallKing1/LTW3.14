@@ -1,0 +1,52 @@
+[
+    {
+        "function": "set_name",
+        "name": {
+            "text": "骨头",
+            "color": "light_purple",
+            "italic": false
+        }
+    },
+    {
+        "function": "set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "text": "无属性",
+                "color": "gray",
+                "italic": false
+            },
+            {
+                "text": "特殊模型",
+                "color": "aqua",
+                "italic": false
+            },
+            "",
+            [
+                {
+                    "text": "收集进度: ",
+                    "color": "gray",
+                    "italic": false
+                },
+                {
+                    "score": {
+                        "name": "@s",
+                        "objective": "powerup_00017"
+                    },
+                    "color": "red",
+                    "italic": false
+                },
+                {
+                    "text": " / 5",
+                    "color": "gray",
+                    "italic": false
+                }
+            ],
+            {
+                "text": "你尚未拥有该物品！",
+                "color": "red",
+                "italic": false
+            }
+        ]
+    }
+]

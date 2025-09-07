@@ -1,3 +1,8 @@
+# 幻境干扰 -1：如果击退鱼在副手，则累积能量值
+execute if score $ley_line_disorder mem matches -1 if data entity @s Inventory[{Slot:-106b,id:"minecraft:cod",tag:{game_item:1b}}] run scoreboard players operation @s power_count += @s power_count_temp
+execute if score $ley_line_disorder mem matches -1 if data entity @s Inventory[{Slot:-106b,id:"minecraft:cod",tag:{game_item:1b}}] run scoreboard players set @s power_count_temp 0
+execute if score $ley_line_disorder mem matches -1 if data entity @s Inventory[{Slot:-106b,id:"minecraft:cod",tag:{game_item:1b}}] at @s run function lib:sounds/levelup
+
 clear @s cod{game_item: 1b}
 
 # 返还格子上的物品

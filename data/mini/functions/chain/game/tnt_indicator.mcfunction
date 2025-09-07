@@ -1,5 +1,5 @@
 # 找到距离自己最近的 TNT
-tag @e[type=tnt,limit=1,sort=nearest] add targeted_tnt
+tag @e[tag=chain_tnt,limit=1,sort=nearest] add targeted_tnt
 
 # 生成一个标记
 summon marker ~ ~ ~ {Tags:["tnt_indicator"]}

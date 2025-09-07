@@ -1,0 +1,5 @@
+execute if entity @s[scores={potionType=0}] run item replace entity @s hotbar.8 with splash_potion{game_item:1b,display:{Name:'[{"text": "炸药","color": "red","italic": false}," ",{"text": "(按 ","color": "gray","italic": false},{"keybind":"key.swapOffhand","color": "gray","italic": false},{"text": " 切换为治疗药水)","color": "gray","italic": false}]'},Potion:"minecraft:strong_harming",HideFlags:63}
+execute if entity @s[scores={potionType=1}] run item replace entity @s hotbar.8 with potion{game_item:1b,display:{Name:'[{"text": "治疗药水","color": "green","italic": false}," ",{"text": "(按 ","color": "gray","italic": false},{"keybind":"key.swapOffhand","color": "gray","italic": false},{"text": " 切换为炸药)","color": "gray","italic": false}]'},Potion:"minecraft:healing",HideFlags:63}
+
+# 标签更换
+tag @s add has_potion

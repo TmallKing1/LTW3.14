@@ -1,0 +1,39 @@
+{
+    "function": "set_name",
+    "entity": "this",
+    "name": [
+        {
+            "text": "双倍奖励 关闭 ",
+            "color": "white",
+            "italic": false
+        },
+        {
+            "text": "(剩余 ",
+            "color": "gray",
+            "italic": false
+        },
+        {
+            "score": {
+                "name": "@s",
+                "objective": "double_reward"
+            },
+            "color": "gray",
+            "italic": false
+        },
+        {
+            "text": " 次，按 ",
+            "color": "gray",
+            "italic": false
+        },
+        {
+            "keybind": "key.drop",
+            "color": "gray",
+            "italic": false
+        },
+        {
+            "text": " 开启)",
+            "color": "gray",
+            "italic": false
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+execute if score $countdown mem matches 165 run fill 2000 16 3000 2028 16 3028 water replace air
+execute if score $countdown mem matches 150 run fill 2000 17 3000 2028 17 3028 water replace air
+execute if score $countdown mem matches 135 run fill 2000 18 3000 2028 18 3028 water replace air
+execute if score $countdown mem matches 120 run fill 2000 19 3000 2028 19 3028 water replace air
+execute if score $countdown mem matches 105 run fill 2000 20 3000 2028 20 3028 water replace air
+execute if score $countdown mem matches 90 run fill 2000 21 3000 2028 21 3028 water replace air
+execute if score $countdown mem matches 75 run fill 2000 22 3000 2028 22 3028 water replace air
+execute if score $countdown mem matches 60 run fill 2000 23 3000 2028 23 3028 water replace air
+execute if score $countdown mem matches 45 run fill 2000 24 3000 2028 24 3028 water replace air

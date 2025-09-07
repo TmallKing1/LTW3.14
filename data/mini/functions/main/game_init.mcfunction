@@ -2,6 +2,8 @@
 scoreboard players reset * mini_score
 scoreboard players reset * mini_heart
 scoreboard players reset * health
+scoreboard players reset * power_count
+scoreboard players reset * power_count_temp
 
 # 重置幻境干扰
 scoreboard players set $ley_line_disorder mem 0
@@ -32,6 +34,7 @@ execute if score $mini_type mem matches 104 run function mini:hopper/game_init
 execute if score $mini_type mem matches 105 run function mini:bingo/game_init
 execute if score $mini_type mem matches 201 run function mini:ass/game_init
 execute if score $mini_type mem matches 202 run function mini:arrow/game_init
+execute if score $mini_type mem matches 203 run function mini:potion/game_init
 execute if score $mini_type mem matches 301 run function mini:duckrush/game_init
 execute if score $mini_type mem matches 302 run function mini:element/game_init
 execute if score $mini_type mem matches 303 run function mini:power/game_init
@@ -42,3 +45,8 @@ execute if score #gamemode mem matches 1 run scoreboard players set $ley_line_di
 execute if score #gamemode mem matches 1 run scoreboard players set $period_lld mem 0
 execute if score #gamemode mem matches 1 run scoreboard players set $period_lld_max mem 0
 execute if score #gamemode mem matches 1 run scoreboard players set $period_lld_warn mem 0
+execute if score #gamemode mem matches 2 if score $round mem matches ..5 run scoreboard players set $ley_line_disorder mem -1
+
+# PVP 模式：0 - 完全禁止 PVP，1 - 特殊伤害计算模式（禁止弓的伤害），2 - 允许 PVP
+execute if score $pvp_mode mem matches 0 run team modify playing friendlyFire false
+execute if score $pvp_mode mem matches 1..2 run team modify playing friendlyFire true

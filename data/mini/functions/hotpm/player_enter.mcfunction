@@ -12,11 +12,14 @@ scoreboard players set @s[team=playing,tag=!rejoining] mini_heart 3
 function mini:main/player_max_health
 tag @s remove hotpm_hurt
 
-# 清理 Tag
+# 清理 Tag 与分数
 tag @s remove pm_holding
 tag @s remove pm_damage_dealt
 tag @s remove pm_damage_taken
 tag @s remove pm_explode_last
+tag @s remove thorns_check_mainhand
+tag @s remove thorns_check_offhand
+scoreboard players reset @s pm_harmless
 
 # 传送玩家
 tp @s[team=playing,tag=!rejoining] 1018.0 8 3015.0

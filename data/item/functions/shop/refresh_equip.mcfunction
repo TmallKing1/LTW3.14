@@ -1,5 +1,12 @@
 # 刷新单个玩家购买的物品
 
+# 头戴物品
+function item:shop/refresh_head
+
+# 世界模式随机格下的操作
+execute store result score @s[tag=world_enable] world_temp run function ltw:state/0/world/get_current_type
+execute if score @s[tag=world_enable] world_temp matches 2 run return run function item:shop/refresh_equip_random
+
 # 01
 clear @s bow
 give @s[scores={shop_01_bow=1}] bow{display: {Name: '{"text":"破损的弓","italic":false,"color":"gray"}'}, Damage: 382}
@@ -42,6 +49,7 @@ give @s[scores={shop_05_axe=7}] golden_axe{display: {Name: '{"text":"金斧","it
 # 06
 item replace entity @s armor.feet with air
 function item:shop/refresh_boots
+
 # 07
 clear @s fishing_rod
 give @s[scores={shop_07_fish=1}] fishing_rod{display: {Name: '{"text":"一次性钓鱼竿","italic":false,"color":"gray"}'}, Damage: 63}
@@ -52,6 +60,3 @@ give @s[scores={shop_07_fish=5}] fishing_rod{display: {Name: '{"text":"钓鱼竿
 give @s[scores={shop_07_fish=6}] fishing_rod{display: {Name: '{"text":"钓鱼竿","italic":false,"color":"white"}'}, Damage: 54}
 give @s[scores={shop_07_fish=7}] fishing_rod{display: {Name: '{"text":"钓鱼竿","italic":false,"color":"white"}'}, Damage: 54,Enchantments:[{id:"lure",lvl:1}]}
 give @s[scores={shop_07_fish=8..}] fishing_rod{display: {Name: '{"text":"钓鱼竿","italic":false,"color":"white"}'}, Damage: 54,Enchantments:[{id:"lure",lvl:2}]}
-
-# 头戴物品
-function item:shop/refresh_head

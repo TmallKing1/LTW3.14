@@ -18,6 +18,9 @@ attribute @s generic.knockback_resistance modifier remove e0edf3eb-5aea-4a18-9b9
 attribute @s generic.attack_damage modifier remove 12bc0778-5585-498c-a1d4-993156bd3ff6
 attribute @s generic.attack_speed modifier remove dd1beb7d-dab5-4449-9c70-9fe03f406c75
 
+# 重置世界模式反馈数据
+tag @s remove world_feedback
+
 # 重置在线时间
 scoreboard players set @s online_time 0
 

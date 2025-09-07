@@ -8,6 +8,10 @@
         "dropper",
         "target",
         "slime_block",
-        "light_gray_stained_glass_pane"
+        "light_gray_stained_glass_pane",
+        "end_rod",
+        "bone",
+        "lead",
+        "red_bed"
     ]
 }

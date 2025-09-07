@@ -1,7 +1,6 @@
 
 # 下一状态
-execute if score $countdown mem matches 0 if entity @a[tag=selecting] run function ltw:state/7/next
-execute if score $countdown mem matches 0 if score $first_selection mem matches 1 run function ltw:state/7/next
+execute if score $countdown mem matches 0 if score $end_selection mem matches 0..1 run function ltw:state/7/next
 
 # 显示倒计时
 execute if entity @a[tag=selecting] run title @a times 3 14 2

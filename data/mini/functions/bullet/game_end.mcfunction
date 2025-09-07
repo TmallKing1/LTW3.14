@@ -2,9 +2,9 @@
 forceload remove 999 17999 1019 18019
 
 # 给予进度
-advancement grant @a[team=playing,scores={power_count=114..}] only ltw:blood/bullet1
-advancement grant @a[team=playing,scores={power_count=328..}] only ltw:blood/bullet2
-advancement grant @a[team=playing,scores={power_count=648..}] only ltw:blood/bullet3
+execute unless score #gamemode mem matches 2 run advancement grant @a[team=playing,scores={power_count=114..}] only ltw:blood/bullet1
+execute unless score #gamemode mem matches 2 run advancement grant @a[team=playing,scores={power_count=198..}] only ltw:blood/bullet2
+execute unless score #gamemode mem matches 2 run advancement grant @a[team=playing,scores={power_count=328..}] only ltw:blood/bullet3
 
 # 清理残余实体
 tp @e[tag=bullet_entity] 1000 -100 18000

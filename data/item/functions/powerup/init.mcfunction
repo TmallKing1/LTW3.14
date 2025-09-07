@@ -14,6 +14,10 @@ scoreboard objectives add powerup_00012 dummy
 scoreboard objectives add powerup_00013 dummy
 scoreboard objectives add powerup_00014 dummy
 scoreboard objectives add powerup_00015 dummy
+scoreboard objectives add powerup_00016 dummy
+scoreboard objectives add powerup_00017 dummy
+scoreboard objectives add powerup_00018 dummy
+scoreboard objectives add powerup_00019 dummy
 
 # 玩家当前的物品
 scoreboard objectives add powerup_current dummy

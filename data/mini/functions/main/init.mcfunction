@@ -4,6 +4,7 @@ function mini:tntrun/init
 function mini:hotpm/init
 function mini:phantom/init
 function mini:koth/init
+function mini:seat/init
 function mini:zombie/init
 function mini:river/init
 function mini:bullet/init
@@ -20,6 +21,7 @@ function mini:bingo/init
 
 function mini:ass/init
 function mini:arrow/init
+function mini:potion/init
 
 function mini:duckrush/init
 function mini:element/init

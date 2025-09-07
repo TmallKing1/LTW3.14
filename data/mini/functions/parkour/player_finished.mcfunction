@@ -1,3 +1,4 @@
+#> mini:parkour/player_finished
 # 玩家成功时由玩家自己触发
 
 # 计数

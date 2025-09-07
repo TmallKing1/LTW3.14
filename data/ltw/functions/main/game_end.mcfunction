@@ -24,6 +24,9 @@ execute as @a if score @s total_score = #score_min mem run tag @s add total_rank
 # 没有名次
 tag @a[team=playing,tag=!total_rank1,tag=!total_rank2,tag=!total_rank3] add total_rankl
 
+# 逆转模式
+execute unless score $test_mode mem matches 1 if score #gamemode mem matches 2 run scoreboard players add @a[team=playing] stat_total_reverse 1
+
 # 给予进度
 execute unless score $test_mode mem matches 1 run scoreboard players add @a[team=playing] stat_total 1
 execute unless score $test_mode mem matches 1 run scoreboard players add @a[tag=total_rank1] stat_win 1
@@ -35,15 +38,18 @@ execute if entity @a[tag=total_rank2] run tellraw @a ["  ",{"text": "第二名 >
 execute if entity @a[tag=total_rank3] run tellraw @a ["  ",{"text": "第三名 >  ","color":"yellow"},{"selector": "@a[tag=total_rank3]","color":"yellow"},{"text":" (","color":"gray"},{"score":{"name": "@p[tag=total_rank3]","objective": "total_score"},"color":"gray"},{"text":")","color":"gray"}]
 tellraw @a ""
 
-# 若非测试模式，则给予金粒
-execute unless score $test_mode mem matches 1 run function ltw:main/give_gold_nuggets
+# 若非测试模式，则给予奖励
+execute unless score $test_mode mem matches 1 run function ltw:main/give_rewards
 
 # 若为测试模式，则显示提示
 execute if score $test_mode mem matches 1 run tellraw @a " 本局为测试局，没有奖励！"
 
+# 解除奖励增益模式
+execute if score #gamemode mem matches 3 unless score $test_mode mem matches 1 unless score $force_end mem matches 1 run scoreboard players set $boost_active mem 0
+
 # 奖励结束
 tellraw @a[team=playing] ""
-#execute unless score $force_end mem matches 1 as @a[tag=double_reward,team=playing] run tellraw @s ["",{"text": ">> ","color": "green","bold": true},{"text": "已激活「黎明盛会」双倍奖励次数，当前剩余 ","color": "green"},{"score": {"name": "*","objective": "double_reward"},"color": "green"},{"text": " 次！","color": "green"}]
+execute unless score $force_end mem matches 1 as @a[tag=double_reward,team=playing] run tellraw @s ["",{"text": ">> ","color": "green","bold": true},{"text": "已激活「黎明盛会」双倍奖励次数，当前剩余 ","color": "green"},{"score": {"name": "*","objective": "double_reward"},"color": "green"},{"text": " 次！","color": "green"}]
 scoreboard players set $force_end mem 0
 
 # 返回主大厅
@@ -54,3 +60,5 @@ forceload add 0 0
 forceload add 0 1900 50 2000
 forceload add -32 -17 45 -80
 forceload add 997 -976 949 -1024
+## 世界模式
+forceload add 960 -2064 1038 -1940

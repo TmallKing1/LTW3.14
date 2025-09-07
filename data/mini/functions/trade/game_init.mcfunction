@@ -16,7 +16,7 @@ setblock 1000 255 5001 redstone_block
 
 # 伤害管理
 scoreboard players set $remove_resistance mem 1
-team modify playing friendlyFire false
+scoreboard players set $pvp_mode mem 0
 team modify playing collisionRule never
 team modify playing deathMessageVisibility always
 gamerule naturalRegeneration false

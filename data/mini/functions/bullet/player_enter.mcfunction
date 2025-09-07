@@ -15,6 +15,10 @@ tag @s remove kill_witch
 tag @s remove out_of_area
 tag @s remove bullet_adv_failed
 
+# 设置初始能量值
+scoreboard players reset @s power_count
+execute if score $ley_line_disorder mem matches -1 run scoreboard players set @s[team=playing,tag=!rejoining] power_count 10000
+
 # 传送玩家
 spreadplayers 1010.0 18010.0 0 6 false @s
 

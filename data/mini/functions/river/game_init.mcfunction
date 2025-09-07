@@ -9,6 +9,7 @@ scoreboard players set $survival mem 0
 scoreboard players set $countdown_fast mem 0
 scoreboard players set $bridge_broken mem 0
 scoreboard players set $timer_max mem 60
+execute if score #gamemode mem matches 2 run scoreboard players set $timer_max mem 150
 scoreboard players set $game_end_mode mem 1
 scoreboard players set $speci_hinted mem 1
 
@@ -27,7 +28,7 @@ execute store result score $player_total_river mem if entity @a[team=playing]
 
 # 初始化
 scoreboard players set $remove_resistance mem 0
-team modify playing friendlyFire true
+scoreboard players set $pvp_mode mem 2
 team modify playing collisionRule always
 team modify playing deathMessageVisibility never
 gamerule naturalRegeneration true

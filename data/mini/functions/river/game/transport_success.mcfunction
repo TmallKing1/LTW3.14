@@ -7,8 +7,8 @@ execute if entity @s[tag=has_mats_basic] if score $timer_max mem matches ..10 ru
 execute if entity @s[tag=has_mats_speci] positioned ~ ~3 ~ run function mini:river/game/new_item
 
 # 给予进度
-advancement grant @s[scores={tran_mats=5..}] only ltw:parkour/river1
-advancement grant @s[scores={tran_mats_ex=2..}] only ltw:parkour/river3
+execute unless score #gamemode mem matches 2 run advancement grant @s[scores={tran_mats=5..}] only ltw:parkour/river1
+execute unless score #gamemode mem matches 2 run advancement grant @s[scores={tran_mats_ex=2..}] only ltw:parkour/river3
 
 # 清除物资物品
 clear @s chest{game_item: 1b}

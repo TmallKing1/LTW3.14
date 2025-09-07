@@ -1,0 +1,28 @@
+{
+    "parent": "ltw:vs/potion2",
+    "display": {
+      "icon": {
+        "item": "minecraft:splash_potion"
+      },
+      "title": {
+        "text": "药剂专家 · γ "
+      },
+      "description": [
+        {"text": "【炸药突袭】结束游戏时生命值等于 200\n", "color":"gray"},
+        {"text": "奖励: ","color":"green"},
+        {"text": "2 绿宝石","color":"white"}
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "rewards": {
+      "function": "ltw:advancement/bonus_3"
+    },
+    "criteria": {
+      "a":{
+          "trigger": "minecraft:impossible"
+      }
+    }
+  }

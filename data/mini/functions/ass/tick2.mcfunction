@@ -1,12 +1,17 @@
 # 使用苦力怕刷怪蛋调用函数
 execute as @a[tag=mini_running,scores={creeperUse=1..}] run function mini:ass/game/use_creeper
 # 给予苦力怕刷怪蛋
-execute as @a[tag=mini_running,scores={countdown_fast=0}] unless data entity @s Inventory[{Slot: -106b, id: "minecraft:creeper_spawn_egg", tag: {game_item: 1b}}] run function mini:ass/game/give_creeper
+execute unless score $ley_line_disorder mem matches -1 as @a[tag=mini_running,scores={countdown_fast=0}] unless data entity @s Inventory[{Slot: -106b, id: "minecraft:creeper_spawn_egg", tag: {game_item: 1b}}] run function mini:ass/game/give_creeper
+execute if score $ley_line_disorder mem matches -1 as @a[tag=mini_running,scores={countdown_fast=0}] unless data entity @s Inventory[{Slot: 8b, id: "minecraft:creeper_spawn_egg", tag: {game_item: 1b}}] run function mini:ass/game/give_creeper
 # 幻境干扰处理
 execute if score $ley_line_disorder mem matches 3 as @a[tag=mini_running,scores={countdown_fast=-1}] unless data entity @s Inventory[{Slot: -106b, id: "minecraft:creeper_spawn_egg", tag: {game_item: 1b}}] run function mini:ass/game/use_creeper
+execute if score $ley_line_disorder mem matches -1 as @a[tag=mini_running,scores={countdown_fast=-1}] unless data entity @s Inventory[{Slot: 8b, id: "minecraft:creeper_spawn_egg", tag: {game_item: 1b}}] run function mini:ass/game/use_creeper
+
+# 出界玩家处理
+execute if score $ley_line_disorder mem matches -1 as @a[tag=mini_running,gamemode=!spectator,x=1000,y=23,z=7000,dx=31,dy=9,dz=31] run damage @s 114514 bad_respawn_point
 
 # 给予击退棒
-execute as @a[tag=mini_running] unless data entity @s Inventory[{Slot: 8b, id: "minecraft:lightning_rod", tag: {game_item: 1b}}] run function mini:ass/game/give_stick
+execute unless score $ley_line_disorder mem matches -1 as @a[tag=mini_running] unless data entity @s Inventory[{Slot: 8b, id: "minecraft:lightning_rod", tag: {game_item: 1b}}] run function mini:ass/game/give_stick
 
 # 同步生命值
 scoreboard players reset * health_alive

@@ -10,8 +10,9 @@ execute as @a[x=13,y=27,z=-26,dx=0,dy=3,dz=0,tag=!pass_wish] run tp @s 15.66 21.
 
 # 下界传送门
 scoreboard players add @a[x=-32,y=8,z=-41,dx=0,dy=3,dz=4] nether_portal 1
-execute as @a unless entity @s[x=-32,y=8,z=-41,dx=0,dy=3,dz=4] run scoreboard players set @s nether_portal 0
-execute as @a[scores={nether_portal=39..}] at @s run function ltw:state/0/portal
+scoreboard players add @a[x=-30,y=23,z=-40,dx=0,dy=1,dz=2] nether_portal 1
+execute as @a unless entity @s[x=-32,y=8,z=-41,dx=0,dy=3,dz=4] unless entity @s[x=-30,y=23,z=-40,dx=0,dy=1,dz=2] run scoreboard players set @s nether_portal 0
+execute as @a[scores={nether_portal=29..}] at @s run function ltw:state/0/portal
 
 # 赞助者建筑传送
 tp @a[x=994,y=8,z=-1001,dx=2,dy=3,dz=2] 955 20 -1000
@@ -31,12 +32,15 @@ execute as @a[tag=refresh] run function item:shop/refresh_diamond
 tag @a[tag=refresh] remove refresh
 
 # 处理传送卷轴
-execute as @a if data entity @s Inventory.[{Slot: -106b, tag: {teleportation: 1b}}] run tp @s -1 28 -47 -90 0
+execute as @a if data entity @s Inventory.[{Slot: -106b, tag: {teleportation: 1b}}] run function ltw:state/0/scroll_teleport
 execute as @a if data entity @s Inventory.[{Slot: -106b, tag: {teleportation: 1b}}] run function item:shop/refresh_gold
 
 # 处理钻石块
 execute as @a if data entity @s Inventory.[{Slot: -106b, id: "minecraft:diamond_block"}] run item replace entity @s armor.head from entity @s weapon.offhand
 execute as @a if data entity @s Inventory.[{Slot: -106b, id: "minecraft:diamond_block"}] run item replace entity @s weapon.offhand with air
+
+# 处理世界模式玩家
+function ltw:state/0/world/tick2
 
 # 调用末影箱模块
 execute as @a at @s run function item:enderchest/tick2

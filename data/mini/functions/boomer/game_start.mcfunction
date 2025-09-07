@@ -5,6 +5,7 @@ scoreboard players set $countdown mem 70
 scoreboard objectives setdisplay list health_disp
 scoreboard objectives setdisplay below_name health_disp
 scoreboard objectives setdisplay sidebar health_alive
+execute if score $ley_line_disorder mem matches -1 run scoreboard objectives setdisplay sidebar power_count
 scoreboard players set $bossbar_color mem 3
 scoreboard players set $countdown_max mem 70
 scoreboard players set $bossbar_type mem 2

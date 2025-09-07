@@ -12,7 +12,8 @@ attribute @s generic.max_health base set 10
 effect give @s instant_health 1 0 true
 
 # 传送玩家
-tp @s[team=playing,tag=!rejoining] 2029.5 22 3014.5 90 0
+execute unless score $ley_line_disorder mem matches -1 run tp @s[team=playing,tag=!rejoining] 2029.5 22 3014.5 90 0
+execute if score $ley_line_disorder mem matches -1 run tp @s[team=playing,tag=!rejoining] 2014.5 23.00 3014.5 
 
 # 重置记分板
 scoreboard players reset @s gold_ingame

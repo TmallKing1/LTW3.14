@@ -22,7 +22,7 @@ team modify playing nametagVisibility always
 
 # 特殊模式直接结束
 execute if score $round mem matches 0 run return 0
-execute if score $test_mode mem matches 1 if score $round mem matches 6 run return 0
+execute if score $test_mode mem matches 1 unless score #gamemode mem matches 2 if score $round mem matches 6 run return 0
 
 # 生成地图
 setblock 0 10 2000 minecraft:structure_block{mode:"LOAD",name:"ltw:select"}

@@ -1,5 +1,9 @@
-execute unless score $ley_line_disorder mem matches 3 run scoreboard players add @s power_count 3
-execute unless score $ley_line_disorder mem matches 3 run scoreboard players add @s power_count_temp 3
+execute unless score $ley_line_disorder mem matches 3 unless score $ley_line_disorder mem matches -1 run scoreboard players add @s power_count 3
+execute unless score $ley_line_disorder mem matches 3 unless score $ley_line_disorder mem matches -1 run scoreboard players add @s power_count_temp 3
+
+execute if score $ley_line_disorder mem matches -1 store result score $random mem run random value 1..4
+execute if score $ley_line_disorder mem matches -1 run scoreboard players operation @s power_count += $random mem
+execute if score $ley_line_disorder mem matches -1 run scoreboard players operation @s power_count_temp += $random mem
 
 # 清除进度
 advancement revoke @s only mini:zombie/normal_zombie

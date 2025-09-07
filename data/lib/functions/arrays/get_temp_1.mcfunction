@@ -1,0 +1,1 @@
+$data modify storage lib:arrays Output set from storage lib:arrays Array[$(Index)]
